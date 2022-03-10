@@ -5,7 +5,7 @@ public class RotateCamera : MonoBehaviour
     [SerializeField]
     Transform camTransform;
 
-    public float mouseSensitivity = 5f;
+    public float mouseSensitivity = 50f;
 
     float xRotation = 0f;
     float yRotation = 0f;
@@ -14,8 +14,7 @@ public class RotateCamera : MonoBehaviour
     {
         Cursor.lockState = CursorLockMode.Locked;    
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         yRotation += Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;

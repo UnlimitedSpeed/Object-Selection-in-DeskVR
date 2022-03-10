@@ -9,7 +9,6 @@ public class CheckObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //other.gameObject.GetComponent<Outline>().enabled = true;
         GameObject go = other.gameObject;
         go.AddComponent<Outline>();
         numberOfObj++;
@@ -18,7 +17,6 @@ public class CheckObject : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        //other.gameObject.GetComponent<Outline>().enabled = false;
         GameObject go = other.gameObject;
         Destroy(go.GetComponent<Outline>());
         numberOfObj--;
