@@ -9,16 +9,20 @@ public class CheckObject : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        other.gameObject.GetComponent<Outline>().enabled = true;
+        //other.gameObject.GetComponent<Outline>().enabled = true;
+        GameObject go = other.gameObject;
+        go.AddComponent<Outline>();
         numberOfObj++;
-        namesOfObj.Add(other.gameObject.name);
+        namesOfObj.Add(go.name);
     }
 
     private void OnTriggerExit(Collider other)
     {
-        other.gameObject.GetComponent<Outline>().enabled = false;
+        //other.gameObject.GetComponent<Outline>().enabled = false;
+        GameObject go = other.gameObject;
+        Destroy(go.GetComponent<Outline>());
         numberOfObj--;
-        namesOfObj.Remove(other.gameObject.name);
+        namesOfObj.Remove(go.name);
     }
 
     public int getNumberOfObj()
