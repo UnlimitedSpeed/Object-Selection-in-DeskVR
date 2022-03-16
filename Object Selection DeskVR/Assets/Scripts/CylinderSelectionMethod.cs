@@ -3,13 +3,23 @@ using UnityEngine;
 
 public class CylinderSelectionMethod : MonoBehaviour
 {
+    [SerializeField]
     GameObject cylinder;
+
+    GameObject cylinderClone;
     GameObject cylinderParent;
     int state = 1;
 
     float xRotation = 0f;
     float yRotation = 0f;
     public float mouseSensitivity = 50f;
+    MethodControls mc;
+
+
+    void Start()
+    {
+        mc = transform.GetComponent<MethodControls>();
+    }
 
     void Update()
     {
@@ -17,16 +27,12 @@ public class CylinderSelectionMethod : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                Debug.Log("First Stage");
-                cylinder = GameObject.CreatePrimitive(PrimitiveType.Cylinder);
-                cylinder.transform.SetParent(transform);
-                cylinder.name = "SelectionCylinder";
-                cylinder.GetComponent<CapsuleCollider>().isTrigger = true;
-                cylinder.AddComponent<CheckObject>();
+                cylinderClone = Instantiate(cylinder, transform.position, Quaternion.Euler(45, 45, 45));
+                cylinderClone.transform.SetParent(transform);
+                cylinderClone.name = "SelectionCylinder";
 
-                cylinder.transform.localScale = new Vector3(0.1f, 50f, 0.1f);
-                cylinder.transform.localRotation = Quaternion.Euler(90f, 0f, 0f);
-                cylinder.transform.localPosition = new Vector3(0f, -0.5f, 51f);
+                cylinderClone.transform.localPosition = new Vector3(0, -1, 26);
+                cylinderClone.transform.localRotation = Quaternion.Euler(90, 0, 0);
             }
         }
 
@@ -56,18 +62,18 @@ public class CylinderSelectionMethod : MonoBehaviour
                                             transform.position.y + transform.forward.y,
                                             transform.position.z + transform.forward.z);
 
-                    cylinder.transform.SetParent(cylinderParent.transform);
+                    cylinderClone.transform.SetParent(cylinderParent.transform);
 
                     xRotation = cylinderParent.transform.eulerAngles.x;
                     yRotation = cylinderParent.transform.eulerAngles.y;
-                    Debug.Log(xRotation + " " + yRotation);
 
                     // Only aplicable in Desktop
                     transform.gameObject.GetComponent<RotateCamera>().enabled = false;
                     
                     break;
+
                 case 3:
-                    CheckObject co = cylinder.GetComponent<CheckObject>();
+                    CheckObject co = cylinderClone.GetComponent<CheckObject>();
                     int numberOfObj = co.getNumberOfObj();
                     List<string> names = co.getNamesOfObj();
                     Destroy(cylinderParent);
@@ -75,6 +81,11 @@ public class CylinderSelectionMethod : MonoBehaviour
                     for (int i = 0; i < names.Count; i++)
                     {
                         Debug.Log(names[i]);
+                    }
+
+                    if (mc.isFadeOutActive)
+                    {
+                        mc.FadeOut(names);
                     }
 
                     state = 1;
