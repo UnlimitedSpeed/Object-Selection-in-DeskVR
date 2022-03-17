@@ -36,13 +36,13 @@ public class MethodControls : MonoBehaviour
             activeMethod = 1;
         }
 
-        /*if (Input.GetKeyDown(KeyCode.Alpha1))
+        if (Input.GetKeyDown(KeyCode.Alpha3))
         {
             methods[activeMethod].enabled = false;
-            methods[0].enabled = true;
+            methods[2].enabled = true;
             activeMethod = 0;
         }
-
+        /*
         if (Input.GetKeyDown(KeyCode.Alpha1))
         {
             methods[activeMethod].enabled = false;

@@ -13,7 +13,6 @@ GameObject:
   - component: {fileID: 909759683512813792}
   - component: {fileID: 1563951323249106756}
   - component: {fileID: 1186315025450548561}
-  - component: {fileID: -7895540591612842038}
   m_Layer: 0
   m_Name: cone
   m_TagString: Untagged
@@ -110,21 +109,3 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d476594e6de974ca18e14b9d1679e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &-7895540591612842038
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1702609065432017205}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5fea29bb7c508c244a1f805a5fd3fc4d, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  outlineMode: 0
-  outlineColor: {r: 1, g: 0, b: 0, a: 1}
-  outlineWidth: 2
-  precomputeOutline: 0
-  bakeKeys: []
-  bakeValues: []
