@@ -32,10 +32,10 @@ public class GazeSelectionMethod : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             CheckObject co = c.GetComponent<CheckObject>();
-            int numberOfObj = co.getNumberOfObj();
             List<string> names = co.getNamesOfObj();
             Destroy(c);
-            Debug.Log("Selected " + numberOfObj + " objects:");
+
+            Debug.Log("Selected " + names.Count + " objects:");
             for (int i = 0; i < names.Count; i++)
             {
                 Debug.Log(names[i]);

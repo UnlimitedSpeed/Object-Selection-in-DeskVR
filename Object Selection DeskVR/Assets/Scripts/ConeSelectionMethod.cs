@@ -34,7 +34,6 @@ public class ConeSelectionMethod : MonoBehaviour
             {
                 coneClone = Instantiate(cone, transform.position, Quaternion.Euler(45, 45, 45));
                 coneClone.transform.SetParent(transform);
-                coneClone.name = "SelectionCone";
 
                 coneClone.transform.localPosition = new Vector3(0, -1, 1);
                 coneClone.transform.localRotation = Quaternion.Euler(0, 180, 0);
@@ -78,10 +77,10 @@ public class ConeSelectionMethod : MonoBehaviour
 
                 case 3:
                     CheckObject co = coneClone.GetComponent<CheckObject>();
-                    int numberOfObj = co.getNumberOfObj();
                     List<string> names = co.getNamesOfObj();
                     Destroy(coneParent);
-                    Debug.Log("Selected " + numberOfObj + " objects:");
+
+                    Debug.Log("Selected " + names.Count + " objects:");
                     for (int i = 0; i < names.Count; i++)
                     {
                         Debug.Log(names[i]);

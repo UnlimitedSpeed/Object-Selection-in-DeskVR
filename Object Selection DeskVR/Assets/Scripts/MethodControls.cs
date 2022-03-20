@@ -81,8 +81,19 @@ public class MethodControls : MonoBehaviour
         for (int i = 0; i < names.Count; i++)
         {
             GameObject selectedObj = GameObject.Find(names[i]);
-            Renderer r = selectedObj.GetComponent<Renderer>();
-            r.material.color = Color.white;
+            if (selectedObj.GetComponent<Renderer>() != null)
+            {
+                Renderer r = selectedObj.GetComponent<Renderer>();
+                r.material.color = Color.white;
+            }
+            else
+            {
+                Renderer[] selectedObjChildren = selectedObj.GetComponentsInChildren<Renderer>();
+                foreach (Renderer rc in selectedObjChildren)
+                {
+                    rc.material.color = Color.white;
+                }
+            }
         }
     }
 

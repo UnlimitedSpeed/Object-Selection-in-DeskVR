@@ -3,17 +3,22 @@ using UnityEngine;
 
 public class CylinderSelectionMethod : MonoBehaviour
 {
+    public float mouseSensitivity = 50f;
+
     [SerializeField]
     GameObject cylinder;
 
+    int state = 1;
+    bool isSelection = true;
+
     GameObject cylinderClone;
     GameObject cylinderParent;
-    int state = 1;
-
     float xRotation = 0f;
     float yRotation = 0f;
-    public float mouseSensitivity = 50f;
     MethodControls mc;
+    List<string> names;
+
+    int index = 0;
 
 
     void Start()
@@ -23,21 +28,28 @@ public class CylinderSelectionMethod : MonoBehaviour
 
     void Update()
     {
+        if (isSelection)
+            Selection();
+        else
+            Refinement();
+    }
+
+    void Selection()
+    {
         if (state == 1)
         {
             if (Input.GetKeyDown(KeyCode.Mouse0))
             {
-                cylinderClone = Instantiate(cylinder, transform.position, Quaternion.Euler(45, 45, 45));
+                cylinderClone = Instantiate(cylinder, transform.position, Quaternion.Euler(45f, 45f, 45f));
                 cylinderClone.transform.SetParent(transform);
-                cylinderClone.name = "SelectionCylinder";
 
-                cylinderClone.transform.localPosition = new Vector3(0, -1, 26);
-                cylinderClone.transform.localRotation = Quaternion.Euler(90, 0, 0);
+                cylinderClone.transform.localPosition = new Vector3(0f, -0.5f, 25.5f);
+                cylinderClone.transform.localRotation = Quaternion.Euler(90f, 0f, 0f);
             }
         }
 
 
-        if(state == 2)
+        if (state == 2)
         {
             if (Input.GetKey(KeyCode.Mouse0))
             {
@@ -51,8 +63,8 @@ public class CylinderSelectionMethod : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             state++;
-            
-            switch(state)
+
+            switch (state)
             {
                 case 2:
                     cylinderParent = new GameObject("cylinderParent");
@@ -69,15 +81,15 @@ public class CylinderSelectionMethod : MonoBehaviour
 
                     // Only aplicable in Desktop
                     transform.gameObject.GetComponent<RotateCamera>().enabled = false;
-                    
+
                     break;
 
                 case 3:
                     CheckObject co = cylinderClone.GetComponent<CheckObject>();
-                    int numberOfObj = co.getNumberOfObj();
-                    List<string> names = co.getNamesOfObj();
+                    names = co.getNamesOfObj();
                     Destroy(cylinderParent);
-                    Debug.Log("Selected " + numberOfObj + " objects:");
+
+                    Debug.Log(names.Count);
                     for (int i = 0; i < names.Count; i++)
                     {
                         Debug.Log(names[i]);
@@ -88,13 +100,46 @@ public class CylinderSelectionMethod : MonoBehaviour
                         mc.FadeOut(names);
                     }
 
+                    GameObject.Find(names[index]).GetComponent<Outline>().OutlineColor = Color.red;
                     state = 1;
+                    isSelection = false;
 
                     // Only aplicable in Desktop
                     transform.gameObject.GetComponent<RotateCamera>().enabled = true;
 
                     break;
             }
+        }
+    }
+
+    void Refinement()
+    {
+        float scroll = Input.mouseScrollDelta.y;
+
+        if(scroll != 0)
+        {
+            int newIndex = (index + (int)scroll) % names.Count;
+            if (newIndex < 0)
+                newIndex *= -1;
+
+            GameObject.Find(names[index]).GetComponent<Outline>().OutlineColor = Color.white;
+
+            GameObject.Find(names[newIndex]).GetComponent<Outline>().OutlineColor = Color.red;
+
+            index = newIndex;
+        }
+
+        if (Input.GetKeyUp(KeyCode.Mouse0))
+        {
+            string selected = names[index];
+            Debug.Log("SELECTED OBJECT = " + selected);
+            foreach(string s in names)
+            {
+                if(s != selected)
+                    Destroy(GameObject.Find(s).GetComponent<Outline>());
+            }
+            index = 0;
+            isSelection = true;
         }
     }
 }

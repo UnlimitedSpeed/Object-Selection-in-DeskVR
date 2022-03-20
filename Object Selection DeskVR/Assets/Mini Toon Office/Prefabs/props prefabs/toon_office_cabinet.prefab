@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 1974732663239211384}
   m_Layer: 0
   m_Name: toon_office_cabinet
-  m_TagString: Untagged
+  m_TagString: Selectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -110,6 +110,6 @@ MeshCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 4
-  m_Convex: 0
+  m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: -6870519172671050157, guid: 160c7c7be24134ae08522bcb8a66f852, type: 3}
