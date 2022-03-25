@@ -6,8 +6,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637821672265452206
-    m_Hash: 4007186375
+      ticks: 637834750575619382
+    m_Hash: 723872690
   m_LockFileStatus:
     m_FilePath: D:/Users/Joao/Desktop/Object-Selection-in-DeskVR/Object Selection
       DeskVR/Packages/packages-lock.json
@@ -15,8 +15,8 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 637821672731604473
-    m_Hash: 38571225
+      ticks: 637834750868439209
+    m_Hash: 728892229
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_PackageAssets:
@@ -76,10 +76,16 @@ m_PackageAssets:
         - 1.14.4
         - 1.14.7
         - 1.14.9
+        - 1.14.12
+        - 1.14.13
+        - 1.14.15
         - 1.15.1
         - 1.15.4
         - 1.15.7
         - 1.15.9
+        - 1.15.12
+        - 1.15.13
+        - 1.15.15
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -102,6 +108,9 @@ m_PackageAssets:
         - 1.14.4
         - 1.14.7
         - 1.14.9
+        - 1.14.12
+        - 1.14.13
+        - 1.14.15
         - 2.0.0-preview.6
         - 2.0.0-preview.8
         - 2.0.0-preview.15
@@ -196,6 +205,7 @@ m_PackageAssets:
         - 3.0.7
         - 3.0.9
         - 3.0.10
+        - 3.0.12
         compatible:
         - 1.0.2
         - 1.0.6
@@ -224,6 +234,7 @@ m_PackageAssets:
         - 3.0.7
         - 3.0.9
         - 3.0.10
+        - 3.0.12
         verified: 2.0.7
       dependencies:
       - name: com.unity.test-framework
@@ -385,6 +396,7 @@ m_PackageAssets:
         - 1.2.2
         - 1.2.3
         - 1.2.4
+        - 1.2.5
         compatible:
         - 1.0.2
         - 1.0.3
@@ -398,7 +410,8 @@ m_PackageAssets:
         - 1.2.2
         - 1.2.3
         - 1.2.4
-        verified: 1.2.4
+        - 1.2.5
+        verified: 1.2.5
       dependencies: []
       resolvedDependencies: []
       keywords: []
@@ -475,6 +488,7 @@ m_PackageAssets:
         - 1.1.27
         - 1.1.29
         - 1.1.30
+        - 1.1.31
         - 2.0.1-pre.12
         - 2.0.1-pre.18
         compatible:
@@ -484,9 +498,10 @@ m_PackageAssets:
         - 1.1.27
         - 1.1.29
         - 1.1.30
+        - 1.1.31
         - 2.0.1-pre.12
         - 2.0.1-pre.18
-        verified: 1.1.30
+        verified: 1.1.31
       dependencies:
       - name: com.unity.ext.nunit
         version: 1.0.6
@@ -627,6 +642,7 @@ m_PackageAssets:
         - 2.1.6
         - 2.2.0-preview.1
         - 2.2.0-preview.2
+        - 2.2.0-preview.3
         - 3.0.0-preview.1
         - 3.0.0-preview.3
         - 3.0.0-preview.4
@@ -646,6 +662,7 @@ m_PackageAssets:
         - 3.0.6
         - 3.2.0-pre.1
         - 3.2.0-pre.2
+        - 3.2.0-pre.3
         - 4.0.0-pre.1
         compatible:
         - 3.0.1
@@ -655,6 +672,7 @@ m_PackageAssets:
         - 3.0.6
         - 3.2.0-pre.1
         - 3.2.0-pre.2
+        - 3.2.0-pre.3
         verified: 3.0.6
       dependencies:
       - name: com.unity.ugui
@@ -781,7 +799,11 @@ m_PackageAssets:
         - 1.6.1
         - 1.6.2
         - 1.6.3
+        - 1.6.4
         - 1.7.0-pre.1
+        - 1.7.0-pre.2
+        - 1.7.0
+        - 1.7.1
         compatible:
         - 1.4.6
         - 1.4.7
@@ -807,7 +829,11 @@ m_PackageAssets:
         - 1.6.1
         - 1.6.2
         - 1.6.3
+        - 1.6.4
         - 1.7.0-pre.1
+        - 1.7.0-pre.2
+        - 1.7.0
+        - 1.7.1
         verified: 1.4.8
       dependencies:
       - name: com.unity.modules.director
@@ -905,6 +931,93 @@ m_PackageAssets:
         capabilities: 0
       hasRegistry: 0
       hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 0
+      documentationUrl: 
+      hasRepository: 0
+      repository:
+        type: 
+        url: 
+        revision: 
+        path: 
+    - packageId: com.valvesoftware.unity.openvr@file:D:\Users\Joao\Desktop\Object-Selection-in-DeskVR\Object
+        Selection DeskVR\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz
+      testable: 0
+      isDirectDependency: 1
+      version: 1.1.4
+      source: 6
+      resolvedPath: D:\Users\Joao\Desktop\Object-Selection-in-DeskVR\Object Selection
+        DeskVR\Library\PackageCache\com.valvesoftware.unity.openvr@26765a57de4d-1614121125000
+      assetPath: Packages/com.valvesoftware.unity.openvr
+      name: com.valvesoftware.unity.openvr
+      displayName: OpenVR XR Plugin
+      author:
+        name: Valve Corporation
+        email: 
+        url: 
+      category: 
+      type: 
+      description: 'Provides rendering support for OpenVR devices in Unity XR. For
+        input please see: https://github.com/ValveSoftware/steamvr_unity_plugin'
+      status: 4
+      errors: []
+      versions:
+        all: []
+        compatible: []
+        verified: 
+      dependencies:
+      - name: com.unity.xr.management
+        version: 3.2.13
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.xr.legacyinputhelpers
+        version: 2.1.4
+      resolvedDependencies:
+      - name: com.unity.xr.management
+        version: 3.2.13
+      - name: com.unity.xr.legacyinputhelpers
+        version: 2.1.7
+      - name: com.unity.modules.vr
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      - name: com.unity.modules.xr
+        version: 1.0.0
+      - name: com.unity.modules.subsystems
+        version: 1.0.0
+      - name: com.unity.subsystemregistration
+        version: 1.0.6
+      - name: com.unity.ugui
+        version: 1.0.0
+      - name: com.unity.modules.ui
+        version: 1.0.0
+      - name: com.unity.modules.imgui
+        version: 1.0.0
+      keywords:
+      - openvr
+      - xr
+      - virtual
+      - reality
+      - xreditorsubsystem
+      - xrsdk
+      - steamvr
+      - vr
+      - unity
+      - sdk
+      - valve
+      registry:
+        id: 
+        name: 
+        url: 
+        scopes: []
+        isDefault: 0
+        capabilities: 0
+      hasRegistry: 0
+      hideInEditor: 0
       entitlements:
         isAllowed: 1
       isAssetStorePackage: 0
@@ -2658,6 +2771,242 @@ m_PackageAssets:
         url: 
         revision: 
         path: 
+    - packageId: com.unity.xr.management@3.2.13
+      testable: 0
+      isDirectDependency: 0
+      version: 3.2.13
+      source: 1
+      resolvedPath: D:\Users\Joao\Desktop\Object-Selection-in-DeskVR\Object Selection
+        DeskVR\Library\PackageCache\com.unity.xr.management@3.2.13
+      assetPath: Packages/com.unity.xr.management
+      name: com.unity.xr.management
+      displayName: XR Plugin Management
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Package to provide for simple management of XR plug-ins. Provides
+        help and management for loading, initialization, settings, and build support
+        for XR plug-ins.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 0.1.0-preview.8
+        - 0.1.0-preview.12
+        - 1.0.0-preview.2
+        - 2.0.0-preview.3
+        - 2.0.0-preview.6
+        - 2.0.0-preview.9
+        - 2.0.0-preview.10
+        - 2.0.0-preview.13
+        - 2.0.0-preview.21
+        - 2.0.0-preview.22
+        - 2.0.0-preview.24
+        - 2.0.0-preview.25
+        - 2.0.0-preview.26
+        - 3.0.1
+        - 3.0.2-preview.1
+        - 3.0.2-preview.2
+        - 3.0.3
+        - 3.0.4-preview.1
+        - 3.0.4-preview.3
+        - 3.0.4
+        - 3.0.5-preview.1
+        - 3.0.5
+        - 3.0.6-preview.2
+        - 3.0.6
+        - 3.1.0-preview.2
+        - 3.2.4
+        - 3.2.6
+        - 3.2.7
+        - 3.2.9
+        - 3.2.10
+        - 3.2.11-preview.1
+        - 3.2.12
+        - 3.2.13
+        - 3.2.15
+        - 3.2.16
+        - 3.2.17
+        - 4.0.0-exp.2
+        - 4.0.0-pre.2
+        - 4.0.0-pre.3
+        - 4.0.1
+        - 4.0.3
+        - 4.0.5
+        - 4.0.6
+        - 4.0.7
+        - 4.1.0-pre.1
+        - 4.1.0-pre.2
+        - 4.1.0
+        - 4.2.0
+        - 4.2.1
+        compatible:
+        - 3.2.13
+        - 3.2.15
+        - 3.2.16
+        - 3.2.17
+        - 4.0.0-exp.2
+        - 4.0.0-pre.2
+        - 4.0.0-pre.3
+        - 4.0.1
+        - 4.0.3
+        - 4.0.5
+        - 4.0.6
+        - 4.0.7
+        - 4.1.0-pre.1
+        - 4.1.0-pre.2
+        - 4.1.0
+        - 4.2.0
+        - 4.2.1
+        verified: 4.0.7
+      dependencies:
+      - name: com.unity.xr.legacyinputhelpers
+        version: 2.1.2
+      - name: com.unity.subsystemregistration
+        version: 1.0.6
+      resolvedDependencies:
+      - name: com.unity.xr.legacyinputhelpers
+        version: 2.1.7
+      - name: com.unity.modules.vr
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      - name: com.unity.modules.xr
+        version: 1.0.0
+      - name: com.unity.modules.subsystems
+        version: 1.0.0
+      - name: com.unity.subsystemregistration
+        version: 1.0.6
+      keywords:
+      - xr
+      - sdk
+      - ar
+      - vr
+      - management
+      - build
+      - plugin
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637293838190000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/xr.sdk.management.git
+        revision: 3a3e4cb8f3b8a580f8bbf417ef9726adf94b1b97
+        path: 
+    - packageId: com.unity.xr.legacyinputhelpers@2.1.7
+      testable: 0
+      isDirectDependency: 0
+      version: 2.1.7
+      source: 1
+      resolvedPath: D:\Users\Joao\Desktop\Object-Selection-in-DeskVR\Object Selection
+        DeskVR\Library\PackageCache\com.unity.xr.legacyinputhelpers@2.1.7
+      assetPath: Packages/com.unity.xr.legacyinputhelpers
+      name: com.unity.xr.legacyinputhelpers
+      displayName: XR Legacy Input Helpers
+      author:
+        name: 
+        email: 
+        url: 
+      category: XR
+      type: 
+      description: This package includes the tracked pose driver for the legacy input
+        system, the XR Bindings Seeding Tool and 3Dof Arm Model support for the Tracked
+        Pose Driver. The Tracked Pose Driver is a behavior that enables GameObjects
+        to track input devices, the XR Bindings Seeding Tool adds a menu item under
+        the 'Assets' menu which populates the Input Asset with Unity's crossplatform
+        Input Bindings
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0
+        - 1.0.2
+        - 1.0.3
+        - 1.3.1
+        - 1.3.2
+        - 1.3.4
+        - 1.3.5
+        - 1.3.6
+        - 1.3.7
+        - 1.3.8
+        - 1.3.11
+        - 2.0.1
+        - 2.0.2
+        - 2.0.4
+        - 2.0.6
+        - 2.0.8
+        - 2.1.1
+        - 2.1.2
+        - 2.1.3
+        - 2.1.4
+        - 2.1.6
+        - 2.1.7
+        - 2.1.8
+        - 2.1.9
+        compatible:
+        - 2.1.7
+        - 2.1.8
+        - 2.1.9
+        verified: 2.1.9
+      dependencies:
+      - name: com.unity.modules.vr
+        version: 1.0.0
+      - name: com.unity.modules.xr
+        version: 1.0.0
+      resolvedDependencies:
+      - name: com.unity.modules.vr
+        version: 1.0.0
+      - name: com.unity.modules.jsonserialize
+        version: 1.0.0
+      - name: com.unity.modules.physics
+        version: 1.0.0
+      - name: com.unity.modules.xr
+        version: 1.0.0
+      - name: com.unity.modules.subsystems
+        version: 1.0.0
+      keywords:
+      - TPD
+      - Tracked Pose Driver
+      - XR
+      - Input
+      - Helpers
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637434003470000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: https://github.cds.internal.unity3d.com/unity/com.unity.xr.legacyinputhelpers.git
+        revision: b2024928b8140a10ad43aeb5824d2f08bb8796bc
+        path: 
     - packageId: com.unity.ext.nunit@1.0.6
       testable: 0
       isDirectDependency: 0
@@ -2722,8 +3071,83 @@ m_PackageAssets:
         url: https://github.cds.internal.unity3d.com/unity/com.unity.ext.nunit.git
         revision: 29ea4d6504a5f58fb3a6934db839aa80ae6d9d88
         path: 
+    - packageId: com.unity.subsystemregistration@1.0.6
+      testable: 0
+      isDirectDependency: 0
+      version: 1.0.6
+      source: 1
+      resolvedPath: D:\Users\Joao\Desktop\Object-Selection-in-DeskVR\Object Selection
+        DeskVR\Library\PackageCache\com.unity.subsystemregistration@1.0.6
+      assetPath: Packages/com.unity.subsystemregistration
+      name: com.unity.subsystemregistration
+      displayName: Subsystem Registration
+      author:
+        name: 
+        email: 
+        url: 
+      category: 
+      type: 
+      description: Provides internal registration mechanism for standalone subsystems. 
+        It allows a standalone subsystem to inform the Subsystem Manager of its existence.
+      status: 4
+      errors: []
+      versions:
+        all:
+        - 1.0.0-preview.4
+        - 1.0.4
+        - 1.0.5
+        - 1.0.6
+        - 1.1.0
+        - 1.1.1
+        compatible:
+        - 1.0.6
+        - 1.1.0
+        - 1.1.1
+        verified: 1.1.1
+      dependencies: []
+      resolvedDependencies: []
+      keywords:
+      - subsystem
+      - registration
+      - internal
+      registry:
+        id: main
+        name: 
+        url: https://packages.unity.com
+        scopes: []
+        isDefault: 1
+        capabilities: 7
+      hasRegistry: 1
+      hideInEditor: 1
+      entitlements:
+        isAllowed: 1
+      isAssetStorePackage: 0
+      datePublishedTicks: 637056434700000000
+      documentationUrl: 
+      hasRepository: 1
+      repository:
+        type: git
+        url: git@github.cds.internal.unity3d.com:unity/com.unity.subsystemregistration.git
+        revision: 0b4157c6c0a160c51e74ead305aee77e6f29527d
+        path: 
   m_LocalPackages:
-    m_LocalFileStatus: []
+    m_LocalFileStatus:
+    - m_FilePath: D:\Users\Joao\Desktop\Object-Selection-in-DeskVR\Object Selection
+        DeskVR\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz/package.json
+      m_PathExists: 0
+      m_ContentTrackingEnabled: 1
+      m_ModificationDate:
+        serializedVersion: 2
+        ticks: 0
+      m_Hash: 0
+    - m_FilePath: D:\Users\Joao\Desktop\Object-Selection-in-DeskVR\Object Selection
+        DeskVR\Assets\SteamVR\OpenVRUnityXRPackage\Editor\com.valvesoftware.unity.openvr-1.1.4.tgz
+      m_PathExists: 1
+      m_ContentTrackingEnabled: 1
+      m_ModificationDate:
+        serializedVersion: 2
+        ticks: 637497179250000000
+      m_Hash: 2919789393
 m_ProjectPath: D:/Users/Joao/Desktop/Object-Selection-in-DeskVR/Object Selection
   DeskVR/Packages
 m_EditorVersion: 2020.3.1f1 (77a89f25062f)

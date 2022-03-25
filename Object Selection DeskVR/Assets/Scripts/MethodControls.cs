@@ -7,8 +7,7 @@ public class MethodControls : MonoBehaviour
     public bool isFadeOutActive = false;
     [SerializeField]
     MonoBehaviour[] methods;
-
-    int activeMethod = 0;
+    
     
     void Update()
     {
@@ -22,33 +21,7 @@ public class MethodControls : MonoBehaviour
             ResetObjects();
         }
 
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            methods[activeMethod].enabled = false;
-            methods[0].enabled = true;
-            activeMethod = 0;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha2))
-        {
-            methods[activeMethod].enabled = false;
-            methods[1].enabled = true;
-            activeMethod = 1;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Alpha3))
-        {
-            methods[activeMethod].enabled = false;
-            methods[2].enabled = true;
-            activeMethod = 0;
-        }
-        /*
-        if (Input.GetKeyDown(KeyCode.Alpha1))
-        {
-            methods[activeMethod].enabled = false;
-            methods[0].enabled = true;
-            activeMethod = 0;
-        }*/
+        
     }
 
     void ResetObjects()
@@ -64,7 +37,6 @@ public class MethodControls : MonoBehaviour
         Outline[] childrenOutlines = mockup.GetComponentsInChildren<Outline>();
         foreach (Outline o in childrenOutlines)
         {
-            Debug.Log(o.transform.gameObject.name);
             Destroy(o);
         }
     }

@@ -8,13 +8,13 @@ public class CheckObject : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         GameObject go = other.gameObject;
-        GameObject parent = go.transform.parent.gameObject;
+        GameObject parent = go.transform.parent.gameObject;        
 
         if (go.tag == "Selectable")
         {
             if(go.GetComponent<Outline>() == null)
                 go.AddComponent<Outline>();
-
+            
             namesOfObj.Add(go.name);
         }
         else if(parent.tag == "Selectable")
@@ -24,6 +24,7 @@ public class CheckObject : MonoBehaviour
 
             if(!namesOfObj.Contains(parent.name))
                 namesOfObj.Add(parent.name);
+            
         }
         
     }
