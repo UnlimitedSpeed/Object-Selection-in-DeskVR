@@ -39,15 +39,15 @@ public class CylinderSelectionMethod : MonoBehaviour
 
     void Selection()
     {
-
-        if (Input.GetKeyDown(KeyCode.Mouse0) || false)
+        //The process begins when the user presses the Left Mouse Button
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
             cylinderParent = new GameObject("cylinderParent");
             cylinderParent.transform.rotation = transform.rotation;
             cylinderParent.transform.localPosition = new Vector3(
-                                    transform.position.x + transform.forward.x/2,
-                                    transform.position.y + transform.forward.y/2 - 0.5f,
-                                    transform.position.z + transform.forward.z/2);
+                                    transform.position.x + transform.forward.x / 2,
+                                    transform.position.y + transform.forward.y / 2 - 0.5f,
+                                    transform.position.z + transform.forward.z / 2);
 
             cylinderClone = Instantiate(cylinder, transform.position, Quaternion.Euler(45f, 45f, 45f));
             cylinderClone.transform.SetParent(cylinderParent.transform);
@@ -58,7 +58,8 @@ public class CylinderSelectionMethod : MonoBehaviour
             yRotation = cylinderParent.transform.eulerAngles.y;
         }
 
-        if (Input.GetKey(KeyCode.Mouse0) || false)
+        //The user can move ray while holding the button down
+        if (Input.GetKey(KeyCode.Mouse0))
         {
             yRotation += Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
             xRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
@@ -66,8 +67,8 @@ public class CylinderSelectionMethod : MonoBehaviour
             cylinderParent.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
         }
 
-
-        if (Input.GetKeyUp(KeyCode.Mouse0) || false)
+        //Selection process ends when user lets go of the button
+        if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             CheckObject co = cylinderClone.GetComponent<CheckObject>();
             names = co.getNamesOfObj();
@@ -100,7 +101,7 @@ public class CylinderSelectionMethod : MonoBehaviour
                 if (names.Count == 1)
                 {
                     finalSelectedObject = distanceDictionary[distanceList[0]];
-                    finalSelectedObject.GetComponent<Outline>().OutlineColor = Color.red; 
+                    finalSelectedObject.GetComponent<Outline>().OutlineColor = Color.red;
                     Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
                     distanceList.Clear();
                     distanceDictionary.Clear();
@@ -133,7 +134,7 @@ public class CylinderSelectionMethod : MonoBehaviour
             index = newIndex;
         }
 
-        if (Input.GetKeyUp(KeyCode.Mouse0) || false)
+        if (Input.GetKeyUp(KeyCode.Mouse0))
         {
             finalSelectedObject = distanceDictionary[distanceList[index]];
             foreach (string s in names)

@@ -1659,6 +1659,7 @@ GameObject:
   - component: {fileID: 328465501}
   - component: {fileID: 328465504}
   - component: {fileID: 328465505}
+  - component: {fileID: 328465506}
   m_Layer: 0
   m_Name: VRCamera
   m_TagString: MainCamera
@@ -1756,7 +1757,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328465499}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c41606cd33ed554e93cde16cd75e1e3, type: 3}
   m_Name: 
@@ -1777,6 +1778,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isFadeOutActive: 0
   methods: []
+--- !u!114 &328465506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328465499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6b210077ee803428164d42043e21bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchSensitivity: 5
+  cylinder: {fileID: 1225754809453058988, guid: ff0a040df628bde4c92bc25e203a8a03, type: 3}
 --- !u!1 &333768498 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d45a5ab4202f43f09aefd0ff7a777aa, type: 3}
