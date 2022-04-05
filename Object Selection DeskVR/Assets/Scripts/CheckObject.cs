@@ -3,51 +3,77 @@ using UnityEngine;
 
 public class CheckObject : MonoBehaviour
 {
-    private List<string> namesOfObj = new List<string>();
+    List<string> namesOfObj = new List<string>();
 
-    private void OnTriggerEnter(Collider other)
+    void CheckSelectable(GameObject currentObject, bool isEnter)
     {
-        GameObject go = other.gameObject;
-        GameObject parent = go.transform.parent.gameObject;        
-
-        if (go.tag == "Selectable")
+        if(currentObject.tag == "Selectable")
         {
-            if(go.GetComponent<Outline>() == null)
-                go.AddComponent<Outline>();
-            
-            namesOfObj.Add(go.name);
+            if (isEnter && !namesOfObj.Contains(currentObject.name))
+            {
+                namesOfObj.Add(currentObject.name);
+                //add outline
+            }
+            else if (!isEnter && namesOfObj.Contains(currentObject.name))
+            {
+                namesOfObj.Remove(currentObject.name);
+                //remove outline
+            }
         }
-        else if(parent.tag == "Selectable")
+        else
         {
-            if (parent.GetComponent<Outline>() == null)
-                parent.AddComponent<Outline>();
+            GameObject parent = currentObject.transform.parent.gameObject;
 
-            if(!namesOfObj.Contains(parent.name))
-                namesOfObj.Add(parent.name);
-            
+            if (parent.tag != "Root")
+                CheckSelectable(parent, isEnter);
+            else
+                return;
         }
-        
     }
 
-    private void OnTriggerExit(Collider other)
+    void CheckGroup(GameObject currentObject, bool isEnter)
     {
-        GameObject go = other.gameObject;
-        GameObject parent = go.transform.parent.gameObject;
-
-        if (go.tag == "Selectable")
+        if(currentObject.tag == "Group")
         {
-            if (go.GetComponent<Outline>() != null)
-                Destroy(go.GetComponent<Outline>());
-
-            namesOfObj.Remove(go.name);
+            if (isEnter && !namesOfObj.Contains(currentObject.name))
+            {
+                namesOfObj.Add(currentObject.name);
+                //add outline
+            }
+            else if (!isEnter && namesOfObj.Contains(currentObject.name))
+            {
+                namesOfObj.Remove(currentObject.name);
+                //remove outline
+            }
         }
-        else if(parent.tag == "Selectable")
-        {
-            if (parent.GetComponent<Outline>() != null)
-                Destroy(parent.GetComponent<Outline>());
 
-            if (namesOfObj.Contains(parent.name))
-                namesOfObj.Remove(parent.name);
+        GameObject parent = currentObject.transform.parent.gameObject;
+        if(parent.tag != "Root")
+        {
+            CheckGroup(parent, isEnter);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        CheckSelectable(other.gameObject, true);
+
+        CheckGroup(other.gameObject, true);
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        CheckSelectable(other.gameObject, false);
+
+        CheckGroup(other.gameObject, false);
+    }
+
+    private void Update()
+    {
+        if(Input.GetKeyDown(KeyCode.A))
+        {
+            foreach (string name in namesOfObj)
+                Debug.Log(name);
         }
     }
 
