@@ -109,3 +109,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 66d476594e6de974ca18e14b9d1679e1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AddMaterial: {fileID: 0}
+  whiteOutline: {fileID: 2100000, guid: 1e11a7cf39250624aacf6d945de0eb5f, type: 2}

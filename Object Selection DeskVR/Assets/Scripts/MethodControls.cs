@@ -3,11 +3,8 @@ using UnityEngine;
 
 public class MethodControls : MonoBehaviour
 {
-    
     public bool isFadeOutActive = false;
-    [SerializeField]
-    MonoBehaviour[] methods;
-    
+    public AddMaterial AddMaterial;
     
     void Update()
     {
@@ -20,8 +17,6 @@ public class MethodControls : MonoBehaviour
         {
             ResetObjects();
         }
-
-        
     }
 
     void ResetObjects()
@@ -33,11 +28,7 @@ public class MethodControls : MonoBehaviour
         foreach (Renderer r in childrenRenderer)
         {
             r.material.color = Color.white;
-        }
-        Outline[] childrenOutlines = mockup.GetComponentsInChildren<Outline>();
-        foreach (Outline o in childrenOutlines)
-        {
-            Destroy(o);
+            AddMaterial.AddMat(r.gameObject, 0);
         }
     }
 

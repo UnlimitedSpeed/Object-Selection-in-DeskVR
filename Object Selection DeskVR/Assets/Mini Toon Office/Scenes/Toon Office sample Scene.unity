@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 0
   m_SubtractiveShadowColor: {r: 0.42, g: 0.478, b: 0.627, a: 1}
-  m_SkyboxMaterial: {fileID: 10304, guid: 0000000000000000f000000000000000, type: 0}
+  m_SkyboxMaterial: {fileID: 0}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.17901844, g: 0.22415785, b: 0.30597407, a: 1}
+  m_IndirectSpecularColor: {r: 0.1280942, g: 0.15871572, b: 0.21006799, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -97,8 +97,8 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
-  m_LightingSettings: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 6304ac96429f70d458eb5050e4d861ce, type: 2}
+  m_LightingSettings: {fileID: 4890085278179872738, guid: 9e23273677afff64f8c6afd7da7f8848, type: 2}
 --- !u!196 &4
 NavMeshSettings:
   serializedVersion: 2
@@ -182,6 +182,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_small (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78990769bf46e404d91c9a9a34d5af26, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78990769bf46e404d91c9a9a34d5af26, type: 3}
 --- !u!4 &149827 stripped
@@ -199,6 +203,10 @@ PrefabInstance:
     - target: {fileID: 7162311903120173922, guid: f13b72967b20549d5aff589765bc47c2, type: 3}
       propertyPath: m_Name
       value: toon_office_pilot_red1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7162311903120173922, guid: f13b72967b20549d5aff589765bc47c2, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7507065270716330456, guid: f13b72967b20549d5aff589765bc47c2, type: 3}
       propertyPath: m_RootOrder
@@ -314,6 +322,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (20)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &18711115 stripped
@@ -379,6 +391,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wall (13)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
@@ -446,6 +462,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low_2x2 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
 --- !u!4 &57215598 stripped
@@ -512,6 +532,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &68736541 stripped
@@ -577,6 +601,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wall (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
@@ -703,6 +731,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low_2x2 (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
 --- !u!4 &126144821 stripped
@@ -777,6 +809,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low_2x2 (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
 --- !u!4 &141514375 stripped
@@ -791,25 +827,37 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 893053121}
     m_Modifications:
+    - target: {fileID: 1012503401505724265, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032813591850593350, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4782563643712683259, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
       propertyPath: m_Name
       value: toon_office_notepad2
       objectReference: {fileID: 0}
+    - target: {fileID: 4782563643712683259, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5266050364502795841, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 5266050364502795841, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.7770002
+      value: -0.22299886
       objectReference: {fileID: 0}
     - target: {fileID: 5266050364502795841, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.95280004
+      value: 0.17580003
       objectReference: {fileID: 0}
     - target: {fileID: 5266050364502795841, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.042001
+      value: 0.020002842
       objectReference: {fileID: 0}
     - target: {fileID: 5266050364502795841, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
       propertyPath: m_LocalRotation.w
@@ -905,6 +953,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (18)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &184117532 stripped
@@ -971,6 +1023,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
 --- !u!4 &184757220 stripped
@@ -988,6 +1044,10 @@ PrefabInstance:
     - target: {fileID: 4617143140117712472, guid: 3a8cf12175ae6400dab162dff4927dc4, type: 3}
       propertyPath: m_Name
       value: toon_office_pilot_blue1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4617143140117712472, guid: 3a8cf12175ae6400dab162dff4927dc4, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5429286806504428770, guid: 3a8cf12175ae6400dab162dff4927dc4, type: 3}
       propertyPath: m_RootOrder
@@ -1032,6 +1092,14 @@ PrefabInstance:
     - target: {fileID: 5429286806504428770, guid: 3a8cf12175ae6400dab162dff4927dc4, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562764218183364493, guid: 3a8cf12175ae6400dab162dff4927dc4, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6562764218183364493, guid: 3a8cf12175ae6400dab162dff4927dc4, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3a8cf12175ae6400dab162dff4927dc4, type: 3}
@@ -1085,13 +1153,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950804951}
     m_Modifications:
+    - target: {fileID: 4851598963047350687, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520831733718747273, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_Name
       value: toon_office_bookcover8
       objectReference: {fileID: 0}
+    - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_RootOrder
-      value: 23
+      value: 22
       objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1180,6 +1260,52 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 5401299796721510346, guid: 65930675a89714e10aca9ca3a3d67258, type: 3}
+--- !u!1 &232470417
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 232470419}
+  - component: {fileID: 232470418}
+  m_Layer: 0
+  m_Name: AddMaterial
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &232470418
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232470417}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bea94c0cc34909468225e1d16fdf4d8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  OutlineMaterials:
+  - {fileID: 2100000, guid: facc0b95810ff5d4497ad7c7c8a23350, type: 2}
+  - {fileID: 2100000, guid: 4d1bad955089d284ca08aada98c773a6, type: 2}
+--- !u!4 &232470419
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 232470417}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &241189490
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1187,13 +1313,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950804951}
     m_Modifications:
+    - target: {fileID: 4851598963047350687, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520831733718747273, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_Name
       value: toon_office_bookcover3
       objectReference: {fileID: 0}
+    - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_RootOrder
-      value: 16
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1339,6 +1477,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wallconnect (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2b40935a50200426eb90f99e6acd97ba, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b40935a50200426eb90f99e6acd97ba, type: 3}
 --- !u!4 &281264552 stripped
@@ -1404,6 +1546,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: bacbff6e3b89c4d0d9ba0f4f915718a6, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_stairs (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bacbff6e3b89c4d0d9ba0f4f915718a6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bacbff6e3b89c4d0d9ba0f4f915718a6, type: 3}
@@ -1474,6 +1620,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wall (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
@@ -1576,6 +1726,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
 --- !u!4 &298538588 stripped
@@ -1590,21 +1744,29 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 893053121}
     m_Modifications:
+    - target: {fileID: 4936383833826048016, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936383833826048016, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6109874162769150847, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6109874162769150847, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.045283
+      value: 0.045284033
       objectReference: {fileID: 0}
     - target: {fileID: 6109874162769150847, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.487
+      value: -0.29000002
       objectReference: {fileID: 0}
     - target: {fileID: 6109874162769150847, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.007663
+      value: -0.0143351555
       objectReference: {fileID: 0}
     - target: {fileID: 6109874162769150847, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
       propertyPath: m_LocalRotation.w
@@ -1638,6 +1800,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_desk2
       objectReference: {fileID: 0}
+    - target: {fileID: 6881907605795576261, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
 --- !u!4 &298907204 stripped
@@ -1660,6 +1826,7 @@ GameObject:
   - component: {fileID: 328465504}
   - component: {fileID: 328465505}
   - component: {fileID: 328465506}
+  - component: {fileID: 328465508}
   m_Layer: 0
   m_Name: VRCamera
   m_TagString: MainCamera
@@ -1674,7 +1841,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328465499}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
@@ -1743,8 +1910,8 @@ Camera:
   m_TargetTexture: {fileID: 0}
   m_TargetDisplay: 0
   m_TargetEye: 3
-  m_HDR: 1
-  m_AllowMSAA: 1
+  m_HDR: 0
+  m_AllowMSAA: 0
   m_AllowDynamicResolution: 0
   m_ForceIntoRT: 0
   m_OcclusionCulling: 1
@@ -1757,12 +1924,13 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 328465499}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 2c41606cd33ed554e93cde16cd75e1e3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 50
+  AddMaterial: {fileID: 232470418}
   cylinder: {fileID: 1225754809453058988, guid: ff0a040df628bde4c92bc25e203a8a03, type: 3}
 --- !u!114 &328465505
 MonoBehaviour:
@@ -1777,8 +1945,22 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFadeOutActive: 0
-  methods: []
+  AddMaterial: {fileID: 232470418}
 --- !u!114 &328465506
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 328465499}
+  m_Enabled: 0
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4d6b210077ee803428164d42043e21bb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  touchSensitivity: 5
+  cylinder: {fileID: 1225754809453058988, guid: ff0a040df628bde4c92bc25e203a8a03, type: 3}
+--- !u!114 &328465508
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -1787,11 +1969,111 @@ MonoBehaviour:
   m_GameObject: {fileID: 328465499}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4d6b210077ee803428164d42043e21bb, type: 3}
+  m_Script: {fileID: 11500000, guid: 23c1ce4fb46143f46bc5cb5224c934f6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchSensitivity: 5
-  cylinder: {fileID: 1225754809453058988, guid: ff0a040df628bde4c92bc25e203a8a03, type: 3}
+  m_Version: 7
+  m_ObsoleteRenderingPath: 0
+  m_ObsoleteFrameSettings:
+    overrides: 0
+    enableShadow: 0
+    enableContactShadows: 0
+    enableShadowMask: 0
+    enableSSR: 0
+    enableSSAO: 0
+    enableSubsurfaceScattering: 0
+    enableTransmission: 0
+    enableAtmosphericScattering: 0
+    enableVolumetrics: 0
+    enableReprojectionForVolumetrics: 0
+    enableLightLayers: 0
+    enableExposureControl: 1
+    diffuseGlobalDimmer: 0
+    specularGlobalDimmer: 0
+    shaderLitMode: 0
+    enableDepthPrepassWithDeferredRendering: 0
+    enableTransparentPrepass: 0
+    enableMotionVectors: 0
+    enableObjectMotionVectors: 0
+    enableDecals: 0
+    enableRoughRefraction: 0
+    enableTransparentPostpass: 0
+    enableDistortion: 0
+    enablePostprocess: 0
+    enableOpaqueObjects: 0
+    enableTransparentObjects: 0
+    enableRealtimePlanarReflection: 0
+    enableMSAA: 0
+    enableAsyncCompute: 0
+    runLightListAsync: 0
+    runSSRAsync: 0
+    runSSAOAsync: 0
+    runContactShadowsAsync: 0
+    runVolumeVoxelizationAsync: 0
+    lightLoopSettings:
+      overrides: 0
+      enableDeferredTileAndCluster: 0
+      enableComputeLightEvaluation: 0
+      enableComputeLightVariants: 0
+      enableComputeMaterialVariants: 0
+      enableFptlForForwardOpaque: 0
+      enableBigTilePrepass: 0
+      isFptlEnabled: 0
+  clearColorMode: 0
+  backgroundColorHDR: {r: 0.025, g: 0.07, b: 0.19, a: 0}
+  clearDepth: 1
+  volumeLayerMask:
+    serializedVersion: 2
+    m_Bits: 1
+  volumeAnchorOverride: {fileID: 0}
+  antialiasing: 0
+  SMAAQuality: 2
+  dithering: 0
+  stopNaNs: 0
+  taaSharpenStrength: 0.5
+  TAAQuality: 1
+  taaHistorySharpening: 0.35
+  taaAntiFlicker: 0.5
+  taaMotionVectorRejection: 0
+  taaAntiHistoryRinging: 0
+  physicalParameters:
+    m_Iso: 200
+    m_ShutterSpeed: 0.005
+    m_Aperture: 16
+    m_BladeCount: 5
+    m_Curvature: {x: 2, y: 11}
+    m_BarrelClipping: 0.25
+    m_Anamorphism: 0
+  flipYMode: 0
+  xrRendering: 1
+  fullscreenPassthrough: 0
+  allowDynamicResolution: 0
+  customRenderingSettings: 0
+  invertFaceCulling: 0
+  probeLayerMask:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  hasPersistentHistory: 0
+  exposureTarget: {fileID: 0}
+  m_RenderingPathCustomFrameSettings:
+    bitDatas:
+      data1: 72198262773251917
+      data2: 13763000468760363032
+    lodBias: 1
+    lodBiasMode: 0
+    lodBiasQualityLevel: 0
+    maximumLODLevel: 0
+    maximumLODLevelMode: 0
+    maximumLODLevelQualityLevel: 0
+    sssQualityMode: 0
+    sssQualityLevel: 0
+    sssCustomSampleBudget: 20
+    materialQuality: 0
+  renderingPathCustomFrameSettingsOverrideMask:
+    mask:
+      data1: 0
+      data2: 0
+  defaultFrameSettings: 0
 --- !u!1 &333768498 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 9d45a5ab4202f43f09aefd0ff7a777aa, type: 3}
@@ -1870,6 +2152,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (29)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &365429301 stripped
@@ -1906,6 +2192,10 @@ PrefabInstance:
     - target: {fileID: 8262744240771097309, guid: c6a74e87f5c7347a09e0ce6ff9643e10, type: 3}
       propertyPath: m_Name
       value: toon_office_shelf1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262744240771097309, guid: c6a74e87f5c7347a09e0ce6ff9643e10, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8782294939265448039, guid: c6a74e87f5c7347a09e0ce6ff9643e10, type: 3}
       propertyPath: m_RootOrder
@@ -2055,6 +2345,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
 --- !u!4 &414721475 stripped
@@ -2140,6 +2434,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (27)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &423645392 stripped
@@ -2166,6 +2464,51 @@ MeshCollider:
   m_Convex: 1
   m_CookingOptions: 30
   m_Mesh: {fileID: 7653945157421287560, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+--- !u!1 &437566686
+GameObject:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 437566688}
+  - component: {fileID: 437566687}
+  m_Layer: 0
+  m_Name: StaticLightingSky
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &437566687
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437566686}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 441482e8936e35048a1dffac814e3ef8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Profile: {fileID: 11400000, guid: e844081579956fb47bd943b3cae1de90, type: 2}
+  m_StaticLightingSkyUniqueID: 1
+--- !u!4 &437566688
+Transform:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 437566686}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &489964253
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2224,6 +2567,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_ground_low (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
@@ -2350,6 +2697,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_high (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
 --- !u!4 &529549730 stripped
@@ -2415,6 +2766,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_ground_high (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
@@ -2500,6 +2855,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_ground_low (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
@@ -2646,7 +3005,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 617606114}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -3.88, y: 1.165, z: 4.24}
+  m_LocalPosition: {x: -3.88, y: 1.165, z: 4.06}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 966519325}
@@ -2828,6 +3187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon__office_tile_ground_low_4x4 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
 --- !u!4 &668414416 stripped
@@ -2842,9 +3205,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950804951}
     m_Modifications:
+    - target: {fileID: 4851598963047350687, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520831733718747273, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_Name
       value: toon_office_book
+      objectReference: {fileID: 0}
+    - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_RootOrder
@@ -2897,6 +3272,38 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
   m_PrefabInstance: {fileID: 668825512}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &669094872
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 669094873}
+  m_Layer: 0
+  m_Name: Group2
+  m_TagString: Group
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 4294967295
+  m_IsActive: 1
+--- !u!4 &669094873
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 669094872}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.35, y: 0.5, z: 3.28}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1350297312}
+  - {fileID: 1689990509}
+  m_Father: {fileID: 1950804951}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &676167183
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2904,13 +3311,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950804951}
     m_Modifications:
+    - target: {fileID: 4851598963047350687, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520831733718747273, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_Name
       value: toon_office_bookcover9
       objectReference: {fileID: 0}
+    - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_RootOrder
-      value: 24
+      value: 23
       objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_LocalPosition.x
@@ -2987,7 +3406,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2671504821341944913, guid: ecf1977f578304690ac5aa8eec474446, type: 3}
       propertyPath: m_RootOrder
-      value: 28
+      value: 27
       objectReference: {fileID: 0}
     - target: {fileID: 2671504821341944913, guid: ecf1977f578304690ac5aa8eec474446, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3033,6 +3452,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_trashbin2
       objectReference: {fileID: 0}
+    - target: {fileID: 3339638852232161003, guid: ecf1977f578304690ac5aa8eec474446, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecf1977f578304690ac5aa8eec474446, type: 3}
 --- !u!4 &699868439 stripped
@@ -3050,6 +3473,7 @@ GameObject:
   m_Component:
   - component: {fileID: 705507995}
   - component: {fileID: 705507994}
+  - component: {fileID: 705507996}
   m_Layer: 0
   m_Name: Directional Light
   m_TagString: Untagged
@@ -3069,7 +3493,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 0.95686275, b: 0.8392157, a: 1}
-  m_Intensity: 0.8
+  m_Intensity: 12
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.802082
@@ -3109,11 +3533,11 @@ Light:
     m_Bits: 4294967295
   m_RenderingLayerMask: 1
   m_Lightmapping: 1
-  m_LightShadowCasterMode: 0
-  m_AreaSize: {x: 1, y: 1}
+  m_LightShadowCasterMode: 2
+  m_AreaSize: {x: 0.5, y: 0.5}
   m_BounceIntensity: 1
   m_ColorTemperature: 6570
-  m_UseColorTemperature: 0
+  m_UseColorTemperature: 1
   m_BoundingSphereOverride: {x: 0, y: 0, z: 0, w: 0}
   m_UseBoundingSphereOverride: 0
   m_UseViewFrustumForShadowCasterCull: 1
@@ -3133,6 +3557,128 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 54.7, y: -4.1, z: 0}
+--- !u!114 &705507996
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 705507993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7a68c43fe1f2a47cfa234b5eeaa98012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Version: 11
+  m_ObsoleteShadowResolutionTier: 1
+  m_ObsoleteUseShadowQualitySettings: 0
+  m_ObsoleteCustomShadowResolution: 512
+  m_ObsoleteContactShadows: 0
+  m_PointlightHDType: 0
+  m_SpotLightShape: 0
+  m_AreaLightShape: 0
+  m_Intensity: 12
+  m_EnableSpotReflector: 1
+  m_LuxAtDistance: 1
+  m_InnerSpotPercent: 0
+  m_SpotIESCutoffPercent: 100
+  m_LightDimmer: 1
+  m_VolumetricDimmer: 1
+  m_LightUnit: 2
+  m_FadeDistance: 10000
+  m_VolumetricFadeDistance: 10000
+  m_AffectDiffuse: 1
+  m_AffectSpecular: 1
+  m_NonLightmappedOnly: 0
+  m_ShapeWidth: 0.5
+  m_ShapeHeight: 0.5
+  m_AspectRatio: 1
+  m_ShapeRadius: 0.025
+  m_SoftnessScale: 1
+  m_UseCustomSpotLightShadowCone: 0
+  m_CustomSpotLightShadowCone: 30
+  m_MaxSmoothness: 0.99
+  m_ApplyRangeAttenuation: 1
+  m_DisplayAreaLightEmissiveMesh: 0
+  m_AreaLightCookie: {fileID: 0}
+  m_IESPoint: {fileID: 0}
+  m_IESSpot: {fileID: 0}
+  m_IncludeForRayTracing: 1
+  m_AreaLightShadowCone: 120
+  m_UseScreenSpaceShadows: 0
+  m_InteractsWithSky: 1
+  m_AngularDiameter: 0.5
+  m_FlareSize: 2
+  m_FlareTint: {r: 1, g: 1, b: 1, a: 1}
+  m_FlareFalloff: 4
+  m_SurfaceTexture: {fileID: 0}
+  m_SurfaceTint: {r: 1, g: 1, b: 1, a: 1}
+  m_Distance: 1.5e+11
+  m_UseRayTracedShadows: 0
+  m_NumRayTracingSamples: 4
+  m_FilterTracedShadow: 1
+  m_FilterSizeTraced: 16
+  m_SunLightConeAngle: 0.5
+  m_LightShadowRadius: 0.5
+  m_SemiTransparentShadow: 0
+  m_ColorShadow: 1
+  m_DistanceBasedFiltering: 0
+  m_EvsmExponent: 15
+  m_EvsmLightLeakBias: 0
+  m_EvsmVarianceBias: 0.00001
+  m_EvsmBlurPasses: 0
+  m_LightlayersMask: 1
+  m_LinkShadowLayers: 1
+  m_ShadowNearPlane: 0.1
+  m_BlockerSampleCount: 24
+  m_FilterSampleCount: 16
+  m_MinFilterSize: 0.1
+  m_KernelSize: 5
+  m_LightAngle: 1
+  m_MaxDepthBias: 0.001
+  m_ShadowResolution:
+    m_Override: 512
+    m_UseOverride: 1
+    m_Level: 0
+  m_ShadowDimmer: 1
+  m_VolumetricShadowDimmer: 1
+  m_ShadowFadeDistance: 10000
+  m_UseContactShadow:
+    m_Override: 0
+    m_UseOverride: 1
+    m_Level: 0
+  m_RayTracedContactShadow: 0
+  m_ShadowTint: {r: 0, g: 0, b: 0, a: 1}
+  m_PenumbraTint: 0
+  m_NormalBias: 0.75
+  m_SlopeBias: 0.5
+  m_ShadowUpdateMode: 0
+  m_AlwaysDrawDynamicShadows: 0
+  m_UpdateShadowOnLightMovement: 0
+  m_CachedShadowTranslationThreshold: 0.01
+  m_CachedShadowAngularThreshold: 0.5
+  m_BarnDoorAngle: 90
+  m_BarnDoorLength: 0.05
+  m_preserveCachedShadow: 0
+  m_ShadowCascadeRatios:
+  - 0.05
+  - 0.2
+  - 0.3
+  m_ShadowCascadeBorders:
+  - 0.2
+  - 0.2
+  - 0.2
+  - 0.2
+  m_ShadowAlgorithm: 0
+  m_ShadowVariant: 0
+  m_ShadowPrecision: 0
+  useOldInspector: 0
+  useVolumetric: 1
+  featuresFoldout: 1
+  showAdditionalSettings: 0
+  m_AreaLightEmissiveMeshShadowCastingMode: 0
+  m_AreaLightEmissiveMeshMotionVectorGenerationMode: 0
+  m_AreaLightEmissiveMeshLayer: -1
 --- !u!1001 &709444248
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3191,6 +3737,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 40a09c842bcab43448ab73a7a99c47b1, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wallcorner (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40a09c842bcab43448ab73a7a99c47b1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40a09c842bcab43448ab73a7a99c47b1, type: 3}
@@ -3276,6 +3826,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_ground_low (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
@@ -3381,6 +3935,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon__office_tile_ground_low_4x4 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
 --- !u!4 &750771929 stripped
@@ -3447,6 +4005,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (26)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &763402074 stripped
@@ -3483,6 +4045,10 @@ PrefabInstance:
     - target: {fileID: 2799242785918641492, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
       propertyPath: m_Name
       value: toon_office_cabinet1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2799242785918641492, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3284031049561096174, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
       propertyPath: m_RootOrder
@@ -3621,6 +4187,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low_2x2
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
 --- !u!4 &781951031 stripped
@@ -3635,13 +4205,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950804951}
     m_Modifications:
+    - target: {fileID: 934387606514279261, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2284339069795499469, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6070418075575626771, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
       propertyPath: m_Name
       value: toon_office_vase2
       objectReference: {fileID: 0}
+    - target: {fileID: 6070418075575626771, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6878586247019493033, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
       propertyPath: m_RootOrder
-      value: 14
+      value: 13
       objectReference: {fileID: 0}
     - target: {fileID: 6878586247019493033, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
       propertyPath: m_LocalPosition.x
@@ -3704,7 +4286,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &801575156
 Transform:
@@ -3861,6 +4443,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_trashbin
       objectReference: {fileID: 0}
+    - target: {fileID: 3339638852232161003, guid: ecf1977f578304690ac5aa8eec474446, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ecf1977f578304690ac5aa8eec474446, type: 3}
 --- !u!4 &809616898 stripped
@@ -3967,6 +4553,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_high (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
 --- !u!4 &823470096 stripped
@@ -4002,13 +4592,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950804951}
     m_Modifications:
+    - target: {fileID: 4851598963047350687, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520831733718747273, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_Name
       value: toon_office_bookcover2
       objectReference: {fileID: 0}
+    - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_RootOrder
-      value: 15
+      value: 14
       objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4116,6 +4718,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wallcolumn (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 95254ac0923c24d348f4993a0b5be633, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95254ac0923c24d348f4993a0b5be633, type: 3}
 --- !u!4 &835039266 stripped
@@ -4157,9 +4763,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_cabinet2
       objectReference: {fileID: 0}
+    - target: {fileID: 2799242785918641492, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3284031049561096174, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
       propertyPath: m_RootOrder
-      value: 13
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 3284031049561096174, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -4288,6 +4898,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b6be710e946b84c79bfa5da05149a9b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6be710e946b84c79bfa5da05149a9b8, type: 3}
 --- !u!1001 &869738805
@@ -4297,6 +4911,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950804951}
     m_Modifications:
+    - target: {fileID: 4936383833826048016, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4936383833826048016, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: fcdb7a99237c6417a9e5766d641a824c, type: 2}
+    - target: {fileID: 4936383833826048016, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
     - target: {fileID: 6109874162769150847, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
       propertyPath: m_RootOrder
       value: 1
@@ -4344,6 +4970,10 @@ PrefabInstance:
     - target: {fileID: 6881907605795576261, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
       propertyPath: m_Name
       value: toon_office_desk
+      objectReference: {fileID: 0}
+    - target: {fileID: 6881907605795576261, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4d0f11df00a954898acb314f59db9866, type: 3}
@@ -4430,6 +5060,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
 --- !u!4 &875734228 stripped
@@ -4448,10 +5082,10 @@ GameObject:
   - component: {fileID: 893053121}
   m_Layer: 0
   m_Name: Group1
-  m_TagString: Untagged
+  m_TagString: Group
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &893053121
 Transform:
@@ -4461,15 +5095,15 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 893053120}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 2, y: 0.777, z: 4.022}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
+  - {fileID: 1569712490}
   - {fileID: 2038063279}
   - {fileID: 298907204}
   - {fileID: 163689408}
-  - {fileID: 1569712490}
   m_Father: {fileID: 1950804951}
-  m_RootOrder: 27
+  m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &897400030 stripped
 GameObject:
@@ -4568,6 +5202,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wallcolumn (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 95254ac0923c24d348f4993a0b5be633, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95254ac0923c24d348f4993a0b5be633, type: 3}
 --- !u!4 &922043740 stripped
@@ -4634,6 +5272,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_door (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b6be710e946b84c79bfa5da05149a9b8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b6be710e946b84c79bfa5da05149a9b8, type: 3}
 --- !u!1001 &945443793
@@ -4694,6 +5336,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wall (12)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
@@ -4815,6 +5461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   mouseSensitivity: 50
+  AddMaterial: {fileID: 0}
   cylinder: {fileID: 1225754809453058988, guid: ff0a040df628bde4c92bc25e203a8a03, type: 3}
 --- !u!114 &963194232
 MonoBehaviour:
@@ -4829,10 +5476,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isFadeOutActive: 0
-  methods:
-  - {fileID: 963194231}
-  - {fileID: 963194229}
-  - {fileID: 963194233}
+  AddMaterial: {fileID: 0}
 --- !u!114 &963194233
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4937,6 +5581,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wallconnect (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 2b40935a50200426eb90f99e6acd97ba, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2b40935a50200426eb90f99e6acd97ba, type: 3}
 --- !u!4 &971860064 stripped
@@ -5003,6 +5651,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (14)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &975317032 stripped
@@ -5068,6 +5720,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
       propertyPath: m_Name
       value: toon__office_tile_ground_low_4x4 (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
@@ -5162,6 +5818,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low_2x2 (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
 --- !u!4 &997416637 stripped
@@ -5179,6 +5839,10 @@ PrefabInstance:
     - target: {fileID: 4907499685619757410, guid: d8e62113aeeee43d183ac5185ed7cb83, type: 3}
       propertyPath: m_Name
       value: toon_office_chair1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4907499685619757410, guid: d8e62113aeeee43d183ac5185ed7cb83, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5715384973331311576, guid: d8e62113aeeee43d183ac5185ed7cb83, type: 3}
       propertyPath: m_RootOrder
@@ -5309,6 +5973,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &1010052290 stripped
@@ -5412,6 +6080,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wall (28)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
@@ -5557,6 +6229,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_high (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
 --- !u!4 &1105303228 stripped
@@ -5598,9 +6274,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_cabinet5
       objectReference: {fileID: 0}
+    - target: {fileID: 2799242785918641492, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3284031049561096174, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
       propertyPath: m_RootOrder
-      value: 25
+      value: 24
       objectReference: {fileID: 0}
     - target: {fileID: 3284031049561096174, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5735,6 +6415,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low_2x2 (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
 --- !u!4 &1150557964 stripped
@@ -5800,6 +6484,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wall (25)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
@@ -5905,6 +6593,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low_2x2 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
 --- !u!4 &1162328665 stripped
@@ -5989,6 +6681,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wall (22)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
@@ -6094,6 +6790,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_high (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
 --- !u!4 &1226937442 stripped
@@ -6154,9 +6854,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_cabinet3
       objectReference: {fileID: 0}
+    - target: {fileID: 2799242785918641492, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3284031049561096174, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
       propertyPath: m_RootOrder
-      value: 20
+      value: 19
       objectReference: {fileID: 0}
     - target: {fileID: 3284031049561096174, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -6267,6 +6971,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wall (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
@@ -6407,6 +7115,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low (13)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
 --- !u!4 &1320606087 stripped
@@ -6472,6 +7184,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_ground_high (8)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
@@ -6566,6 +7282,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low_2x2 (8)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
 --- !u!4 &1350032760 stripped
@@ -6578,27 +7298,39 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1950804951}
+    m_TransformParent: {fileID: 669094873}
     m_Modifications:
+    - target: {fileID: 934387606514279261, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 2284339069795499469, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6070418075575626771, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
       propertyPath: m_Name
       value: toon_office_vase1
       objectReference: {fileID: 0}
+    - target: {fileID: 6070418075575626771, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 6878586247019493033, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
       propertyPath: m_RootOrder
-      value: 11
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6878586247019493033, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.516
+      value: 0.2500019
       objectReference: {fileID: 0}
     - target: {fileID: 6878586247019493033, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6878586247019493033, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.216382
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6878586247019493033, guid: 74da833b5bb7c425390b7e2f8e7dbbe8, type: 3}
       propertyPath: m_LocalRotation.w
@@ -6694,6 +7426,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_high (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
 --- !u!4 &1352616888 stripped
@@ -6779,6 +7515,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_high (9)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
 --- !u!4 &1367469761 stripped
@@ -6844,6 +7584,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_ground_low_2x2 (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
@@ -6929,6 +7673,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
       propertyPath: m_Name
       value: toon__office_tile_ground_low_4x4 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
@@ -7126,6 +7874,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon__office_tile_ground_low_4x4 (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
 --- !u!4 &1479589172 stripped
@@ -7191,6 +7943,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 78990769bf46e404d91c9a9a34d5af26, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_ground_small (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 78990769bf46e404d91c9a9a34d5af26, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 78990769bf46e404d91c9a9a34d5af26, type: 3}
@@ -7258,6 +8014,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wallcolumn (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 95254ac0923c24d348f4993a0b5be633, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95254ac0923c24d348f4993a0b5be633, type: 3}
 --- !u!4 &1487324921 stripped
@@ -7323,6 +8083,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_ground_low (15)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
@@ -7405,6 +8169,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_board1
       objectReference: {fileID: 0}
+    - target: {fileID: 8902904784820920504, guid: cd6fb14eee4254287b5f2cb8ecc8e5db, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cd6fb14eee4254287b5f2cb8ecc8e5db, type: 3}
 --- !u!4 &1503625356 stripped
@@ -7471,6 +8239,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wallcolumn (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 95254ac0923c24d348f4993a0b5be633, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 95254ac0923c24d348f4993a0b5be633, type: 3}
 --- !u!4 &1511921962 stripped
@@ -7523,9 +8295,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950804951}
     m_Modifications:
+    - target: {fileID: 1012503401505724265, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 1032813591850593350, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4782563643712683259, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
       propertyPath: m_Name
       value: toon_office_notepad1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4782563643712683259, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 5266050364502795841, guid: 0ead29c770bf744edb5d1bb35396fd9a, type: 3}
       propertyPath: m_RootOrder
@@ -7656,6 +8440,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &1565724453 stripped
@@ -7670,29 +8458,41 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 893053121}
     m_Modifications:
+    - target: {fileID: 4851598963047350687, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520831733718747273, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_Name
       value: toon_office_bookcover10
       objectReference: {fileID: 0}
+    - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.2150004
+      value: 0.21500134
       objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: 0.22299999
       objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.111001
+      value: 0.089003086
       objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_LocalRotation.w
-      value: 0.043842334
+      value: 0.043842312
       objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_LocalRotation.x
@@ -7784,6 +8584,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (24)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &1573154763 stripped
@@ -7869,6 +8673,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_stairs (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: bacbff6e3b89c4d0d9ba0f4f915718a6, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bacbff6e3b89c4d0d9ba0f4f915718a6, type: 3}
 --- !u!4 &1593161538 stripped
@@ -7953,6 +8761,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45f023caa61a4c70a5b476c42c8991d, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wall_door (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45f023caa61a4c70a5b476c42c8991d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45f023caa61a4c70a5b476c42c8991d, type: 3}
@@ -8089,6 +8901,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low_2x2 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
 --- !u!4 &1634506123 stripped
@@ -8155,6 +8971,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
 --- !u!4 &1637224186 stripped
@@ -8220,6 +9040,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wall (23)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
@@ -8306,6 +9130,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_high (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
 --- !u!4 &1651977109 stripped
@@ -8356,27 +9184,39 @@ PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 1950804951}
+    m_TransformParent: {fileID: 669094873}
     m_Modifications:
+    - target: {fileID: 4559150657011629980, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7778219903848572427, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8597855651660641000, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
       propertyPath: m_Name
       value: toon_office_water_drinker (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 8597855651660641000, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8942574934595561554, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
       propertyPath: m_RootOrder
-      value: 12
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8942574934595561554, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 6.1163406
+      value: -0.2499981
       objectReference: {fileID: 0}
     - target: {fileID: 8942574934595561554, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.5
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8942574934595561554, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 3.2832785
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8942574934595561554, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
       propertyPath: m_LocalRotation.w
@@ -8384,15 +9224,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8942574934595561554, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8942574934595561554, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8942574934595561554, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8942574934595561554, guid: 63592b06c95d24828ac0c0891a5cb176, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -8510,6 +9350,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_slope (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 9d45a5ab4202f43f09aefd0ff7a777aa, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 9d45a5ab4202f43f09aefd0ff7a777aa, type: 3}
 --- !u!4 &1699131052 stripped
@@ -8547,9 +9391,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_cabinet4
       objectReference: {fileID: 0}
+    - target: {fileID: 2799242785918641492, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 3284031049561096174, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
       propertyPath: m_RootOrder
-      value: 22
+      value: 21
       objectReference: {fileID: 0}
     - target: {fileID: 3284031049561096174, guid: 436d6c6ad13444243927518c3405f6ea, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8628,9 +9476,13 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_chair2
       objectReference: {fileID: 0}
+    - target: {fileID: 4907499685619757410, guid: d8e62113aeeee43d183ac5185ed7cb83, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5715384973331311576, guid: d8e62113aeeee43d183ac5185ed7cb83, type: 3}
       propertyPath: m_RootOrder
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 5715384973331311576, guid: d8e62113aeeee43d183ac5185ed7cb83, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8671,6 +9523,14 @@ PrefabInstance:
     - target: {fileID: 5715384973331311576, guid: d8e62113aeeee43d183ac5185ed7cb83, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852803555852243127, guid: d8e62113aeeee43d183ac5185ed7cb83, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6852803555852243127, guid: d8e62113aeeee43d183ac5185ed7cb83, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: d8e62113aeeee43d183ac5185ed7cb83, type: 3}
@@ -8738,6 +9598,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low_2x2 (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
 --- !u!4 &1777577049 stripped
@@ -8771,13 +9635,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950804951}
     m_Modifications:
+    - target: {fileID: 4851598963047350687, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520831733718747273, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_Name
       value: toon_office_bookcover4
       objectReference: {fileID: 0}
+    - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_RootOrder
-      value: 17
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_LocalPosition.x
@@ -8885,6 +9761,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wallcorner (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 40a09c842bcab43448ab73a7a99c47b1, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 40a09c842bcab43448ab73a7a99c47b1, type: 3}
 --- !u!4 &1815240145 stripped
@@ -8950,6 +9830,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
       propertyPath: m_Name
       value: toon__office_tile_ground_low_4x4 (7)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
@@ -9076,6 +9960,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_high (12)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
 --- !u!4 &1838930021 stripped
@@ -9094,10 +9982,10 @@ GameObject:
   - component: {fileID: 1849344296}
   m_Layer: 0
   m_Name: mockup
-  m_TagString: Untagged
+  m_TagString: Root
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1849344296
 Transform:
@@ -9122,13 +10010,33 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950804951}
     m_Modifications:
+    - target: {fileID: 4851598963047350687, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194150396392538368, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_Materials.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7194150396392538368, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520831733718747273, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_Name
       value: toon_office_bookcover5
       objectReference: {fileID: 0}
+    - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_RootOrder
-      value: 18
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9236,6 +10144,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
 --- !u!4 &1890921869 stripped
@@ -9301,6 +10213,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: f45f023caa61a4c70a5b476c42c8991d, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wall_door (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: f45f023caa61a4c70a5b476c42c8991d, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f45f023caa61a4c70a5b476c42c8991d, type: 3}
@@ -9386,6 +10302,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wall (17)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
@@ -9480,6 +10400,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_low_2x2 (11)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
 --- !u!4 &1916701857 stripped
@@ -9545,6 +10469,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_ground_low (9)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 959e3ae9e7e6b41338aa0f89fc764001, type: 3}
@@ -9631,6 +10559,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &1943259410 stripped
@@ -9697,6 +10629,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (21)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &1947199397 stripped
@@ -9718,7 +10654,7 @@ GameObject:
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
+  m_StaticEditorFlags: 4294967295
   m_IsActive: 1
 --- !u!4 &1950804951
 Transform:
@@ -9742,8 +10678,7 @@ Transform:
   - {fileID: 1552867042}
   - {fileID: 190884353}
   - {fileID: 6637553}
-  - {fileID: 1350297312}
-  - {fileID: 1689990509}
+  - {fileID: 669094873}
   - {fileID: 850930203}
   - {fileID: 797132410}
   - {fileID: 831375261}
@@ -9821,6 +10756,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wall (16)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
@@ -9907,6 +10846,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon__office_tile_ground_low_4x4 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b2a58bff693e940b0bd58bc12b2218be, type: 3}
 --- !u!4 &2000250878 stripped
@@ -9921,13 +10864,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950804951}
     m_Modifications:
+    - target: {fileID: 4851598963047350687, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520831733718747273, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_Name
       value: toon_office_bookcover6
       objectReference: {fileID: 0}
+    - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_RootOrder
-      value: 19
+      value: 18
       objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10054,6 +11009,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &2012477065 stripped
@@ -10139,6 +11098,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_high (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
 --- !u!4 &2029357766 stripped
@@ -10197,21 +11160,25 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_cup2
       objectReference: {fileID: 0}
+    - target: {fileID: 7425838284820148179, guid: 4ff5a917ee05d4e27a188b977e58d326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 7801976452085396841, guid: 4ff5a917ee05d4e27a188b977e58d326, type: 3}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 7801976452085396841, guid: 4ff5a917ee05d4e27a188b977e58d326, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 2.4780004
+      value: 0.47800136
       objectReference: {fileID: 0}
     - target: {fileID: 7801976452085396841, guid: 4ff5a917ee05d4e27a188b977e58d326, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.89829993
+      value: 0.12129992
       objectReference: {fileID: 0}
     - target: {fileID: 7801976452085396841, guid: 4ff5a917ee05d4e27a188b977e58d326, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 4.224001
+      value: 0.202003
       objectReference: {fileID: 0}
     - target: {fileID: 7801976452085396841, guid: 4ff5a917ee05d4e27a188b977e58d326, type: 3}
       propertyPath: m_LocalRotation.w
@@ -10307,6 +11274,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (15)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &2074310929 stripped
@@ -10372,6 +11343,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_wall (30)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
@@ -10458,6 +11433,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_ground_high (10)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7eb9eb6936d00480185ca21627ae4927, type: 3}
 --- !u!4 &2085539467 stripped
@@ -10531,6 +11510,10 @@ PrefabInstance:
     - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
       propertyPath: m_Name
       value: toon_office_tile_ground_low_2x2 (10)
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 76af168351ed34e2b91db02d4ef7bc11, type: 3}
@@ -10619,6 +11602,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: toon_office_tile_wall (19)
       objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 661d685e026c547f0a6c2f2d0c859fe7, type: 3}
 --- !u!4 &2103303057 stripped
@@ -10633,13 +11620,25 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1950804951}
     m_Modifications:
+    - target: {fileID: 4851598963047350687, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
+    - target: {fileID: 8520831733718747273, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_Name
       value: toon_office_bookcover7
       objectReference: {fileID: 0}
+    - target: {fileID: 8586645781547976933, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_RootOrder
-      value: 21
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 8962783884462150239, guid: 2ac7e6eb682174e7f8af567817914142, type: 3}
       propertyPath: m_LocalPosition.x
@@ -10717,6 +11716,10 @@ PrefabInstance:
     - target: {fileID: 7425838284820148179, guid: 4ff5a917ee05d4e27a188b977e58d326, type: 3}
       propertyPath: m_Name
       value: toon_office_cup1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7425838284820148179, guid: 4ff5a917ee05d4e27a188b977e58d326, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 7801976452085396841, guid: 4ff5a917ee05d4e27a188b977e58d326, type: 3}
       propertyPath: m_RootOrder

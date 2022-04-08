@@ -3,51 +3,84 @@ using UnityEngine;
 
 public class CheckObject : MonoBehaviour
 {
-    private List<string> namesOfObj = new List<string>();
+    AddMaterial AddMaterial;
+    
+    List<string> namesOfObj = new List<string>();
 
-    private void OnTriggerEnter(Collider other)
+
+    private void Awake()
     {
-        GameObject go = other.gameObject;
-        GameObject parent = go.transform.parent.gameObject;        
-
-        if (go.tag == "Selectable")
-        {
-            if(go.GetComponent<Outline>() == null)
-                go.AddComponent<Outline>();
-            
-            namesOfObj.Add(go.name);
-        }
-        else if(parent.tag == "Selectable")
-        {
-            if (parent.GetComponent<Outline>() == null)
-                parent.AddComponent<Outline>();
-
-            if(!namesOfObj.Contains(parent.name))
-                namesOfObj.Add(parent.name);
-            
-        }
-        
+        AddMaterial = GameObject.Find("AddMaterial").GetComponent<AddMaterial>();
     }
 
-    private void OnTriggerExit(Collider other)
+
+    bool CheckSelectable(GameObject currentObject, bool isEnter)
     {
-        GameObject go = other.gameObject;
-        GameObject parent = go.transform.parent.gameObject;
-
-        if (go.tag == "Selectable")
+        if (currentObject.tag == "Selectable")
         {
-            if (go.GetComponent<Outline>() != null)
-                Destroy(go.GetComponent<Outline>());
-
-            namesOfObj.Remove(go.name);
+            Debug.Log(currentObject.name);
+            if (isEnter && !namesOfObj.Contains(currentObject.name))
+            {
+                namesOfObj.Add(currentObject.name);
+                AddMaterial.AddMat(currentObject, 1);
+            }
+            else if (!isEnter && namesOfObj.Contains(currentObject.name))
+            {
+                namesOfObj.Remove(currentObject.name);
+                AddMaterial.AddMat(currentObject, 0);
+            }
+            return true;
         }
-        else if(parent.tag == "Selectable")
+        else
         {
-            if (parent.GetComponent<Outline>() != null)
-                Destroy(parent.GetComponent<Outline>());
+            GameObject parent = currentObject.transform.parent.gameObject;
 
-            if (namesOfObj.Contains(parent.name))
-                namesOfObj.Remove(parent.name);
+            if (parent.tag != "Root")
+                return CheckSelectable(parent, isEnter);
+            else
+                return false;
+        }
+    }
+
+    void CheckGroup(GameObject currentObject, bool isEnter)
+    {
+        if (currentObject.tag == "Group")
+        {
+            if (isEnter && !namesOfObj.Contains(currentObject.name))
+            {
+                namesOfObj.Add(currentObject.name);
+            }
+            else if (!isEnter && namesOfObj.Contains(currentObject.name))
+            {
+                namesOfObj.Remove(currentObject.name);
+            }
+        }
+
+        GameObject parent = currentObject.transform.parent.gameObject;
+        if (parent.tag != "Root")
+        {
+            CheckGroup(parent, isEnter);
+        }
+    }
+
+    void OnTriggerEnter(Collider other)
+    {
+        if(CheckSelectable(other.gameObject, true))
+            CheckGroup(other.gameObject, true);
+    }
+
+    void OnTriggerExit(Collider other)
+    {
+        if (CheckSelectable(other.gameObject, false))
+            CheckGroup(other.gameObject, false);
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.A))
+        {
+            foreach (string name in namesOfObj)
+                Debug.Log(name);
         }
     }
 

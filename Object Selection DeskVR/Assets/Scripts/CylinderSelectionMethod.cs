@@ -5,6 +5,7 @@ using UnityEngine;
 public class CylinderSelectionMethod : MonoBehaviour
 {
     public float mouseSensitivity = 50f;
+    public AddMaterial AddMaterial;
 
     [SerializeField]
     GameObject cylinder;
@@ -76,6 +77,7 @@ public class CylinderSelectionMethod : MonoBehaviour
 
             foreach (string s in names)
             {
+                Debug.Log(s);
                 GameObject go = GameObject.Find(s);
                 float d = Vector3.Distance(transform.position, go.transform.position);
                 distanceDictionary.Add(d, go);
@@ -101,14 +103,16 @@ public class CylinderSelectionMethod : MonoBehaviour
                 if (names.Count == 1)
                 {
                     finalSelectedObject = distanceDictionary[distanceList[0]];
-                    finalSelectedObject.GetComponent<Outline>().OutlineColor = Color.red;
+
+                    AddMaterial.AddMat(finalSelectedObject, 2);
+
                     Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
                     distanceList.Clear();
                     distanceDictionary.Clear();
                 }
                 else
                 {
-                    distanceDictionary[distanceList[0]].GetComponent<Outline>().OutlineColor = Color.red;
+                    AddMaterial.AddMat(distanceDictionary[distanceList[0]], 2);
 
                     isSelection = false;
                 }
@@ -122,14 +126,22 @@ public class CylinderSelectionMethod : MonoBehaviour
 
         if (scroll != 0)
         {
-            int newIndex = (index + (int)scroll) % names.Count;
+            int newIndex = index + (int)scroll;
             if (newIndex < 0)
                 newIndex = names.Count - 1;
             if (newIndex >= names.Count)
                 newIndex = 0;
+            
+            if (distanceDictionary[distanceList[index]].tag == "Group")
+            {
+                AddMaterial.AddMat(distanceDictionary[distanceList[index]], 1);
+            }
+            else
+            {
+                AddMaterial.AddMat(distanceDictionary[distanceList[index]], 1);
+            }
 
-            distanceDictionary[distanceList[index]].GetComponent<Outline>().OutlineColor = Color.white;
-            distanceDictionary[distanceList[newIndex]].GetComponent<Outline>().OutlineColor = Color.red;
+            AddMaterial.AddMat(distanceDictionary[distanceList[newIndex]], 2);
 
             index = newIndex;
         }
@@ -140,7 +152,7 @@ public class CylinderSelectionMethod : MonoBehaviour
             foreach (string s in names)
             {
                 if (s != finalSelectedObject.name)
-                    Destroy(GameObject.Find(s).GetComponent<Outline>());
+                    AddMaterial.AddMat(GameObject.Find(s), 0);
             }
 
             Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);

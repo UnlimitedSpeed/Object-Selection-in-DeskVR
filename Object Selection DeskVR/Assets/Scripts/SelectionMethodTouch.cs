@@ -107,14 +107,14 @@ public class SelectionMethodTouch : MonoBehaviour
                     if (names.Count == 1)
                     {
                         finalSelectedObject = distanceDictionary[distanceList[0]];
-                        finalSelectedObject.GetComponent<Outline>().OutlineColor = Color.red;
+                        //finalSelectedObject.GetComponent<Outline>().OutlineColor = Color.red;
                         Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
                         distanceList.Clear();
                         distanceDictionary.Clear();
                     }
                     else
                     {
-                        distanceDictionary[distanceList[0]].GetComponent<Outline>().OutlineColor = Color.red;
+                        //distanceDictionary[distanceList[0]].GetComponent<Outline>().OutlineColor = Color.red;
 
                         isSelection = false;
                     }
@@ -147,8 +147,8 @@ public class SelectionMethodTouch : MonoBehaviour
                 if (newIndex >= names.Count)
                     newIndex = 0;
 
-                distanceDictionary[distanceList[index]].GetComponent<Outline>().OutlineColor = Color.white;
-                distanceDictionary[distanceList[newIndex]].GetComponent<Outline>().OutlineColor = Color.red;
+                //distanceDictionary[distanceList[index]].GetComponent<Outline>().OutlineColor = Color.white;
+                //distanceDictionary[distanceList[newIndex]].GetComponent<Outline>().OutlineColor = Color.red;
                
                 index = newIndex;
             }
@@ -158,8 +158,8 @@ public class SelectionMethodTouch : MonoBehaviour
                 finalSelectedObject = distanceDictionary[distanceList[index]];
                 foreach (string s in names)
                 {
-                    if (s != finalSelectedObject.name)
-                        Destroy(GameObject.Find(s).GetComponent<Outline>());
+                    //if (s != finalSelectedObject.name)
+                      //  Destroy(GameObject.Find(s).GetComponent<Outline>());
                 }
 
                 Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
