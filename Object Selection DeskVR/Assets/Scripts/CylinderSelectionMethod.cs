@@ -132,14 +132,8 @@ public class CylinderSelectionMethod : MonoBehaviour
             if (newIndex >= names.Count)
                 newIndex = 0;
             
-            if (distanceDictionary[distanceList[index]].tag == "Group")
-            {
-                AddMaterial.AddMat(distanceDictionary[distanceList[index]], 1);
-            }
-            else
-            {
-                AddMaterial.AddMat(distanceDictionary[distanceList[index]], 1);
-            }
+            AddMaterial.AddMat(distanceDictionary[distanceList[index]], 1);
+            
 
             AddMaterial.AddMat(distanceDictionary[distanceList[newIndex]], 2);
 
