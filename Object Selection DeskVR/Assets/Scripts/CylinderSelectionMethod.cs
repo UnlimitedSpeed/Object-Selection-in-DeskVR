@@ -5,26 +5,25 @@ using UnityEngine;
 public class CylinderSelectionMethod : MonoBehaviour
 {
     public float mouseSensitivity = 50f;
-    public AddMaterial AddMaterial;
+    public ChangeMaterial ChangeMaterial;
 
     [SerializeField]
     GameObject cylinder;
 
+    MethodControls mc;
     bool isSelection = true;
 
     GameObject cylinderClone;
     GameObject cylinderParent;
     float xRotation = 0f;
     float yRotation = 0f;
-    MethodControls mc;
     List<string> names;
     List<float> distanceList = new List<float>();
     Dictionary<float, GameObject> distanceDictionary = new Dictionary<float, GameObject>();
 
     GameObject finalSelectedObject;
     int index = 0;
-
-
+    
     void Start()
     {
         mc = transform.GetComponent<MethodControls>();
@@ -43,20 +42,15 @@ public class CylinderSelectionMethod : MonoBehaviour
         //The process begins when the user presses the Left Mouse Button
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            cylinderParent = new GameObject("cylinderParent");
-            cylinderParent.transform.rotation = transform.rotation;
-            cylinderParent.transform.localPosition = new Vector3(
+            Vector3 pos = new Vector3(
                                     transform.position.x + transform.forward.x / 2,
                                     transform.position.y + transform.forward.y / 2 - 0.5f,
                                     transform.position.z + transform.forward.z / 2);
-
-            cylinderClone = Instantiate(cylinder, transform.position, Quaternion.Euler(45f, 45f, 45f));
-            cylinderClone.transform.SetParent(cylinderParent.transform);
-            cylinderClone.transform.localPosition = new Vector3(0f, 0f, 25f);
-            cylinderClone.transform.localRotation = Quaternion.Euler(90f, 0f, 0f);
-
-            xRotation = cylinderParent.transform.eulerAngles.x;
-            yRotation = cylinderParent.transform.eulerAngles.y;
+            
+            cylinderClone = Instantiate(cylinder, pos, transform.rotation);
+            
+            xRotation = cylinderClone.transform.eulerAngles.x;
+            yRotation = cylinderClone.transform.eulerAngles.y;
         }
 
         //The user can move ray while holding the button down
@@ -65,27 +59,28 @@ public class CylinderSelectionMethod : MonoBehaviour
             yRotation += Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
             xRotation -= Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
-            cylinderParent.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
+            cylinderClone.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
         }
 
         //Selection process ends when user lets go of the button
         if (Input.GetKeyUp(KeyCode.Mouse0))
         {
-            CheckObject co = cylinderClone.GetComponent<CheckObject>();
+            CheckObject co = cylinderClone.GetComponentInChildren<CheckObject>();
             names = co.getNamesOfObj();
-            Destroy(cylinderParent);
+            Destroy(cylinderClone);
 
             foreach (string s in names)
             {
-                Debug.Log(s);
                 GameObject go = GameObject.Find(s);
                 float d = Vector3.Distance(transform.position, go.transform.position);
                 distanceDictionary.Add(d, go);
             }
-
-
+            
             distanceList = distanceDictionary.Keys.ToList();
             distanceList.Sort();
+
+
+
 
             if (names.Count == 0)
             {
@@ -104,7 +99,7 @@ public class CylinderSelectionMethod : MonoBehaviour
                 {
                     finalSelectedObject = distanceDictionary[distanceList[0]];
 
-                    AddMaterial.AddMat(finalSelectedObject, 2);
+                    ChangeMaterial.ChangeColor(finalSelectedObject, 2);
 
                     Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
                     distanceList.Clear();
@@ -112,7 +107,7 @@ public class CylinderSelectionMethod : MonoBehaviour
                 }
                 else
                 {
-                    AddMaterial.AddMat(distanceDictionary[distanceList[0]], 2);
+                    ChangeMaterial.ChangeColor(distanceDictionary[distanceList[0]], 2);
 
                     isSelection = false;
                 }
@@ -132,10 +127,10 @@ public class CylinderSelectionMethod : MonoBehaviour
             if (newIndex >= names.Count)
                 newIndex = 0;
             
-            AddMaterial.AddMat(distanceDictionary[distanceList[index]], 1);
-            
+            ChangeMaterial.ChangeColor(distanceDictionary[distanceList[index]], 1);
 
-            AddMaterial.AddMat(distanceDictionary[distanceList[newIndex]], 2);
+
+            ChangeMaterial.ChangeColor(distanceDictionary[distanceList[newIndex]], 2);
 
             index = newIndex;
         }
@@ -146,7 +141,7 @@ public class CylinderSelectionMethod : MonoBehaviour
             foreach (string s in names)
             {
                 if (s != finalSelectedObject.name)
-                    AddMaterial.AddMat(GameObject.Find(s), 0);
+                    ChangeMaterial.ChangeColor(GameObject.Find(s), 0);
             }
 
             Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);

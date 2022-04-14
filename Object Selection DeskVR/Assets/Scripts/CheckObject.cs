@@ -3,14 +3,14 @@ using UnityEngine;
 
 public class CheckObject : MonoBehaviour
 {
-    AddMaterial AddMaterial;
+    ChangeMaterial ChangeMaterial;
     
     List<string> namesOfObj = new List<string>();
 
 
     private void Awake()
     {
-        AddMaterial = GameObject.Find("AddMaterial").GetComponent<AddMaterial>();
+        ChangeMaterial = GameObject.Find("Manager").GetComponent<ChangeMaterial>();
     }
 
 
@@ -18,16 +18,18 @@ public class CheckObject : MonoBehaviour
     {
         if (currentObject.tag == "Selectable")
         {
-            Debug.Log(currentObject.name);
+            
             if (isEnter && !namesOfObj.Contains(currentObject.name))
             {
                 namesOfObj.Add(currentObject.name);
-                AddMaterial.AddMat(currentObject, 1);
+                
+                ChangeMaterial.ChangeColor(currentObject, 1);
             }
             else if (!isEnter && namesOfObj.Contains(currentObject.name))
             {
                 namesOfObj.Remove(currentObject.name);
-                AddMaterial.AddMat(currentObject, 0);
+                
+                ChangeMaterial.ChangeColor(currentObject, 0);
             }
             return true;
         }
@@ -74,16 +76,7 @@ public class CheckObject : MonoBehaviour
         if (CheckSelectable(other.gameObject, false))
             CheckGroup(other.gameObject, false);
     }
-
-    private void Update()
-    {
-        if (Input.GetKeyDown(KeyCode.A))
-        {
-            foreach (string name in namesOfObj)
-                Debug.Log(name);
-        }
-    }
-
+    
     public List<string> getNamesOfObj()
     {
         return namesOfObj;

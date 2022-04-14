@@ -1,0 +1,74 @@
+{
+    "name": "InputMaster",
+    "maps": [
+        {
+            "name": "DepthRay",
+            "id": "23cd7bf6-888a-43e4-bb0a-6c434504f6f8",
+            "actions": [
+                {
+                    "name": "CastRay",
+                    "type": "Value",
+                    "id": "d3e0bbea-c84d-4334-8727-90bdce684e4e",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                },
+                {
+                    "name": "MoveSphere",
+                    "type": "Button",
+                    "id": "7762bf7b-b0d7-4f25-ad38-31663ddc3cc2",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": ""
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "e1be571b-5d74-410c-9174-e33b00142517",
+                    "path": "<Keyboard>/space",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CastRay",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "5992f5e6-5a3a-4623-aaf7-a5085e6179df",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveSphere",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "e5a9aa8d-5605-4aa0-ae4e-0c86e0b75ce9",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveSphere",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "731ff3de-86aa-4b21-850c-1533f266b1c7",
+                    "path": "<Keyboard>/upArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveSphere",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                }
+            ]
+        }
+    ],
+    "controlSchemes": []
+}

@@ -11,7 +11,6 @@ GameObject:
   - component: {fileID: 5526703173029972126}
   - component: {fileID: 7624103218205052159}
   - component: {fileID: 7194150396392538368}
-  - component: {fileID: 6577850970598031557}
   m_Layer: 0
   m_Name: toon_office_bookcover
   m_TagString: Untagged
@@ -82,20 +81,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &6577850970598031557
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4851598963047350687}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 9105925807368060263, guid: eeb673a6da8434ecebd0adcb5ed0e5c9, type: 3}
 --- !u!1 &8520831733718747273
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +92,6 @@ GameObject:
   - component: {fileID: 7330936202728181697}
   - component: {fileID: 1642883978163146128}
   - component: {fileID: 3696409639549352544}
-  - component: {fileID: 74845302348116659}
   m_Layer: 0
   m_Name: toon_office_bookinside
   m_TagString: Untagged
@@ -178,20 +162,6 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!64 &74845302348116659
-MeshCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8520831733718747273}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 1
-  m_CookingOptions: 30
-  m_Mesh: {fileID: 1601226876138960199, guid: eeb673a6da8434ecebd0adcb5ed0e5c9, type: 3}
 --- !u!1 &8586645781547976933
 GameObject:
   m_ObjectHideFlags: 0
@@ -201,10 +171,9 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8962783884462150239}
-  - component: {fileID: 8388181277650840496}
   m_Layer: 0
   m_Name: toon_office_book
-  m_TagString: Selectable
+  m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -225,19 +194,3 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!54 &8388181277650840496
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8586645781547976933}
-  serializedVersion: 2
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0.05
-  m_UseGravity: 1
-  m_IsKinematic: 0
-  m_Interpolate: 0
-  m_Constraints: 0
-  m_CollisionDetection: 0

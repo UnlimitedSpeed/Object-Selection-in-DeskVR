@@ -4,7 +4,7 @@ using UnityEngine;
 public class MethodControls : MonoBehaviour
 {
     public bool isFadeOutActive = false;
-    public AddMaterial AddMaterial;
+    public ChangeMaterial ChangeMaterial;
     
     void Update()
     {
@@ -22,20 +22,20 @@ public class MethodControls : MonoBehaviour
     void ResetObjects()
     {
         Debug.Log("Reset");
-        GameObject mockup = GameObject.Find("mockup");
+        GameObject root = GameObject.FindGameObjectWithTag("Root");
 
-        Renderer[] childrenRenderer = mockup.GetComponentsInChildren<Renderer>();
+        Renderer[] childrenRenderer = root.GetComponentsInChildren<Renderer>();
         foreach (Renderer r in childrenRenderer)
         {
             r.material.color = Color.white;
-            AddMaterial.AddMat(r.gameObject, 0);
+            ChangeMaterial.ChangeColor(r.gameObject, 0);
         }
     }
 
     public void FadeOut(List<string> names)
     {
-        GameObject mockup = GameObject.Find("mockup");
-        Renderer[] mockupChildren = mockup.GetComponentsInChildren<Renderer>();
+        GameObject root = GameObject.FindGameObjectWithTag("Root");
+        Renderer[] mockupChildren = root.GetComponentsInChildren<Renderer>();
         foreach (Renderer r in mockupChildren)
         {
             r.material.color = Color.gray;
@@ -44,19 +44,7 @@ public class MethodControls : MonoBehaviour
         for (int i = 0; i < names.Count; i++)
         {
             GameObject selectedObj = GameObject.Find(names[i]);
-            if (selectedObj.GetComponent<Renderer>() != null)
-            {
-                Renderer r = selectedObj.GetComponent<Renderer>();
-                r.material.color = Color.white;
-            }
-            else
-            {
-                Renderer[] selectedObjChildren = selectedObj.GetComponentsInChildren<Renderer>();
-                foreach (Renderer rc in selectedObjChildren)
-                {
-                    rc.material.color = Color.white;
-                }
-            }
+            ChangeMaterial.ChangeColor(selectedObj, 0);
         }
     }
 
