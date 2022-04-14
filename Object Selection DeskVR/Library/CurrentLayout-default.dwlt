@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 997
   m_ShowMode: 4
-  m_Title: Game
+  m_Title: Hierarchy
   m_RootView: {fileID: 6}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -45,10 +45,10 @@ MonoBehaviour:
     y: 30
     width: 1920
     height: 947
-  m_MinSize: {x: 677, y: 342}
-  m_MaxSize: {x: 12002, y: 8042}
+  m_MinSize: {x: 679, y: 492}
+  m_MaxSize: {x: 14002, y: 14042}
   vertical: 0
-  controlID: 58
+  controlID: 82
 --- !u!114 &3
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -68,8 +68,8 @@ MonoBehaviour:
     y: 0
     width: 437
     height: 947
-  m_MinSize: {x: 275, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 276, y: 71}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 15}
   m_Panes:
   - {fileID: 15}
@@ -94,8 +94,8 @@ MonoBehaviour:
     y: 0
     width: 239
     height: 676
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 201, y: 221}
+  m_MaxSize: {x: 4001, y: 4021}
   m_ActualView: {fileID: 16}
   m_Panes:
   - {fileID: 16}
@@ -111,7 +111,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ConsoleWindow
+  m_Name: ProjectBrowser
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -120,14 +120,14 @@ MonoBehaviour:
     y: 676
     width: 1483
     height: 271
-  m_MinSize: {x: 101, y: 121}
-  m_MaxSize: {x: 4001, y: 4021}
-  m_ActualView: {fileID: 19}
+  m_MinSize: {x: 231, y: 271}
+  m_MaxSize: {x: 10001, y: 10021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 14}
   - {fileID: 19}
-  m_Selected: 1
-  m_LastSelected: 0
+  m_Selected: 0
+  m_LastSelected: 1
 --- !u!114 &6
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -223,10 +223,10 @@ MonoBehaviour:
     y: 0
     width: 1483
     height: 947
-  m_MinSize: {x: 402, y: 342}
-  m_MaxSize: {x: 8002, y: 8042}
+  m_MinSize: {x: 403, y: 492}
+  m_MaxSize: {x: 10001, y: 14042}
   vertical: 1
-  controlID: 105
+  controlID: 83
 --- !u!114 &10
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -248,10 +248,10 @@ MonoBehaviour:
     y: 0
     width: 1483
     height: 676
-  m_MinSize: {x: 402, y: 221}
-  m_MaxSize: {x: 8002, y: 4021}
+  m_MinSize: {x: 403, y: 221}
+  m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 106
+  controlID: 84
 --- !u!114 &11
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -276,11 +276,11 @@ MonoBehaviour:
   m_ActualView: {fileID: 17}
   m_Panes:
   - {fileID: 17}
-  - {fileID: 18}
   - {fileID: 13}
   - {fileID: 12}
+  - {fileID: 18}
   m_Selected: 0
-  m_LastSelected: 1
+  m_LastSelected: 3
 --- !u!114 &12
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -330,9 +330,9 @@ MonoBehaviour:
     m_SearchString: 
   m_ActionsTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 38b8b5e0
-    m_LastClickedID: -524961736
-    m_ExpandedIDs: 90f8ad8b1ab3a8a6ea3847c79cf0b5f6
+    m_SelectedIDs: 
+    m_LastClickedID: 0
+    m_ExpandedIDs: 90f8ad8b1ab3a8a6ea3847c72288c4ed9cf0b5f69a5c0bfa354c6615
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -357,14 +357,14 @@ MonoBehaviour:
         selectedIndex: 11
         scroll: {x: 0, y: 0}
       - itemId: 1943893468
-        selectedIndex: 1
-        scroll: {x: 0, y: 0}
+        selectedIndex: 19
+        scroll: {x: 0, y: 166}
       - itemId: -1415197782
-        selectedIndex: 2
+        selectedIndex: -1
         scroll: {x: 0, y: 0}
       - itemId: 1081013944
-        selectedIndex: 13
-        scroll: {x: 0, y: 191}
+        selectedIndex: -1
+        scroll: {x: 0, y: 446}
       - itemId: 403810634
         selectedIndex: 0
         scroll: {x: 0, y: 0}
@@ -377,6 +377,33 @@ MonoBehaviour:
       - itemId: 300744546
         selectedIndex: 0
         scroll: {x: 0, y: 0}
+      - itemId: -155796026
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: 15784618
+        selectedIndex: 38
+        scroll: {x: 0, y: 480}
+      - itemId: 995250047
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: -844342043
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: 503894695
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: 1923899077
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: -582599340
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: 168695272
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
+      - itemId: 406904127
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
     m_ManualPathEditMode: 0
   m_ActionAssetManager:
     m_AssetObjectForEditing: {fileID: 0}
@@ -387,34 +414,56 @@ MonoBehaviour:
       \"actions\": [\n                {\n                    \"name\": \"CastRay\",\n                   
       \"type\": \"Value\",\n                    \"id\": \"d3e0bbea-c84d-4334-8727-90bdce684e4e\",\n                   
       \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\"\n                },\n                {\n                   
-      \"name\": \"MoveSphere\",\n                    \"type\": \"Button\",\n                   
-      \"id\": \"7762bf7b-b0d7-4f25-ad38-31663ddc3cc2\",\n                    \"expectedControlType\":
-      \"Button\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\"\n                }\n            ],\n            \"bindings\":
-      [\n                {\n                    \"name\": \"\",\n                   
-      \"id\": \"e1be571b-5d74-410c-9174-e33b00142517\",\n                    \"path\":
-      \"<Keyboard>/space\",\n                    \"interactions\": \"\",\n                   
+      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
+      },\n                {\n                    \"name\": \"MoveSphere\",\n                   
+      \"type\": \"Value\",\n                    \"id\": \"7762bf7b-b0d7-4f25-ad38-31663ddc3cc2\",\n                   
+      \"expectedControlType\": \"Vector2\",\n                    \"processors\":
+      \"\",\n                    \"interactions\": \"\",\n                    \"initialStateCheck\":
+      true\n                }\n            ],\n            \"bindings\": [\n               
+      {\n                    \"name\": \"\",\n                    \"id\": \"e1be571b-5d74-410c-9174-e33b00142517\",\n                   
+      \"path\": \"<Keyboard>/space\",\n                    \"interactions\": \"\",\n                   
       \"processors\": \"\",\n                    \"groups\": \"\",\n                   
       \"action\": \"CastRay\",\n                    \"isComposite\": false,\n                   
       \"isPartOfComposite\": false\n                },\n                {\n                   
-      \"name\": \"1D Axis\",\n                    \"id\": \"5992f5e6-5a3a-4623-aaf7-a5085e6179df\",\n                   
-      \"path\": \"1DAxis\",\n                    \"interactions\": \"\",\n                   
+      \"name\": \"\",\n                    \"id\": \"ae281d4e-9f79-4291-a368-68a1bbaf250b\",\n                   
+      \"path\": \"<XRController>{RightHand}/triggerPressed\",\n                   
+      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
+      \"groups\": \"\",\n                    \"action\": \"CastRay\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"ArrowKeys\",\n                   
+      \"id\": \"45b61d09-b1bd-41fc-9190-0e9d5c96256f\",\n                    \"path\":
+      \"2DVector\",\n                    \"interactions\": \"\",\n                   
       \"processors\": \"\",\n                    \"groups\": \"\",\n                   
       \"action\": \"MoveSphere\",\n                    \"isComposite\": true,\n                   
       \"isPartOfComposite\": false\n                },\n                {\n                   
-      \"name\": \"negative\",\n                    \"id\": \"e5a9aa8d-5605-4aa0-ae4e-0c86e0b75ce9\",\n                   
+      \"name\": \"up\",\n                    \"id\": \"f2b3cfb0-e9bc-45e3-b4ea-f5411fc23b4a\",\n                   
+      \"path\": \"<Keyboard>/upArrow\",\n                    \"interactions\": \"\",\n                   
+      \"processors\": \"\",\n                    \"groups\": \"\",\n                   
+      \"action\": \"MoveSphere\",\n                    \"isComposite\": false,\n                   
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"down\",\n                    \"id\": \"208880ff-49d9-45c8-8397-64399ee775a6\",\n                   
       \"path\": \"<Keyboard>/downArrow\",\n                    \"interactions\":
       \"\",\n                    \"processors\": \"\",\n                    \"groups\":
       \"\",\n                    \"action\": \"MoveSphere\",\n                   
       \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
-      },\n                {\n                    \"name\": \"positive\",\n                   
-      \"id\": \"731ff3de-86aa-4b21-850c-1533f266b1c7\",\n                    \"path\":
-      \"<Keyboard>/upArrow\",\n                    \"interactions\": \"\",\n                   
+      },\n                {\n                    \"name\": \"left\",\n                   
+      \"id\": \"91b35a12-a6ac-48e0-b13b-2673254ce82a\",\n                    \"path\":
+      \"<Keyboard>/leftArrow\",\n                    \"interactions\": \"\",\n                   
       \"processors\": \"\",\n                    \"groups\": \"\",\n                   
       \"action\": \"MoveSphere\",\n                    \"isComposite\": false,\n                   
-      \"isPartOfComposite\": true\n                }\n            ]\n        }\n   
-      ],\n    \"controlSchemes\": []\n}"
+      \"isPartOfComposite\": true\n                },\n                {\n                   
+      \"name\": \"right\",\n                    \"id\": \"902a8bcd-2dd9-44c4-b1cb-cbc8aaaa43ac\",\n                   
+      \"path\": \"<Keyboard>/rightArrow\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"\",\n                    \"action\": \"MoveSphere\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"86963bd1-8d9a-4643-8dfe-6c666968dbc8\",\n                    \"path\":
+      \"<XRController>{RightHand}/joystick\",\n                    \"interactions\":
+      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
+      \"\",\n                    \"action\": \"MoveSphere\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      }\n            ]\n        }\n    ],\n    \"controlSchemes\": []\n}"
     m_IsDirty: 0
   m_Toolbar:
     m_IsDirty: 0
@@ -493,22 +542,23 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scripts
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scripts
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
-  m_LastProjectPath: D:\Users\Joao\Desktop\Object Selection DeskVR v2
+  m_LastProjectPath: C:\Users\Testes\Desktop\Object-Selection-in-DeskVR\Object Selection
+    DeskVR
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: d46a0000
-    m_LastClickedID: 27348
-    m_ExpandedIDs: 000000001e41000000ca9a3b
+    m_SelectedIDs: d0860000
+    m_LastClickedID: 34512
+    m_ExpandedIDs: 00000000d052000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -536,7 +586,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 000000001e410000
+    m_ExpandedIDs: 00000000d0520000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -561,8 +611,8 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: 2e3f0000
-    m_LastClickedInstanceID: 16174
+    m_SelectedInstanceIDs: 
+    m_LastClickedInstanceID: 0
     m_HadKeyboardFocusLastEvent: 1
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
@@ -657,9 +707,9 @@ MonoBehaviour:
   m_SceneHierarchy:
     m_TreeViewState:
       scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 003f0000
-      m_LastClickedID: 16128
-      m_ExpandedIDs: 4efbffff
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 30fdfeff800effff441cffff5e1cffff641cffff40a1ffff5aa1ffff60a1ffff64a3ffffc4a4fffff0a5ffffa0eaffffe0500000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -719,9 +769,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -2.212668, y: 2.1277275, z: 7.34728}
+    m_Target: {x: -3.8001366, y: 0.6383362, z: 11.294231}
     speed: 2
-    m_Value: {x: -2.212668, y: 2.1277275, z: 7.34728}
+    m_Value: {x: 4.7331934, y: -2.0486515, z: 1.6170603}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -768,13 +818,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.18361326, y: 0.62832177, z: -0.15599693, w: -0.7398046}
+    m_Target: {x: -0.38841733, y: 0.30479795, z: -0.1379221, w: -0.85869545}
     speed: 2
-    m_Value: {x: -0.18359967, y: 0.6282753, z: -0.15598539, w: -0.73974985}
+    m_Value: {x: -0.1711363, y: -0.6025836, z: 0.13432291, w: -0.7678299}
   m_Size:
-    m_Target: 2.0660253
+    m_Target: 17.759748
     speed: 2
-    m_Value: 2.0660253
+    m_Value: 5.377177
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -833,7 +883,7 @@ MonoBehaviour:
   m_TargetSize: {x: 1242, y: 634}
   m_TextureFilterMode: 0
   m_TextureHideFlags: 61
-  m_RenderIMGUI: 1
+  m_RenderIMGUI: 0
   m_MaximizeOnPlay: 0
   m_UseMipMap: 0
   m_VSyncEnabled: 0

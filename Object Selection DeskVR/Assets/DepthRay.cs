@@ -9,6 +9,7 @@ public class DepthRay : MonoBehaviour
     public ChangeMaterial ChangeMaterial;
 
     float sphereInput;
+    bool hasStarted = false;
 
     InputMaster InputMaster;
     GameObject Clone;
@@ -23,24 +24,25 @@ public class DepthRay : MonoBehaviour
     void Awake()
     {
         InputMaster = new InputMaster();
-
+        
         InputMaster.DepthRay.CastRay.started += ctx => CastRay();
         InputMaster.DepthRay.CastRay.canceled += ctx => DeleteRay();
 
-        InputMaster.DepthRay.MoveSphere.started += ctx => { sphereInput = ctx.ReadValue<float>(); };
-        InputMaster.DepthRay.MoveSphere.canceled += ctx => { sphereInput = 0; };
+        InputMaster.DepthRay.MoveSphere.started += ctx => MoveSphere(ctx.ReadValue<Vector2>().y);
+        InputMaster.DepthRay.MoveSphere.canceled += ctx => MoveSphere(0);
+        
     }
 
     void CastRay()
     {
-        Debug.Log("Start");
+        hasStarted = true;
         Clone = Instantiate(Ray, transform);
-        Sphere = GameObject.Find(Clone.name + "/Sphere");
+        Sphere = GameObject.Find(transform.gameObject.name + "/" + Clone.name + "/Sphere");
     }
 
     void DeleteRay()
     {
-        Debug.Log("STOP");
+        hasStarted = false;
         Destroy(Clone);
         finalSelectedObject = currentObject;
 
@@ -49,9 +51,11 @@ public class DepthRay : MonoBehaviour
             foreach (string s in names)
             {
                 if (s != finalSelectedObject.name)
-                    ChangeMaterial.ChangeColor(GameObject.Find(s), 0);
+                {
+                    GameObject obj = GameObject.Find(s);
+                    ChangeMaterial.ChangeColor(obj, 0);
+                }
             }
-
 
             Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
         }
@@ -61,15 +65,26 @@ public class DepthRay : MonoBehaviour
         }
     }
     
+    void MoveSphere(float y)
+    {
+        if (y > 0)
+            sphereInput = 0.5f;
+        else if (y < 0)
+            sphereInput = -0.5f;
+        else
+            sphereInput = 0f;
+    }
+
     void Update()
     {
         if (Sphere != null)
         {
-            if (Sphere.transform.localPosition.z < 50 && Sphere.transform.localPosition.z > 0)
+            if (Sphere.transform.localPosition.z < 50 && sphereInput > 0 || Sphere.transform.localPosition.z > 0 && sphereInput < 50)
                 Sphere.transform.localPosition += new Vector3(0, 0, sphereVelocity * sphereInput * Time.deltaTime);
+
         }
 
-        if (Clone != null)
+        if (hasStarted)
         {
             CheckObject co = Clone.GetComponentInChildren<CheckObject>();
             names = co.getNamesOfObj();
@@ -92,7 +107,6 @@ public class DepthRay : MonoBehaviour
                 GameObject obj = GameObject.Find(n);
                 if (n == currentObject.name)
                 {
-                    Debug.Log(n);
                     ChangeMaterial.ChangeColor(obj, 2);
                 }
                 else
