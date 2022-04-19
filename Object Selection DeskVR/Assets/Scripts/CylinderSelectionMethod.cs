@@ -23,6 +23,11 @@ public class CylinderSelectionMethod : MonoBehaviour
 
     GameObject finalSelectedObject;
     int index = 0;
+
+
+    //Timed Trial
+    public TimeTrial TimeTrial;
+
     
     void Start()
     {
@@ -42,6 +47,8 @@ public class CylinderSelectionMethod : MonoBehaviour
         //The process begins when the user presses the Left Mouse Button
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            TimeTrial.StartCounting();
+
             Vector3 pos = new Vector3(
                                     transform.position.x + transform.forward.x / 2,
                                     transform.position.y + transform.forward.y / 2 - 0.5f,
@@ -80,13 +87,12 @@ public class CylinderSelectionMethod : MonoBehaviour
             distanceList.Sort();
 
 
-
-
             if (names.Count == 0)
             {
                 Debug.Log("NO OBJECT SELECTED");
                 distanceList.Clear();
                 distanceDictionary.Clear();
+                TimeTrial.StopCounting(null);
             }
             else
             {
@@ -104,6 +110,7 @@ public class CylinderSelectionMethod : MonoBehaviour
                     Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
                     distanceList.Clear();
                     distanceDictionary.Clear();
+                    TimeTrial.StopCounting(finalSelectedObject.name);
                 }
                 else
                 {
@@ -149,6 +156,8 @@ public class CylinderSelectionMethod : MonoBehaviour
             isSelection = true;
             distanceList.Clear();
             distanceDictionary.Clear();
+
+            TimeTrial.StopCounting(finalSelectedObject.name);
         }
     }
 }
