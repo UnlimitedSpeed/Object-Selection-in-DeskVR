@@ -6,11 +6,11 @@ public class CylinderSelectionMethod : MonoBehaviour
 {
     public float mouseSensitivity = 50f;
     public ChangeMaterial ChangeMaterial;
+    public MethodControls mc;
 
     [SerializeField]
     GameObject cylinder;
 
-    MethodControls mc;
     bool isSelection = true;
 
     GameObject cylinderClone;
@@ -27,12 +27,7 @@ public class CylinderSelectionMethod : MonoBehaviour
 
     //Timed Trial
     public TimeTrial TimeTrial;
-
     
-    void Start()
-    {
-        mc = transform.GetComponent<MethodControls>();
-    }
 
     void Update()
     {
@@ -47,6 +42,8 @@ public class CylinderSelectionMethod : MonoBehaviour
         //The process begins when the user presses the Left Mouse Button
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
+            //mc.ResetObjects();
+
             TimeTrial.StartCounting();
 
             Vector3 pos = new Vector3(
@@ -147,9 +144,9 @@ public class CylinderSelectionMethod : MonoBehaviour
             finalSelectedObject = distanceDictionary[distanceList[index]];
             foreach (string s in names)
             {
-                if (s != finalSelectedObject.name)
-                    ChangeMaterial.ChangeColor(GameObject.Find(s), 0);
+                ChangeMaterial.ChangeColor(GameObject.Find(s), 0);
             }
+            ChangeMaterial.ChangeColor(finalSelectedObject, 2);
 
             Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
             index = 0;

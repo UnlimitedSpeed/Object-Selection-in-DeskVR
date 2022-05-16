@@ -24,6 +24,11 @@ public class SelectionMethodTouch : MonoBehaviour
     GameObject finalSelectedObject;
     int index = 0;
 
+    //Timed Trial
+    public TimeTrial TimeTrial;
+
+
+
     void Start()
     {
         mc = transform.GetComponent<MethodControls>();
@@ -46,6 +51,8 @@ public class SelectionMethodTouch : MonoBehaviour
             //The process begins when the user touches the touch pad
             if (touch.phase == TouchPhase.Began)
             {
+                TimeTrial.StartCounting();
+
                 Vector3 pos = new Vector3(
                                     transform.position.x + transform.forward.x / 2,
                                     transform.position.y + transform.forward.y / 2 - 0.5f,
@@ -85,6 +92,7 @@ public class SelectionMethodTouch : MonoBehaviour
                 
                 if (names.Count == 0)
                 {
+                    TimeTrial.StopCounting(null);
                     Debug.Log("NO OBJECT SELECTED");
                     distanceList.Clear();
                     distanceDictionary.Clear();
@@ -98,6 +106,8 @@ public class SelectionMethodTouch : MonoBehaviour
 
                     if (names.Count == 1)
                     {
+                        TimeTrial.StopCounting(finalSelectedObject.name);
+
                         finalSelectedObject = distanceDictionary[distanceList[0]];
 
                         ChangeMaterial.ChangeColor(finalSelectedObject, 2);
@@ -158,6 +168,7 @@ public class SelectionMethodTouch : MonoBehaviour
                     if (s != finalSelectedObject.name)
                         ChangeMaterial.ChangeColor(GameObject.Find(s), 0);
                 }
+                TimeTrial.StopCounting(finalSelectedObject.name);
 
                 Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
                 index = 0;

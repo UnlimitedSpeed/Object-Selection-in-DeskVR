@@ -7,6 +7,7 @@ public class DepthRay : MonoBehaviour
     public GameObject Ray;
     public float sphereVelocity = 20f;
     public ChangeMaterial ChangeMaterial;
+    public MethodControls mc;
 
     float sphereInput;
     bool hasStarted = false;
@@ -38,6 +39,7 @@ public class DepthRay : MonoBehaviour
 
     void CastRay()
     {
+        mc.ResetObjects();
         TimeTrial.StartCounting();
         hasStarted = true;
         Clone = Instantiate(Ray, transform);

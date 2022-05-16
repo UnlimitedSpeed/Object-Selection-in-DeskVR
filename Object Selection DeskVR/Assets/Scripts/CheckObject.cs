@@ -6,19 +6,16 @@ public class CheckObject : MonoBehaviour
     ChangeMaterial ChangeMaterial;
     
     List<string> namesOfObj = new List<string>();
-
-
+    
     private void Awake()
     {
         ChangeMaterial = GameObject.Find("Manager").GetComponent<ChangeMaterial>();
     }
-
-
+    
     bool CheckSelectable(GameObject currentObject, bool isEnter)
     {
         if (currentObject.tag == "Selectable")
         {
-            
             if (isEnter && !namesOfObj.Contains(currentObject.name))
             {
                 namesOfObj.Add(currentObject.name);

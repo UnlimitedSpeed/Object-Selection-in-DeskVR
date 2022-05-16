@@ -19,7 +19,7 @@ public class MethodControls : MonoBehaviour
         }
     }
 
-    void ResetObjects()
+    public void ResetObjects()
     {
         Debug.Log("Reset");
         GameObject root = GameObject.FindGameObjectWithTag("Root");
@@ -27,8 +27,10 @@ public class MethodControls : MonoBehaviour
         Renderer[] childrenRenderer = root.GetComponentsInChildren<Renderer>();
         foreach (Renderer r in childrenRenderer)
         {
-            r.material.color = Color.white;
-            ChangeMaterial.ChangeColor(r.gameObject, 0);
+            if (r.gameObject.tag == "Selectable")
+            {
+                ChangeMaterial.ChangeColor(r.gameObject, 0);
+            }
         }
     }
 
@@ -47,6 +49,4 @@ public class MethodControls : MonoBehaviour
             ChangeMaterial.ChangeColor(selectedObj, 0);
         }
     }
-
-
 }

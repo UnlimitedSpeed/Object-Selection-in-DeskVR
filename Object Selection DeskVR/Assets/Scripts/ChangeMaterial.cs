@@ -1,8 +1,9 @@
-
 using UnityEngine;
 
 public class ChangeMaterial : MonoBehaviour
 {
+    public Material defaultMat;
+
     public void ChangeColor(GameObject gameObject, int outlineNumber)
     {
         Renderer ren = gameObject.GetComponent<Renderer>();
@@ -11,17 +12,17 @@ public class ChangeMaterial : MonoBehaviour
         {
             switch (outlineNumber)
             {
-                case 1: //Green
+                case 0:
+                    ren.material.color = defaultMat.color;
+                    break;
+                case 1:
                     ren.material.color = Color.green;
-
                     break;
-                case 2: //Red
+                case 2:
                     ren.material.color = Color.red;
-
                     break;
-                default: //White
-                    ren.material.color = Color.white;
-
+                case 3:
+                    ren.material.color = new Color(0.54f, 0.77f, 0.95f);
                     break;
             }
         }
@@ -33,8 +34,5 @@ public class ChangeMaterial : MonoBehaviour
                 ChangeColor(children[i].gameObject, outlineNumber);
             }
         }
-        
     }
-
-    
 }
