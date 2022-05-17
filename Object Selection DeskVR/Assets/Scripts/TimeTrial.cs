@@ -24,7 +24,7 @@ public class TimeTrial : MonoBehaviour
         tw.Close();
 
         currentIndex = 0;
-        ChangeMaterial.ChangeColor(wantedObject[currentIndex], 3);
+        wantedObject[currentIndex].AddComponent<Outline>();
     }
 
 
@@ -59,7 +59,7 @@ public class TimeTrial : MonoBehaviour
 
         if (name == wantedObject[currentIndex].name)
         {
-            ChangeMaterial.ChangeColor(wantedObject[currentIndex], 0);
+            Destroy(wantedObject[currentIndex].GetComponent<Outline>());
             double t = Math.Round(time, 2);
             int tempNumb = currentIndex + 1;
             WriteToCSV(tempNumb, t, numberOfAttempts);
@@ -74,7 +74,7 @@ public class TimeTrial : MonoBehaviour
             else
             {                
                 currentIndex++;
-                ChangeMaterial.ChangeColor(wantedObject[currentIndex], 3);
+                wantedObject[currentIndex].AddComponent<Outline>();
             }
         }
     }

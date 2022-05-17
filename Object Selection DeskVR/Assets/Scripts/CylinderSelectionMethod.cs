@@ -42,7 +42,8 @@ public class CylinderSelectionMethod : MonoBehaviour
         //The process begins when the user presses the Left Mouse Button
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            //mc.ResetObjects();
+            Debug.Log("click");
+            mc.ResetObjects();
 
             TimeTrial.StartCounting();
 

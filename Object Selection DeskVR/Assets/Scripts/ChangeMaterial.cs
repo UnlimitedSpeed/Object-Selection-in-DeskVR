@@ -21,9 +21,6 @@ public class ChangeMaterial : MonoBehaviour
                 case 2:
                     ren.material.color = Color.red;
                     break;
-                case 3:
-                    ren.material.color = new Color(0.54f, 0.77f, 0.95f);
-                    break;
             }
         }
         else
