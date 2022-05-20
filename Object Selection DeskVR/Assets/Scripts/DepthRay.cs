@@ -52,21 +52,7 @@ public class DepthRay : MonoBehaviour
     {
         hasStarted = false;
         Destroy(Clone);
-    }
-    
-    void MoveSphere(float y)
-    {
-        print(y);
-        if (y > 0)
-            sphereInput = 0.5f;
-        else if (y < 0)
-            sphereInput = -0.5f;
-        else
-            sphereInput = 0f;
-    }
 
-    void Comfirm()
-    {
         finalSelectedObject = currentObject;
 
         if (finalSelectedObject != null)
@@ -88,6 +74,21 @@ public class DepthRay : MonoBehaviour
             Debug.Log("NO OBJECT SELECTED");
             TimeTrial.StopCounting(null);
         }
+    }
+    
+    void MoveSphere(float y)
+    {
+        if (y > 0)
+            sphereInput = 0.5f;
+        else if (y < 0)
+            sphereInput = -0.5f;
+        else
+            sphereInput = 0f;
+    }
+
+    void Comfirm()
+    {
+        
     }
 
     void Update()

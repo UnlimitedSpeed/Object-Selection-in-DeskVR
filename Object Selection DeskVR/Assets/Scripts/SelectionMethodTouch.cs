@@ -24,6 +24,8 @@ public class SelectionMethodTouch : MonoBehaviour
     GameObject finalSelectedObject;
     int index = 0;
 
+    float onossoacumulador;
+
     //Timed Trial
     public TimeTrial TimeTrial;
 
@@ -58,6 +60,8 @@ public class SelectionMethodTouch : MonoBehaviour
             xRotation = cylinderClone.transform.eulerAngles.x;
             yRotation = cylinderClone.transform.eulerAngles.y;
         }
+        else
+            onossoacumulador = 0;
     }
 
     void ReleaseTouch()
@@ -115,6 +119,7 @@ public class SelectionMethodTouch : MonoBehaviour
         }
         else
         {
+            Destroy(cylinderClone);
             finalSelectedObject = distanceDictionary[distanceList[index]];
             foreach (string s in names)
             {
@@ -133,6 +138,9 @@ public class SelectionMethodTouch : MonoBehaviour
     
     void MoveTouch(Vector2 touch)
     {
+
+
+        print(touch);
         if (isSelection)
         {
             yRotation += touch.x * touchSensitivity * Time.deltaTime;
@@ -142,14 +150,18 @@ public class SelectionMethodTouch : MonoBehaviour
         }
         else
         {
+            onossoacumulador += touch.y;
+
             int newIndex = index;
-            if (touch.y > 10)
+            if (onossoacumulador > 100)
             {
                 newIndex++;
+                onossoacumulador = 0;
             }
-            else if (touch.y < -10)
+            else if (onossoacumulador < -100)
             {
                 newIndex--;
+                onossoacumulador = 0;
             }
 
             if (newIndex < 0)
