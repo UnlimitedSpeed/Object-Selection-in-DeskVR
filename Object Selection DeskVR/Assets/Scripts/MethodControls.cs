@@ -8,7 +8,7 @@ public class MethodControls : MonoBehaviour
     
     void Update()
     {
-        if(Input.GetKeyDown(KeyCode.Q))
+        /*if(Input.GetKeyDown(KeyCode.Q))
         {
             isFadeOutActive = !isFadeOutActive;
         }
@@ -16,12 +16,11 @@ public class MethodControls : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.R))
         {
             ResetObjects();
-        }
+        }*/
     }
 
     public void ResetObjects()
     {
-        Debug.Log("Reset");
         GameObject root = GameObject.FindGameObjectWithTag("Root");
 
         Renderer[] childrenRenderer = root.GetComponentsInChildren<Renderer>();

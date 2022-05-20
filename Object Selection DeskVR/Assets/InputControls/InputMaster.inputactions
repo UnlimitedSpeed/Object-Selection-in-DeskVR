@@ -18,10 +18,19 @@
                     "name": "MoveSphere",
                     "type": "Value",
                     "id": "7762bf7b-b0d7-4f25-ad38-31663ddc3cc2",
-                    "expectedControlType": "Vector2",
+                    "expectedControlType": "Button",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": true
+                },
+                {
+                    "name": "ComfirmSelection",
+                    "type": "Button",
+                    "id": "b65c3c23-7724-4dee-b1af-b0c56f07615f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 }
             ],
             "bindings": [
@@ -48,9 +57,20 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "ArrowKeys",
-                    "id": "45b61d09-b1bd-41fc-9190-0e9d5c96256f",
-                    "path": "2DVector",
+                    "name": "",
+                    "id": "960b8213-0626-42fe-8284-825afcb9e5d3",
+                    "path": "<XRController>{RightHand}/gripButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ComfirmSelection",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "1D Axis",
+                    "id": "867a061b-4175-450d-b135-298ef20a9eac",
+                    "path": "1DAxis",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -59,9 +79,9 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "up",
-                    "id": "f2b3cfb0-e9bc-45e3-b4ea-f5411fc23b4a",
-                    "path": "<Keyboard>/upArrow",
+                    "name": "negative",
+                    "id": "a36eaba4-4372-4427-bd85-3814edbb54f9",
+                    "path": "<XRController>{RightHand}/primaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -70,46 +90,61 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "down",
-                    "id": "208880ff-49d9-45c8-8397-64399ee775a6",
-                    "path": "<Keyboard>/downArrow",
+                    "name": "positive",
+                    "id": "a060075e-4bb7-4b51-98f8-57fe251ebe05",
+                    "path": "<XRController>{RightHand}/secondaryButton",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "MoveSphere",
                     "isComposite": false,
                     "isPartOfComposite": true
+                }
+            ]
+        },
+        {
+            "name": "TouchPad",
+            "id": "d0da20ae-d0c7-42aa-8b76-2a49d1d98f0a",
+            "actions": [
+                {
+                    "name": "Touch",
+                    "type": "Button",
+                    "id": "11ef1abd-5d86-47ba-844e-9112e79febb8",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
                 },
                 {
-                    "name": "left",
-                    "id": "91b35a12-a6ac-48e0-b13b-2673254ce82a",
-                    "path": "<Keyboard>/leftArrow",
-                    "interactions": "",
+                    "name": "MoveTouch",
+                    "type": "Value",
+                    "id": "f91d8ca3-10e4-4d34-b436-fb04d3f5a664",
+                    "expectedControlType": "Vector2",
                     "processors": "",
-                    "groups": "",
-                    "action": "MoveSphere",
-                    "isComposite": false,
-                    "isPartOfComposite": true
-                },
+                    "interactions": "",
+                    "initialStateCheck": true
+                }
+            ],
+            "bindings": [
                 {
-                    "name": "right",
-                    "id": "902a8bcd-2dd9-44c4-b1cb-cbc8aaaa43ac",
-                    "path": "<Keyboard>/rightArrow",
+                    "name": "",
+                    "id": "710b156d-4a8b-455a-9173-ddbc7d733f16",
+                    "path": "<Touchscreen>/Press",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MoveSphere",
+                    "action": "Touch",
                     "isComposite": false,
-                    "isPartOfComposite": true
+                    "isPartOfComposite": false
                 },
                 {
                     "name": "",
-                    "id": "86963bd1-8d9a-4643-8dfe-6c666968dbc8",
-                    "path": "<XRController>{RightHand}/joystick",
+                    "id": "5eff482a-1bc6-4f93-a2b9-4c2b5a29032c",
+                    "path": "<Touchscreen>/primaryTouch/delta",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "MoveSphere",
+                    "action": "MoveTouch",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }

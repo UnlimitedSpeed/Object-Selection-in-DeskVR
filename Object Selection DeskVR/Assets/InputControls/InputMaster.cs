@@ -40,10 +40,19 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""name"": ""MoveSphere"",
                     ""type"": ""Value"",
                     ""id"": ""7762bf7b-b0d7-4f25-ad38-31663ddc3cc2"",
-                    ""expectedControlType"": ""Vector2"",
+                    ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""ComfirmSelection"",
+                    ""type"": ""Button"",
+                    ""id"": ""b65c3c23-7724-4dee-b1af-b0c56f07615f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 }
             ],
             ""bindings"": [
@@ -70,9 +79,20 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""ArrowKeys"",
-                    ""id"": ""45b61d09-b1bd-41fc-9190-0e9d5c96256f"",
-                    ""path"": ""2DVector"",
+                    ""name"": """",
+                    ""id"": ""960b8213-0626-42fe-8284-825afcb9e5d3"",
+                    ""path"": ""<XRController>{RightHand}/gripButton"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ComfirmSelection"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""1D Axis"",
+                    ""id"": ""867a061b-4175-450d-b135-298ef20a9eac"",
+                    ""path"": ""1DAxis"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -81,9 +101,9 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""up"",
-                    ""id"": ""f2b3cfb0-e9bc-45e3-b4ea-f5411fc23b4a"",
-                    ""path"": ""<Keyboard>/upArrow"",
+                    ""name"": ""negative"",
+                    ""id"": ""a36eaba4-4372-4427-bd85-3814edbb54f9"",
+                    ""path"": ""<XRController>{RightHand}/primaryButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -92,46 +112,61 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""down"",
-                    ""id"": ""208880ff-49d9-45c8-8397-64399ee775a6"",
-                    ""path"": ""<Keyboard>/downArrow"",
+                    ""name"": ""positive"",
+                    ""id"": ""a060075e-4bb7-4b51-98f8-57fe251ebe05"",
+                    ""path"": ""<XRController>{RightHand}/secondaryButton"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""MoveSphere"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": true
+                }
+            ]
+        },
+        {
+            ""name"": ""TouchPad"",
+            ""id"": ""d0da20ae-d0c7-42aa-8b76-2a49d1d98f0a"",
+            ""actions"": [
+                {
+                    ""name"": ""Touch"",
+                    ""type"": ""Button"",
+                    ""id"": ""11ef1abd-5d86-47ba-844e-9112e79febb8"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""left"",
-                    ""id"": ""91b35a12-a6ac-48e0-b13b-2673254ce82a"",
-                    ""path"": ""<Keyboard>/leftArrow"",
-                    ""interactions"": """",
+                    ""name"": ""MoveTouch"",
+                    ""type"": ""Value"",
+                    ""id"": ""f91d8ca3-10e4-4d34-b436-fb04d3f5a664"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveSphere"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                }
+            ],
+            ""bindings"": [
                 {
-                    ""name"": ""right"",
-                    ""id"": ""902a8bcd-2dd9-44c4-b1cb-cbc8aaaa43ac"",
-                    ""path"": ""<Keyboard>/rightArrow"",
+                    ""name"": """",
+                    ""id"": ""710b156d-4a8b-455a-9173-ddbc7d733f16"",
+                    ""path"": ""<Touchscreen>/Press"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MoveSphere"",
+                    ""action"": ""Touch"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
-                    ""id"": ""86963bd1-8d9a-4643-8dfe-6c666968dbc8"",
-                    ""path"": ""<XRController>{RightHand}/joystick"",
+                    ""id"": ""5eff482a-1bc6-4f93-a2b9-4c2b5a29032c"",
+                    ""path"": ""<Touchscreen>/primaryTouch/delta"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MoveSphere"",
+                    ""action"": ""MoveTouch"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 }
@@ -144,6 +179,11 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         m_DepthRay = asset.FindActionMap("DepthRay", throwIfNotFound: true);
         m_DepthRay_CastRay = m_DepthRay.FindAction("CastRay", throwIfNotFound: true);
         m_DepthRay_MoveSphere = m_DepthRay.FindAction("MoveSphere", throwIfNotFound: true);
+        m_DepthRay_ComfirmSelection = m_DepthRay.FindAction("ComfirmSelection", throwIfNotFound: true);
+        // TouchPad
+        m_TouchPad = asset.FindActionMap("TouchPad", throwIfNotFound: true);
+        m_TouchPad_Touch = m_TouchPad.FindAction("Touch", throwIfNotFound: true);
+        m_TouchPad_MoveTouch = m_TouchPad.FindAction("MoveTouch", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -205,12 +245,14 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     private IDepthRayActions m_DepthRayActionsCallbackInterface;
     private readonly InputAction m_DepthRay_CastRay;
     private readonly InputAction m_DepthRay_MoveSphere;
+    private readonly InputAction m_DepthRay_ComfirmSelection;
     public struct DepthRayActions
     {
         private @InputMaster m_Wrapper;
         public DepthRayActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
         public InputAction @CastRay => m_Wrapper.m_DepthRay_CastRay;
         public InputAction @MoveSphere => m_Wrapper.m_DepthRay_MoveSphere;
+        public InputAction @ComfirmSelection => m_Wrapper.m_DepthRay_ComfirmSelection;
         public InputActionMap Get() { return m_Wrapper.m_DepthRay; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
@@ -226,6 +268,9 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @MoveSphere.started -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnMoveSphere;
                 @MoveSphere.performed -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnMoveSphere;
                 @MoveSphere.canceled -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnMoveSphere;
+                @ComfirmSelection.started -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnComfirmSelection;
+                @ComfirmSelection.performed -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnComfirmSelection;
+                @ComfirmSelection.canceled -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnComfirmSelection;
             }
             m_Wrapper.m_DepthRayActionsCallbackInterface = instance;
             if (instance != null)
@@ -236,13 +281,63 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @MoveSphere.started += instance.OnMoveSphere;
                 @MoveSphere.performed += instance.OnMoveSphere;
                 @MoveSphere.canceled += instance.OnMoveSphere;
+                @ComfirmSelection.started += instance.OnComfirmSelection;
+                @ComfirmSelection.performed += instance.OnComfirmSelection;
+                @ComfirmSelection.canceled += instance.OnComfirmSelection;
             }
         }
     }
     public DepthRayActions @DepthRay => new DepthRayActions(this);
+
+    // TouchPad
+    private readonly InputActionMap m_TouchPad;
+    private ITouchPadActions m_TouchPadActionsCallbackInterface;
+    private readonly InputAction m_TouchPad_Touch;
+    private readonly InputAction m_TouchPad_MoveTouch;
+    public struct TouchPadActions
+    {
+        private @InputMaster m_Wrapper;
+        public TouchPadActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Touch => m_Wrapper.m_TouchPad_Touch;
+        public InputAction @MoveTouch => m_Wrapper.m_TouchPad_MoveTouch;
+        public InputActionMap Get() { return m_Wrapper.m_TouchPad; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(TouchPadActions set) { return set.Get(); }
+        public void SetCallbacks(ITouchPadActions instance)
+        {
+            if (m_Wrapper.m_TouchPadActionsCallbackInterface != null)
+            {
+                @Touch.started -= m_Wrapper.m_TouchPadActionsCallbackInterface.OnTouch;
+                @Touch.performed -= m_Wrapper.m_TouchPadActionsCallbackInterface.OnTouch;
+                @Touch.canceled -= m_Wrapper.m_TouchPadActionsCallbackInterface.OnTouch;
+                @MoveTouch.started -= m_Wrapper.m_TouchPadActionsCallbackInterface.OnMoveTouch;
+                @MoveTouch.performed -= m_Wrapper.m_TouchPadActionsCallbackInterface.OnMoveTouch;
+                @MoveTouch.canceled -= m_Wrapper.m_TouchPadActionsCallbackInterface.OnMoveTouch;
+            }
+            m_Wrapper.m_TouchPadActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Touch.started += instance.OnTouch;
+                @Touch.performed += instance.OnTouch;
+                @Touch.canceled += instance.OnTouch;
+                @MoveTouch.started += instance.OnMoveTouch;
+                @MoveTouch.performed += instance.OnMoveTouch;
+                @MoveTouch.canceled += instance.OnMoveTouch;
+            }
+        }
+    }
+    public TouchPadActions @TouchPad => new TouchPadActions(this);
     public interface IDepthRayActions
     {
         void OnCastRay(InputAction.CallbackContext context);
         void OnMoveSphere(InputAction.CallbackContext context);
+        void OnComfirmSelection(InputAction.CallbackContext context);
+    }
+    public interface ITouchPadActions
+    {
+        void OnTouch(InputAction.CallbackContext context);
+        void OnMoveTouch(InputAction.CallbackContext context);
     }
 }

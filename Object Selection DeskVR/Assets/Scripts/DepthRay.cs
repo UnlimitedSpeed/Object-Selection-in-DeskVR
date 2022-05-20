@@ -32,8 +32,10 @@ public class DepthRay : MonoBehaviour
         InputMaster.DepthRay.CastRay.started += ctx => CastRay();
         InputMaster.DepthRay.CastRay.canceled += ctx => DeleteRay();
 
-        InputMaster.DepthRay.MoveSphere.started += ctx => MoveSphere(ctx.ReadValue<Vector2>().y);
+        InputMaster.DepthRay.MoveSphere.started += ctx => MoveSphere(ctx.ReadValue<float>());
         InputMaster.DepthRay.MoveSphere.canceled += ctx => MoveSphere(0);
+
+        InputMaster.DepthRay.ComfirmSelection.performed += ctx => Comfirm();
         
     }
 
@@ -50,6 +52,21 @@ public class DepthRay : MonoBehaviour
     {
         hasStarted = false;
         Destroy(Clone);
+    }
+    
+    void MoveSphere(float y)
+    {
+        print(y);
+        if (y > 0)
+            sphereInput = 0.5f;
+        else if (y < 0)
+            sphereInput = -0.5f;
+        else
+            sphereInput = 0f;
+    }
+
+    void Comfirm()
+    {
         finalSelectedObject = currentObject;
 
         if (finalSelectedObject != null)
@@ -71,16 +88,6 @@ public class DepthRay : MonoBehaviour
             Debug.Log("NO OBJECT SELECTED");
             TimeTrial.StopCounting(null);
         }
-    }
-    
-    void MoveSphere(float y)
-    {
-        if (y > 0)
-            sphereInput = 0.5f;
-        else if (y < 0)
-            sphereInput = -0.5f;
-        else
-            sphereInput = 0f;
     }
 
     void Update()

@@ -6,11 +6,11 @@ public class SelectionMethodTouch : MonoBehaviour
 {
     public float touchSensitivity = 50f;
     public ChangeMaterial ChangeMaterial;
+    public MethodControls mc;
 
     [SerializeField]
     GameObject cylinder;
-
-    MethodControls mc;
+    
     bool isSelection = true;
 
     GameObject cylinderClone;
@@ -27,155 +27,155 @@ public class SelectionMethodTouch : MonoBehaviour
     //Timed Trial
     public TimeTrial TimeTrial;
 
+    InputMaster InputMaster;
 
-
-    void Start()
+    void Awake()
     {
-        mc = transform.GetComponent<MethodControls>();
+        isSelection = true;
+
+        InputMaster = new InputMaster();
+
+        InputMaster.TouchPad.Touch.started += _ => StartTouch();
+        InputMaster.TouchPad.Touch.canceled += _ => ReleaseTouch();
+        InputMaster.TouchPad.MoveTouch.performed += ctx => MoveTouch(ctx.ReadValue<Vector2>());
+
     }
 
-    void Update()
+    void StartTouch()
     {
         if (isSelection)
-            Selection();
-        else
-            Refinement();
+        {
+            mc.ResetObjects();
+            TimeTrial.StartCounting();
+
+            Vector3 pos = new Vector3(
+                                transform.position.x + transform.forward.x / 2,
+                                transform.position.y + transform.forward.y / 2 - 0.5f,
+                                transform.position.z + transform.forward.z / 2);
+
+            cylinderClone = Instantiate(cylinder, pos, transform.rotation);
+
+            xRotation = cylinderClone.transform.eulerAngles.x;
+            yRotation = cylinderClone.transform.eulerAngles.y;
+        }
     }
 
-    void Selection()
+    void ReleaseTouch()
     {
-        if(Input.touchCount > 0)
+        if(isSelection)
         {
-            Touch touch = Input.GetTouch(0);
+            CheckObject co = cylinderClone.GetComponentInChildren<CheckObject>();
+            names = co.getNamesOfObj();
+            //Destroy(cylinderClone);
 
-            //The process begins when the user touches the touch pad
-            if (touch.phase == TouchPhase.Began)
+            foreach (string s in names)
             {
-                TimeTrial.StartCounting();
-
-                Vector3 pos = new Vector3(
-                                    transform.position.x + transform.forward.x / 2,
-                                    transform.position.y + transform.forward.y / 2 - 0.5f,
-                                    transform.position.z + transform.forward.z / 2);
-
-                cylinderClone = Instantiate(cylinder, pos, transform.rotation);
-                
-                xRotation = cylinderClone.transform.eulerAngles.x;
-                yRotation = cylinderClone.transform.eulerAngles.y;
+                GameObject go = GameObject.Find(s);
+                float d = Vector3.Distance(transform.position, go.transform.position);
+                distanceDictionary.Add(d, go);
             }
 
-            //The user can move ray by moving their finger across the touch pad
-            if (touch.phase == TouchPhase.Moved)
-            {                
-                yRotation += touch.deltaPosition.x * touchSensitivity * Time.deltaTime;
-                xRotation -= touch.deltaPosition.y * touchSensitivity * Time.deltaTime;
+            distanceList = distanceDictionary.Keys.ToList();
+            distanceList.Sort();
 
-                cylinderClone.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
-            }
-
-            //Selection process ends when user lets go of the touch pad
-            if (touch.phase == TouchPhase.Ended)
+            if (names.Count == 0)
             {
-                CheckObject co = cylinderClone.GetComponentInChildren<CheckObject>();
-                names = co.getNamesOfObj();
-                Destroy(cylinderClone);
-
-                foreach (string s in names)
+                TimeTrial.StopCounting(null);
+                Debug.Log("NO OBJECT SELECTED");
+                distanceList.Clear();
+                distanceDictionary.Clear();
+            }
+            else
+            {
+                if (mc.isFadeOutActive)
                 {
-                    GameObject go = GameObject.Find(s);
-                    float d = Vector3.Distance(transform.position, go.transform.position);
-                    distanceDictionary.Add(d, go);
+                    mc.FadeOut(names);
                 }
 
-                distanceList = distanceDictionary.Keys.ToList();
-                distanceList.Sort();
-                
-                if (names.Count == 0)
+                if (names.Count == 1)
                 {
-                    TimeTrial.StopCounting(null);
-                    Debug.Log("NO OBJECT SELECTED");
+                    finalSelectedObject = distanceDictionary[distanceList[0]];
+
+                    TimeTrial.StopCounting(finalSelectedObject.name);
+
+                    ChangeMaterial.ChangeColor(finalSelectedObject, 2);
+
+                    Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
                     distanceList.Clear();
                     distanceDictionary.Clear();
                 }
                 else
                 {
-                    if (mc.isFadeOutActive)
-                    {
-                        mc.FadeOut(names);
-                    }
+                    Debug.Log(distanceDictionary[distanceList[0]]);
+                    ChangeMaterial.ChangeColor(distanceDictionary[distanceList[0]], 2);
 
-                    if (names.Count == 1)
-                    {
-                        TimeTrial.StopCounting(finalSelectedObject.name);
-
-                        finalSelectedObject = distanceDictionary[distanceList[0]];
-
-                        ChangeMaterial.ChangeColor(finalSelectedObject, 2);
-
-                        Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
-                        distanceList.Clear();
-                        distanceDictionary.Clear();
-                    }
-                    else
-                    {
-                        Debug.Log(distanceDictionary[distanceList[0]]);
-                        ChangeMaterial.ChangeColor(distanceDictionary[distanceList[0]], 2);
-
-                        isSelection = false;
-                    }
+                    isSelection = false;
                 }
             }
         }
-        
+        else
+        {
+            finalSelectedObject = distanceDictionary[distanceList[index]];
+            foreach (string s in names)
+            {
+                if (s != finalSelectedObject.name)
+                    ChangeMaterial.ChangeColor(GameObject.Find(s), 0);
+            }
+            TimeTrial.StopCounting(finalSelectedObject.name);
+
+            Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
+            index = 0;
+            distanceList.Clear();
+            distanceDictionary.Clear();
+            isSelection = true;
+        }
+    }
+    
+    void MoveTouch(Vector2 touch)
+    {
+        if (isSelection)
+        {
+            yRotation += touch.x * touchSensitivity * Time.deltaTime;
+            xRotation -= touch.y * touchSensitivity * Time.deltaTime;
+
+            cylinderClone.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
+        }
+        else
+        {
+            int newIndex = index;
+            if (touch.y > 10)
+            {
+                newIndex++;
+            }
+            else if (touch.y < -10)
+            {
+                newIndex--;
+            }
+
+            if (newIndex < 0)
+                newIndex = names.Count - 1;
+            if (newIndex >= names.Count)
+                newIndex = 0;
+
+            ChangeMaterial.ChangeColor(distanceDictionary[distanceList[index]], 1);
+
+
+            ChangeMaterial.ChangeColor(distanceDictionary[distanceList[newIndex]], 2);
+
+            index = newIndex;
+        }
     }
 
-    void Refinement()
+  
+
+
+    void OnEnable()
     {
-        if (Input.touchCount > 0)
-        {
-            Touch touch = Input.GetTouch(0);
+        InputMaster.TouchPad.Enable();
+    }
 
-            if (touch.phase == TouchPhase.Moved)
-            {
-                int newIndex = index;
-                if (touch.deltaPosition.y > 0)
-                {
-                    newIndex++;
-                }
-                else if (touch.deltaPosition.y < 0)
-                {
-                    newIndex--;
-                }
-
-                if (newIndex < 0)
-                    newIndex = names.Count - 1;
-                if (newIndex >= names.Count)
-                    newIndex = 0;
-
-                ChangeMaterial.ChangeColor(distanceDictionary[distanceList[index]], 1);
-
-
-                ChangeMaterial.ChangeColor(distanceDictionary[distanceList[newIndex]], 2);
-
-                index = newIndex;
-            }
-
-            if (touch.phase == TouchPhase.Ended)
-            {
-                finalSelectedObject = distanceDictionary[distanceList[index]];
-                foreach (string s in names)
-                {
-                    if (s != finalSelectedObject.name)
-                        ChangeMaterial.ChangeColor(GameObject.Find(s), 0);
-                }
-                TimeTrial.StopCounting(finalSelectedObject.name);
-
-                Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
-                index = 0;
-                isSelection = true;
-                distanceList.Clear();
-                distanceDictionary.Clear();
-            }
-        }
+    void OnDisable()
+    {
+        InputMaster.TouchPad.Disable();
     }
 }

@@ -19,7 +19,7 @@ public class ChangeMaterial : MonoBehaviour
                     ren.material.color = Color.green;
                     break;
                 case 2:
-                    ren.material.color = Color.red;
+                    ren.material.color = Color.cyan;
                     break;
             }
         }

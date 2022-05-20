@@ -1,5 +1,5 @@
 sceneSetups:
-- path: Assets/Scenes/Disperse.unity
+- path: Assets/Scenes/Aggregate.unity
   isLoaded: 1
   isActive: 1
   isSubScene: 0
