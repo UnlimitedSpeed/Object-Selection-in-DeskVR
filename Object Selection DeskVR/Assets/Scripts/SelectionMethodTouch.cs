@@ -14,7 +14,7 @@ public class SelectionMethodTouch : MonoBehaviour
     bool isSelection = true;
 
     GameObject cylinderClone;
-    GameObject cylinderParent;
+
     float xRotation = 0f;
     float yRotation = 0f;
     List<string> names;
@@ -70,7 +70,6 @@ public class SelectionMethodTouch : MonoBehaviour
         {
             CheckObject co = cylinderClone.GetComponentInChildren<CheckObject>();
             names = co.getNamesOfObj();
-            //Destroy(cylinderClone);
 
             foreach (string s in names)
             {
@@ -84,6 +83,7 @@ public class SelectionMethodTouch : MonoBehaviour
 
             if (names.Count == 0)
             {
+                Destroy(cylinderClone);
                 TimeTrial.StopCounting(null);
                 Debug.Log("NO OBJECT SELECTED");
                 distanceList.Clear();
@@ -98,6 +98,8 @@ public class SelectionMethodTouch : MonoBehaviour
 
                 if (names.Count == 1)
                 {
+                    Destroy(cylinderClone);
+
                     finalSelectedObject = distanceDictionary[distanceList[0]];
 
                     TimeTrial.StopCounting(finalSelectedObject.name);
@@ -138,9 +140,6 @@ public class SelectionMethodTouch : MonoBehaviour
     
     void MoveTouch(Vector2 touch)
     {
-
-
-        print(touch);
         if (isSelection)
         {
             yRotation += touch.x * touchSensitivity * Time.deltaTime;

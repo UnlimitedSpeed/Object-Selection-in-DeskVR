@@ -16,10 +16,10 @@ public class ChangeMaterial : MonoBehaviour
                     ren.material.color = defaultMat.color;
                     break;
                 case 1:
-                    ren.material.color = Color.green;
+                    ren.material.color = new Color(0.4f, 0.4f, 0.0f);
                     break;
                 case 2:
-                    ren.material.color = Color.cyan;
+                    ren.material.color = new Color(1f, 1f, 0.6f);
                     break;
             }
         }

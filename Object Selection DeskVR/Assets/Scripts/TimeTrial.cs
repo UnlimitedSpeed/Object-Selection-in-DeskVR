@@ -46,7 +46,7 @@ public class TimeTrial : MonoBehaviour
 
     public void StartCounting()
     {
-        if (!isCounting)
+        if (!isCounting && wantedObject.Length > 0)
         {
             isCounting = true;
             time = 0;
@@ -59,27 +59,30 @@ public class TimeTrial : MonoBehaviour
 
     public void StopCounting(string name)
     {
-        numberOfAttempts++;
-        totalAttempts++;
-
-        if (name == wantedObject[currentIndex].name)
+        if (wantedObject.Length > 0)
         {
-            Destroy(wantedObject[currentIndex].GetComponent<Outline>());
-            double t = Math.Round(time, 2);
-            int tempNumb = currentIndex + 1;
-            WriteToCSV(tempNumb, t, numberOfAttempts);
-            time = 0;
-            numberOfAttempts = 0;
-            
-            if(currentIndex == wantedObject.Length - 1)
+            numberOfAttempts++;
+            totalAttempts++;
+
+            if (name == wantedObject[currentIndex].name)
             {
-                isCounting = false;
-                Debug.Log("Final time: " + Math.Round(finalTime, 2) + "; Attempts: " + totalAttempts);
-            }
-            else
-            {                
-                currentIndex++;
-                wantedObject[currentIndex].AddComponent<Outline>();
+                Destroy(wantedObject[currentIndex].GetComponent<Outline>());
+                double t = Math.Round(time, 2);
+                int tempNumb = currentIndex + 1;
+                WriteToCSV(tempNumb, t, numberOfAttempts);
+                time = 0;
+                numberOfAttempts = 0;
+
+                if (currentIndex == wantedObject.Length - 1)
+                {
+                    isCounting = false;
+                    Debug.Log("Final time: " + Math.Round(finalTime, 2) + "; Attempts: " + totalAttempts);
+                }
+                else
+                {
+                    currentIndex++;
+                    wantedObject[currentIndex].AddComponent<Outline>();
+                }
             }
         }
     }

@@ -171,6 +171,114 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 }
             ]
+        },
+        {
+            ""name"": ""SceneManager"",
+            ""id"": ""7c702777-213b-43c6-89d0-171e4c19ec14"",
+            ""actions"": [
+                {
+                    ""name"": ""Scene1"",
+                    ""type"": ""Button"",
+                    ""id"": ""9cfc1d98-f973-4750-820a-a67c628be407"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Scene2"",
+                    ""type"": ""Button"",
+                    ""id"": ""eb811051-35a0-4524-9c55-3c3e7a9dc49a"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Scene3"",
+                    ""type"": ""Button"",
+                    ""id"": ""eee1fb03-f40a-49f6-bcb9-368d461d5f92"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Scene4"",
+                    ""type"": ""Button"",
+                    ""id"": ""355bf71c-be37-4184-9eb3-68579f336cd7"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""Scene5"",
+                    ""type"": ""Button"",
+                    ""id"": ""76a6d7dc-d53b-4314-bfe8-02a810621f2d"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""1cfd578e-0c30-41c3-b633-f2379f5432d9"",
+                    ""path"": ""<Keyboard>/1"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Scene1"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3bf876a4-12af-4380-8449-3ea9e4ee2c31"",
+                    ""path"": ""<Keyboard>/2"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Scene2"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""502cdd9b-03a5-485c-9ec0-f75f0dc16fd8"",
+                    ""path"": ""<Keyboard>/3"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Scene3"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""828eafc4-0356-4b14-a5e9-78b0571fbb9b"",
+                    ""path"": ""<Keyboard>/4"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Scene4"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""edd87bb1-1b80-4057-af05-f45c9488c58d"",
+                    ""path"": ""<Keyboard>/5"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Scene5"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
         }
     ],
     ""controlSchemes"": []
@@ -184,6 +292,13 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         m_TouchPad = asset.FindActionMap("TouchPad", throwIfNotFound: true);
         m_TouchPad_Touch = m_TouchPad.FindAction("Touch", throwIfNotFound: true);
         m_TouchPad_MoveTouch = m_TouchPad.FindAction("MoveTouch", throwIfNotFound: true);
+        // SceneManager
+        m_SceneManager = asset.FindActionMap("SceneManager", throwIfNotFound: true);
+        m_SceneManager_Scene1 = m_SceneManager.FindAction("Scene1", throwIfNotFound: true);
+        m_SceneManager_Scene2 = m_SceneManager.FindAction("Scene2", throwIfNotFound: true);
+        m_SceneManager_Scene3 = m_SceneManager.FindAction("Scene3", throwIfNotFound: true);
+        m_SceneManager_Scene4 = m_SceneManager.FindAction("Scene4", throwIfNotFound: true);
+        m_SceneManager_Scene5 = m_SceneManager.FindAction("Scene5", throwIfNotFound: true);
     }
 
     public void Dispose()
@@ -329,6 +444,71 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         }
     }
     public TouchPadActions @TouchPad => new TouchPadActions(this);
+
+    // SceneManager
+    private readonly InputActionMap m_SceneManager;
+    private ISceneManagerActions m_SceneManagerActionsCallbackInterface;
+    private readonly InputAction m_SceneManager_Scene1;
+    private readonly InputAction m_SceneManager_Scene2;
+    private readonly InputAction m_SceneManager_Scene3;
+    private readonly InputAction m_SceneManager_Scene4;
+    private readonly InputAction m_SceneManager_Scene5;
+    public struct SceneManagerActions
+    {
+        private @InputMaster m_Wrapper;
+        public SceneManagerActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Scene1 => m_Wrapper.m_SceneManager_Scene1;
+        public InputAction @Scene2 => m_Wrapper.m_SceneManager_Scene2;
+        public InputAction @Scene3 => m_Wrapper.m_SceneManager_Scene3;
+        public InputAction @Scene4 => m_Wrapper.m_SceneManager_Scene4;
+        public InputAction @Scene5 => m_Wrapper.m_SceneManager_Scene5;
+        public InputActionMap Get() { return m_Wrapper.m_SceneManager; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(SceneManagerActions set) { return set.Get(); }
+        public void SetCallbacks(ISceneManagerActions instance)
+        {
+            if (m_Wrapper.m_SceneManagerActionsCallbackInterface != null)
+            {
+                @Scene1.started -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene1;
+                @Scene1.performed -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene1;
+                @Scene1.canceled -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene1;
+                @Scene2.started -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene2;
+                @Scene2.performed -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene2;
+                @Scene2.canceled -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene2;
+                @Scene3.started -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene3;
+                @Scene3.performed -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene3;
+                @Scene3.canceled -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene3;
+                @Scene4.started -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene4;
+                @Scene4.performed -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene4;
+                @Scene4.canceled -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene4;
+                @Scene5.started -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene5;
+                @Scene5.performed -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene5;
+                @Scene5.canceled -= m_Wrapper.m_SceneManagerActionsCallbackInterface.OnScene5;
+            }
+            m_Wrapper.m_SceneManagerActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @Scene1.started += instance.OnScene1;
+                @Scene1.performed += instance.OnScene1;
+                @Scene1.canceled += instance.OnScene1;
+                @Scene2.started += instance.OnScene2;
+                @Scene2.performed += instance.OnScene2;
+                @Scene2.canceled += instance.OnScene2;
+                @Scene3.started += instance.OnScene3;
+                @Scene3.performed += instance.OnScene3;
+                @Scene3.canceled += instance.OnScene3;
+                @Scene4.started += instance.OnScene4;
+                @Scene4.performed += instance.OnScene4;
+                @Scene4.canceled += instance.OnScene4;
+                @Scene5.started += instance.OnScene5;
+                @Scene5.performed += instance.OnScene5;
+                @Scene5.canceled += instance.OnScene5;
+            }
+        }
+    }
+    public SceneManagerActions @SceneManager => new SceneManagerActions(this);
     public interface IDepthRayActions
     {
         void OnCastRay(InputAction.CallbackContext context);
@@ -339,5 +519,13 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     {
         void OnTouch(InputAction.CallbackContext context);
         void OnMoveTouch(InputAction.CallbackContext context);
+    }
+    public interface ISceneManagerActions
+    {
+        void OnScene1(InputAction.CallbackContext context);
+        void OnScene2(InputAction.CallbackContext context);
+        void OnScene3(InputAction.CallbackContext context);
+        void OnScene4(InputAction.CallbackContext context);
+        void OnScene5(InputAction.CallbackContext context);
     }
 }
