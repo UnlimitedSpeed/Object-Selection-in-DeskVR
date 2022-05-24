@@ -3658,7 +3658,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 572295544}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: 0}
-  m_LocalPosition: {x: 2.224, y: 0.582, z: -1.21}
+  m_LocalPosition: {x: 2.676, y: 0.548, z: 1.11}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 511033490}
@@ -6288,7 +6288,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 13c83a4dd69ce5d4abe3afe074077afa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  touchSensitivity: 50
+  touchSensitivity: 2
   ChangeMaterial: {fileID: 1241783333}
   mc: {fileID: 1241783336}
   cylinder: {fileID: 1353465874605371500, guid: 612d81fbe0bfb904e95575595a773a21, type: 3}

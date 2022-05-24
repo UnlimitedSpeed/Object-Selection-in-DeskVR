@@ -35,7 +35,7 @@ public class DepthRay : MonoBehaviour
         InputMaster.DepthRay.MoveSphere.started += ctx => MoveSphere(ctx.ReadValue<float>());
         InputMaster.DepthRay.MoveSphere.canceled += ctx => MoveSphere(0);
 
-        InputMaster.DepthRay.ComfirmSelection.performed += ctx => Comfirm();
+        InputMaster.DepthRay.Confirm.performed += ctx => Comfirm();
         
     }
 
@@ -45,6 +45,8 @@ public class DepthRay : MonoBehaviour
         TimeTrial.StartCounting();
         hasStarted = true;
         Clone = Instantiate(Ray, transform);
+        GameObject c = GameObject.Find(transform.gameObject.name + "/" + Clone.name + "/Cylinder");
+        Destroy(c.GetComponent<CheckObject>());
         Sphere = GameObject.Find(transform.gameObject.name + "/" + Clone.name + "/Sphere");
     }
 
@@ -52,28 +54,6 @@ public class DepthRay : MonoBehaviour
     {
         hasStarted = false;
         Destroy(Clone);
-
-        finalSelectedObject = currentObject;
-
-        if (finalSelectedObject != null)
-        {
-            foreach (string s in names)
-            {
-                if (s != finalSelectedObject.name)
-                {
-                    GameObject obj = GameObject.Find(s);
-                    ChangeMaterial.ChangeColor(obj, 0);
-                }
-            }
-
-            Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
-            TimeTrial.StopCounting(finalSelectedObject.name);
-        }
-        else
-        {
-            Debug.Log("NO OBJECT SELECTED");
-            TimeTrial.StopCounting(null);
-        }
     }
     
     void MoveSphere(float y)
@@ -88,7 +68,35 @@ public class DepthRay : MonoBehaviour
 
     void Comfirm()
     {
-        
+        if (hasStarted)
+        {
+            Renderer r = currentObject.GetComponent<Renderer>();
+
+            if (r.material.color == new Color(1f, 1f, 0.6f))
+                finalSelectedObject = currentObject;
+            else
+                finalSelectedObject = null;
+
+            if (finalSelectedObject != null)
+            {
+                foreach (string s in names)
+                {
+                    if (s != finalSelectedObject.name)
+                    {
+                        GameObject obj = GameObject.Find(s);
+                        ChangeMaterial.ChangeColor(obj, 0);
+                    }
+                }
+
+                Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
+                TimeTrial.StopCounting(finalSelectedObject.name);
+            }
+            else
+            {
+                Debug.Log("NO OBJECT SELECTED");
+                TimeTrial.StopCounting(null);
+            }
+        }
     }
 
     void Update()
