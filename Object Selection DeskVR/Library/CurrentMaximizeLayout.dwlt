@@ -21,10 +21,10 @@ MonoBehaviour:
     y: 30
     width: 2560
     height: 1307
-  m_MinSize: {x: 679, y: 492}
-  m_MaxSize: {x: 14002, y: 14042}
+  m_MinSize: {x: 679, y: 342}
+  m_MaxSize: {x: 12004, y: 8042}
   vertical: 0
-  controlID: 5253
+  controlID: 10504
 --- !u!114 &2
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -45,8 +45,8 @@ MonoBehaviour:
     m_Tooltip: 
   m_Pos:
     serializedVersion: 2
-    x: 403
-    y: 19
+    x: 402
+    y: 72.66667
     width: 1419.3334
     height: 721
   m_ViewDataDictionary: {fileID: 0}
@@ -83,7 +83,7 @@ MonoBehaviour:
     m_HSlider: 0
     m_VSlider: 0
     m_IgnoreScrollWheelUntilClicked: 0
-    m_EnableMouseInput: 0
+    m_EnableMouseInput: 1
     m_EnableSliderZoomHorizontal: 0
     m_EnableSliderZoomVertical: 0
     m_UniformScale: 1
@@ -135,10 +135,10 @@ MonoBehaviour:
     y: 0
     width: 1823.3334
     height: 1307
-  m_MinSize: {x: 403, y: 492}
-  m_MaxSize: {x: 10001, y: 14042}
+  m_MinSize: {x: 403, y: 342}
+  m_MaxSize: {x: 8003, y: 8042}
   vertical: 1
-  controlID: 5254
+  controlID: 10505
 --- !u!114 &4
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -163,7 +163,7 @@ MonoBehaviour:
   m_MinSize: {x: 403, y: 221}
   m_MaxSize: {x: 8003, y: 4021}
   vertical: 0
-  controlID: 5229
+  controlID: 10506
 --- !u!114 &5
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -220,7 +220,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: c6f3ffff8cf4ffff52f5ffff2cf7ffff0cf8ffffecf8ffffc4f9ffff4afbffff586a0000b66a0000
+      m_ExpandedIDs: 02acffffccacffff92adffffd2bbffffacc8ffff4cfbffffa8450000064600002c47000090470000cc6f0000a4700000b6790000de7a00000a7b0000
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -273,7 +273,7 @@ MonoBehaviour:
   - {fileID: 10}
   - {fileID: 11}
   m_Selected: 1
-  m_LastSelected: 0
+  m_LastSelected: 3
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -310,9 +310,9 @@ MonoBehaviour:
   m_PlayAudio: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: 0.6022543, y: 1.5300534, z: 3.6744838}
+    m_Target: {x: -3.3005464, y: 0.3927878, z: 2.0303185}
     speed: 2
-    m_Value: {x: 0.6022543, y: 1.5300534, z: 3.6744838}
+    m_Value: {x: -3.3005464, y: 0.3927878, z: 2.0303185}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -359,13 +359,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.05756108, y: 0.4051798, z: -0.025060454, w: -0.9122547}
+    m_Target: {x: -0.15023811, y: 0.6690511, z: -0.14002496, w: -0.7145169}
     speed: 2
-    m_Value: {x: -0.05755186, y: 0.4051149, z: -0.02505644, w: -0.91210854}
+    m_Value: {x: -0.15021242, y: 0.66893667, z: -0.14000101, w: -0.7143947}
   m_Size:
-    m_Target: 1.2339747
+    m_Target: 1.7887888
     speed: 2
-    m_Value: 1.2339747
+    m_Value: 1.7887888
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -441,7 +441,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 402
     y: 72.66667
-    width: 1419
+    width: 1419.3334
     height: 721
   m_ViewDataDictionary: {fileID: 0}
   m_ActionMapsTreeState:
@@ -468,8 +468,8 @@ MonoBehaviour:
     m_SearchString: 
   m_ActionsTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 7cb250b2
-    m_LastClickedID: -1303334276
+    m_SelectedIDs: 674ec88d
+    m_LastClickedID: -1916252569
     m_ExpandedIDs: 90f8ad8b674ec88de5949da11ab3a8a67cb250b2ea3847c7bf5d69ddef5521e24fb66ce32288c4edba430feefcea9ef59cf0b5f69a5c0bfaf3c1f912354c6615306bf5240e621d2a67b2eb2c92717871
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -492,17 +492,17 @@ MonoBehaviour:
     m_AdvancedDropdownState:
       states:
       - itemId: 371857150
-        selectedIndex: 11
+        selectedIndex: 9
         scroll: {x: 0, y: 0}
       - itemId: 1943893468
         selectedIndex: 1
         scroll: {x: 0, y: 0}
       - itemId: -1415197782
-        selectedIndex: 12
+        selectedIndex: 1
         scroll: {x: 0, y: 0}
       - itemId: 1081013944
-        selectedIndex: 33
-        scroll: {x: 0, y: 336.5}
+        selectedIndex: 3
+        scroll: {x: 0, y: 0}
       - itemId: 403810634
         selectedIndex: 0
         scroll: {x: 0, y: 0}
@@ -602,6 +602,9 @@ MonoBehaviour:
       - itemId: -1217029472
         selectedIndex: 0
         scroll: {x: 0, y: 0}
+      - itemId: 1276893544
+        selectedIndex: -1
+        scroll: {x: 0, y: 0}
     m_ManualPathEditMode: 0
   m_ActionAssetManager:
     m_AssetObjectForEditing: {fileID: 0}
@@ -615,11 +618,12 @@ MonoBehaviour:
       \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
       },\n                {\n                    \"name\": \"MoveSphere\",\n                   
       \"type\": \"Value\",\n                    \"id\": \"7762bf7b-b0d7-4f25-ad38-31663ddc3cc2\",\n                   
-      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
-      },\n                {\n                    \"name\": \"Confirm\",\n                   
-      \"type\": \"Button\",\n                    \"id\": \"b65c3c23-7724-4dee-b1af-b0c56f07615f\",\n                   
-      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
+      \"expectedControlType\": \"Vector2\",\n                    \"processors\":
+      \"\",\n                    \"interactions\": \"\",\n                    \"initialStateCheck\":
+      true\n                },\n                {\n                    \"name\":
+      \"Confirm\",\n                    \"type\": \"Button\",\n                   
+      \"id\": \"b65c3c23-7724-4dee-b1af-b0c56f07615f\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                   
       \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
       }\n            ],\n            \"bindings\": [\n                {\n                   
       \"name\": \"\",\n                    \"id\": \"ae281d4e-9f79-4291-a368-68a1bbaf250b\",\n                   
@@ -633,24 +637,12 @@ MonoBehaviour:
       \"\",\n                    \"processors\": \"\",\n                    \"groups\":
       \"\",\n                    \"action\": \"Confirm\",\n                    \"isComposite\":
       false,\n                    \"isPartOfComposite\": false\n                },\n               
-      {\n                    \"name\": \"1D Axis\",\n                    \"id\":
-      \"867a061b-4175-450d-b135-298ef20a9eac\",\n                    \"path\": \"1DAxis\",\n                   
-      \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
-      \"groups\": \"\",\n                    \"action\": \"MoveSphere\",\n                   
-      \"isComposite\": true,\n                    \"isPartOfComposite\": false\n               
-      },\n                {\n                    \"name\": \"negative\",\n                   
-      \"id\": \"a36eaba4-4372-4427-bd85-3814edbb54f9\",\n                    \"path\":
-      \"<XRController>{RightHand}/primaryButton\",\n                    \"interactions\":
+      {\n                    \"name\": \"\",\n                    \"id\": \"8e278f06-600e-426e-8557-a8b38a72115f\",\n                   
+      \"path\": \"<XRController>{RightHand}/thumbstick\",\n                    \"interactions\":
       \"\",\n                    \"processors\": \"\",\n                    \"groups\":
       \"\",\n                    \"action\": \"MoveSphere\",\n                   
-      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
-      },\n                {\n                    \"name\": \"positive\",\n                   
-      \"id\": \"a060075e-4bb7-4b51-98f8-57fe251ebe05\",\n                    \"path\":
-      \"<XRController>{RightHand}/secondaryButton\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"\",\n                    \"action\": \"MoveSphere\",\n                   
-      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
-      }\n            ]\n        },\n        {\n            \"name\": \"RopeCursor\",\n           
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      }\n            ]\n        },\n        {\n            \"name\": \"RayCursor\",\n           
       \"id\": \"4a9455b2-587d-41cb-b681-dce2359032c1\",\n            \"actions\":
       [\n                {\n                    \"name\": \"CastRay\",\n                   
       \"type\": \"Value\",\n                    \"id\": \"7d450c6f-0f8d-4289-886e-ffb214512a81\",\n                   
@@ -658,10 +650,15 @@ MonoBehaviour:
       \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
       },\n                {\n                    \"name\": \"MoveSphere\",\n                   
       \"type\": \"Value\",\n                    \"id\": \"b8e029d3-8c15-4281-af9b-10ca00682662\",\n                   
-      \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
-      \"interactions\": \"\",\n                    \"initialStateCheck\": true\n               
-      },\n                {\n                    \"name\": \"Confirm\",\n                   
-      \"type\": \"Button\",\n                    \"id\": \"a334f505-bb64-474c-9cc0-aa172090d635\",\n                   
+      \"expectedControlType\": \"Vector2\",\n                    \"processors\":
+      \"\",\n                    \"interactions\": \"\",\n                    \"initialStateCheck\":
+      true\n                },\n                {\n                    \"name\":
+      \"Confirm\",\n                    \"type\": \"Button\",\n                   
+      \"id\": \"a334f505-bb64-474c-9cc0-aa172090d635\",\n                    \"expectedControlType\":
+      \"Button\",\n                    \"processors\": \"\",\n                   
+      \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
+      },\n                {\n                    \"name\": \"ABC\",\n                   
+      \"type\": \"Button\",\n                    \"id\": \"fcf75141-0a18-47d8-a04e-0dcc1ef5aaa1\",\n                   
       \"expectedControlType\": \"Button\",\n                    \"processors\": \"\",\n                   
       \"interactions\": \"\",\n                    \"initialStateCheck\": false\n               
       }\n            ],\n            \"bindings\": [\n                {\n                   
@@ -676,23 +673,17 @@ MonoBehaviour:
       \"\",\n                    \"processors\": \"\",\n                    \"groups\":
       \"\",\n                    \"action\": \"Confirm\",\n                    \"isComposite\":
       false,\n                    \"isPartOfComposite\": false\n                },\n               
-      {\n                    \"name\": \"1D Axis\",\n                    \"id\":
-      \"72cdb3ec-25af-499c-89c5-4d6409c6ab6f\",\n                    \"path\": \"1DAxis\",\n                   
+      {\n                    \"name\": \"\",\n                    \"id\": \"b6deae3c-112f-4f28-85ab-1d6602c76a02\",\n                   
+      \"path\": \"<XRController>{RightHand}/thumbstickTouched\",\n                   
       \"interactions\": \"\",\n                    \"processors\": \"\",\n                   
-      \"groups\": \"\",\n                    \"action\": \"MoveSphere\",\n                   
-      \"isComposite\": true,\n                    \"isPartOfComposite\": false\n               
-      },\n                {\n                    \"name\": \"negative\",\n                   
-      \"id\": \"3d2483a8-8157-4164-af9c-881ce80cedcf\",\n                    \"path\":
-      \"<XRController>{RightHand}/primaryButton\",\n                    \"interactions\":
+      \"groups\": \"\",\n                    \"action\": \"ABC\",\n                   
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
+      },\n                {\n                    \"name\": \"\",\n                   
+      \"id\": \"927351a5-e7cf-4db5-801b-700511c2308f\",\n                    \"path\":
+      \"<XRController>{RightHand}/thumbstick\",\n                    \"interactions\":
       \"\",\n                    \"processors\": \"\",\n                    \"groups\":
       \"\",\n                    \"action\": \"MoveSphere\",\n                   
-      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
-      },\n                {\n                    \"name\": \"positive\",\n                   
-      \"id\": \"f6c46497-d629-4b14-9fb8-5c5f99d4791d\",\n                    \"path\":
-      \"<XRController>{RightHand}/secondaryButton\",\n                    \"interactions\":
-      \"\",\n                    \"processors\": \"\",\n                    \"groups\":
-      \"\",\n                    \"action\": \"MoveSphere\",\n                   
-      \"isComposite\": false,\n                    \"isPartOfComposite\": true\n               
+      \"isComposite\": false,\n                    \"isPartOfComposite\": false\n               
       }\n            ]\n        },\n        {\n            \"name\": \"TouchPad\",\n           
       \"id\": \"d0da20ae-d0c7-42aa-8b76-2a49d1d98f0a\",\n            \"actions\":
       [\n                {\n                    \"name\": \"Touch\",\n                   
@@ -813,7 +804,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: ProjectBrowser
+  m_Name: ConsoleWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -822,14 +813,14 @@ MonoBehaviour:
     y: 742
     width: 1823.3334
     height: 565
-  m_MinSize: {x: 231, y: 271}
-  m_MaxSize: {x: 10001, y: 10021}
-  m_ActualView: {fileID: 13}
+  m_MinSize: {x: 101, y: 121}
+  m_MaxSize: {x: 4001, y: 4021}
+  m_ActualView: {fileID: 14}
   m_Panes:
   - {fileID: 13}
   - {fileID: 14}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 1
+  m_LastSelected: 0
 --- !u!114 &13
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -868,13 +859,13 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Materials
+    - Assets/Prefabs
     m_Globs: []
     m_OriginalText: 
   m_ViewMode: 1
   m_StartGridSize: 67
   m_LastFolders:
-  - Assets/Materials
+  - Assets/Prefabs
   m_LastFoldersGridSize: 67
   m_LastProjectPath: C:\Users\Testes\Desktop\Object-Selection-in-DeskVR\Object Selection
     DeskVR
@@ -882,9 +873,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 86480000
-    m_LastClickedID: 18566
-    m_ExpandedIDs: 0000000076480000784800007a48000000ca9a3b
+    m_SelectedIDs: 224f0000
+    m_LastClickedID: 20258
+    m_ExpandedIDs: 000000006c4800006e4800007048000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -912,7 +903,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000076480000784800007a48000000ca9a3b
+    m_ExpandedIDs: 000000006c4800006e4800007048000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -937,9 +928,9 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
   m_ListAreaState:
-    m_SelectedInstanceIDs: b252ffff
-    m_LastClickedInstanceID: -44366
-    m_HadKeyboardFocusLastEvent: 1
+    m_SelectedInstanceIDs: 1c790000
+    m_LastClickedInstanceID: 31004
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -1050,7 +1041,7 @@ MonoBehaviour:
     m_CachedPref: 160
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
-  m_LastInspectedObjectInstanceID: -44366
+  m_LastInspectedObjectInstanceID: -1
   m_LastVerticalScrollValue: 0
   m_GlobalObjectId: 
   m_LockTracker:

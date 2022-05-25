@@ -14,6 +14,8 @@ public class TimeTrial : MonoBehaviour
     double finalTime = 0;
     int currentIndex = 0;
 
+    DateTime time2;
+
     int numberOfAttempts = 0;
     int totalAttempts = 0;
 
@@ -50,6 +52,7 @@ public class TimeTrial : MonoBehaviour
         {
             isCounting = true;
             time = 0;
+            time2 = DateTime.Now;
             numberOfAttempts = 0;
             finalTime = 0;
             totalAttempts = 0;
@@ -67,9 +70,11 @@ public class TimeTrial : MonoBehaviour
             if (name == wantedObject[currentIndex].name)
             {
                 Destroy(wantedObject[currentIndex].GetComponent<Outline>());
+                DateTime now = DateTime.Now;
+                TimeSpan diff = now - time2;
                 double t = Math.Round(time, 2);
                 int tempNumb = currentIndex + 1;
-                WriteToCSV(tempNumb, t, numberOfAttempts);
+                WriteToCSV(tempNumb, diff.TotalMilliseconds, numberOfAttempts);
                 time = 0;
                 numberOfAttempts = 0;
 
@@ -82,6 +87,7 @@ public class TimeTrial : MonoBehaviour
                 {
                     currentIndex++;
                     wantedObject[currentIndex].AddComponent<Outline>();
+                    time2 = DateTime.Now;
                 }
             }
         }

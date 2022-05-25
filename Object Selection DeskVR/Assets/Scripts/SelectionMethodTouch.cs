@@ -24,7 +24,7 @@ public class SelectionMethodTouch : MonoBehaviour
     GameObject finalSelectedObject;
     int index = 0;
 
-    float onossoacumulador;
+    float accumulator;
 
     //Timed Trial
     public TimeTrial TimeTrial;
@@ -61,7 +61,9 @@ public class SelectionMethodTouch : MonoBehaviour
             yRotation = cylinderClone.transform.eulerAngles.y;
         }
         else
-            onossoacumulador = 0;
+        {
+            accumulator = 0;
+        }
     }
 
     void ReleaseTouch()
@@ -85,7 +87,7 @@ public class SelectionMethodTouch : MonoBehaviour
             {
                 Destroy(cylinderClone);
                 TimeTrial.StopCounting(null);
-                Debug.Log("NO OBJECT SELECTED");
+                //Debug.Log("NO OBJECT SELECTED");
                 distanceList.Clear();
                 distanceDictionary.Clear();
             }
@@ -106,14 +108,25 @@ public class SelectionMethodTouch : MonoBehaviour
 
                     ChangeMaterial.ChangeColor(finalSelectedObject, 2);
 
-                    Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
+                    //Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
                     distanceList.Clear();
                     distanceDictionary.Clear();
                 }
                 else
                 {
-                    Debug.Log(distanceDictionary[distanceList[0]]);
+                    //Debug.Log(distanceDictionary[distanceList[0]]);
                     ChangeMaterial.ChangeColor(distanceDictionary[distanceList[0]], 2);
+
+                    for (int i = 1; i < distanceList.Count; i++)
+                    {
+                        GameObject o = distanceDictionary[distanceList[i]];
+                        
+                        ChangeMaterial.ChangeColor(o, 1);
+                        Color c = o.GetComponent<Renderer>().material.color;
+                        c.a = 0.5f;
+                        o.GetComponent<Renderer>().material.color = c;
+                        
+                    }
 
                     isSelection = false;
                 }
@@ -130,7 +143,7 @@ public class SelectionMethodTouch : MonoBehaviour
             }
             TimeTrial.StopCounting(finalSelectedObject.name);
 
-            Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
+            //Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
             index = 0;
             distanceList.Clear();
             distanceDictionary.Clear();
@@ -142,25 +155,27 @@ public class SelectionMethodTouch : MonoBehaviour
     {
         if (isSelection)
         {
-            yRotation += touch.x * touchSensitivity * Time.deltaTime;
-            xRotation -= touch.y * touchSensitivity * Time.deltaTime;
+            float v = touch.magnitude / Time.deltaTime / 1000.0f;
+
+            yRotation += touch.x * touchSensitivity * Time.deltaTime * v;
+            xRotation -= touch.y * touchSensitivity * Time.deltaTime * v;
 
             cylinderClone.transform.rotation = Quaternion.Euler(xRotation, yRotation, 0f);
         }
         else
         {
-            onossoacumulador += touch.y;
+            accumulator += touch.y;
 
             int newIndex = index;
-            if (onossoacumulador > 100)
+            if (accumulator > 100)
             {
                 newIndex++;
-                onossoacumulador = 0;
+                accumulator = 0;
             }
-            else if (onossoacumulador < -100)
+            else if (accumulator < -100)
             {
                 newIndex--;
-                onossoacumulador = 0;
+                accumulator = 0;
             }
 
             if (newIndex < 0)
@@ -170,8 +185,28 @@ public class SelectionMethodTouch : MonoBehaviour
 
             ChangeMaterial.ChangeColor(distanceDictionary[distanceList[index]], 1);
 
-
             ChangeMaterial.ChangeColor(distanceDictionary[distanceList[newIndex]], 2);
+            
+            for(int i = 0; i < distanceList.Count; i++)
+            {
+                GameObject o = distanceDictionary[distanceList[i]];
+                
+                if (i != newIndex)
+                {
+                    ChangeMaterial.ChangeColor(o, 1);
+                    Color c = o.GetComponent<Renderer>().material.color;
+                    c.a = 0.5f;
+                    o.GetComponent<Renderer>().material.color = c;
+                }
+                else
+                {
+                    ChangeMaterial.ChangeColor(o, 2);
+                    Color c = o.GetComponent<Renderer>().material.color;
+                    c.a = 1.0f;
+                    o.GetComponent<Renderer>().material.color = c;
+                }
+            }
+
 
             index = newIndex;
         }

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using UnityEngine;
@@ -32,8 +33,7 @@ public class DepthRay : MonoBehaviour
         InputMaster.DepthRay.CastRay.started += ctx => CastRay();
         InputMaster.DepthRay.CastRay.canceled += ctx => DeleteRay();
 
-        InputMaster.DepthRay.MoveSphere.started += ctx => MoveSphere(ctx.ReadValue<float>());
-        InputMaster.DepthRay.MoveSphere.canceled += ctx => MoveSphere(0);
+        InputMaster.DepthRay.MoveSphere.started += ctx => MoveSphere(ctx.ReadValue<Vector2>());
 
         InputMaster.DepthRay.Confirm.performed += ctx => Comfirm();
         
@@ -45,8 +45,6 @@ public class DepthRay : MonoBehaviour
         TimeTrial.StartCounting();
         hasStarted = true;
         Clone = Instantiate(Ray, transform);
-        GameObject c = GameObject.Find(transform.gameObject.name + "/" + Clone.name + "/Cylinder");
-        Destroy(c.GetComponent<CheckObject>());
         Sphere = GameObject.Find(transform.gameObject.name + "/" + Clone.name + "/Sphere");
     }
 
@@ -55,15 +53,10 @@ public class DepthRay : MonoBehaviour
         hasStarted = false;
         Destroy(Clone);
     }
-    
-    void MoveSphere(float y)
+
+    void MoveSphere(Vector2 vec)
     {
-        if (y > 0)
-            sphereInput = 0.5f;
-        else if (y < 0)
-            sphereInput = -0.5f;
-        else
-            sphereInput = 0f;
+        sphereInput = (float)Math.Round(vec.y, 2);
     }
 
     void Comfirm()

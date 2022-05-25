@@ -40,7 +40,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""name"": ""MoveSphere"",
                     ""type"": ""Value"",
                     ""id"": ""7762bf7b-b0d7-4f25-ad38-31663ddc3cc2"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -79,42 +79,20 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""867a061b-4175-450d-b135-298ef20a9eac"",
-                    ""path"": ""1DAxis"",
+                    ""name"": """",
+                    ""id"": ""8e278f06-600e-426e-8557-a8b38a72115f"",
+                    ""path"": ""<XRController>{RightHand}/thumbstick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""MoveSphere"",
-                    ""isComposite"": true,
+                    ""isComposite"": false,
                     ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": ""negative"",
-                    ""id"": ""a36eaba4-4372-4427-bd85-3814edbb54f9"",
-                    ""path"": ""<XRController>{RightHand}/primaryButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveSphere"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""a060075e-4bb7-4b51-98f8-57fe251ebe05"",
-                    ""path"": ""<XRController>{RightHand}/secondaryButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveSphere"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
                 }
             ]
         },
         {
-            ""name"": ""RopeCursor"",
+            ""name"": ""RayCursor"",
             ""id"": ""4a9455b2-587d-41cb-b681-dce2359032c1"",
             ""actions"": [
                 {
@@ -130,7 +108,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""name"": ""MoveSphere"",
                     ""type"": ""Value"",
                     ""id"": ""b8e029d3-8c15-4281-af9b-10ca00682662"",
-                    ""expectedControlType"": ""Button"",
+                    ""expectedControlType"": ""Vector2"",
                     ""processors"": """",
                     ""interactions"": """",
                     ""initialStateCheck"": true
@@ -139,6 +117,15 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""name"": ""Confirm"",
                     ""type"": ""Button"",
                     ""id"": ""a334f505-bb64-474c-9cc0-aa172090d635"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ABC"",
+                    ""type"": ""Button"",
+                    ""id"": ""fcf75141-0a18-47d8-a04e-0dcc1ef5aaa1"",
                     ""expectedControlType"": ""Button"",
                     ""processors"": """",
                     ""interactions"": """",
@@ -169,37 +156,26 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""1D Axis"",
-                    ""id"": ""72cdb3ec-25af-499c-89c5-4d6409c6ab6f"",
-                    ""path"": ""1DAxis"",
+                    ""name"": """",
+                    ""id"": ""b6deae3c-112f-4f28-85ab-1d6602c76a02"",
+                    ""path"": ""<XRController>{RightHand}/thumbstickTouched"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""MoveSphere"",
-                    ""isComposite"": true,
+                    ""action"": ""ABC"",
+                    ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""negative"",
-                    ""id"": ""3d2483a8-8157-4164-af9c-881ce80cedcf"",
-                    ""path"": ""<XRController>{RightHand}/primaryButton"",
+                    ""name"": """",
+                    ""id"": ""927351a5-e7cf-4db5-801b-700511c2308f"",
+                    ""path"": ""<XRController>{RightHand}/thumbstick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""MoveSphere"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": true
-                },
-                {
-                    ""name"": ""positive"",
-                    ""id"": ""f6c46497-d629-4b14-9fb8-5c5f99d4791d"",
-                    ""path"": ""<XRController>{RightHand}/secondaryButton"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""MoveSphere"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": true
+                    ""isPartOfComposite"": false
                 }
             ]
         },
@@ -367,11 +343,12 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         m_DepthRay_CastRay = m_DepthRay.FindAction("CastRay", throwIfNotFound: true);
         m_DepthRay_MoveSphere = m_DepthRay.FindAction("MoveSphere", throwIfNotFound: true);
         m_DepthRay_Confirm = m_DepthRay.FindAction("Confirm", throwIfNotFound: true);
-        // RopeCursor
-        m_RopeCursor = asset.FindActionMap("RopeCursor", throwIfNotFound: true);
-        m_RopeCursor_CastRay = m_RopeCursor.FindAction("CastRay", throwIfNotFound: true);
-        m_RopeCursor_MoveSphere = m_RopeCursor.FindAction("MoveSphere", throwIfNotFound: true);
-        m_RopeCursor_Confirm = m_RopeCursor.FindAction("Confirm", throwIfNotFound: true);
+        // RayCursor
+        m_RayCursor = asset.FindActionMap("RayCursor", throwIfNotFound: true);
+        m_RayCursor_CastRay = m_RayCursor.FindAction("CastRay", throwIfNotFound: true);
+        m_RayCursor_MoveSphere = m_RayCursor.FindAction("MoveSphere", throwIfNotFound: true);
+        m_RayCursor_Confirm = m_RayCursor.FindAction("Confirm", throwIfNotFound: true);
+        m_RayCursor_ABC = m_RayCursor.FindAction("ABC", throwIfNotFound: true);
         // TouchPad
         m_TouchPad = asset.FindActionMap("TouchPad", throwIfNotFound: true);
         m_TouchPad_Touch = m_TouchPad.FindAction("Touch", throwIfNotFound: true);
@@ -488,39 +465,44 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     }
     public DepthRayActions @DepthRay => new DepthRayActions(this);
 
-    // RopeCursor
-    private readonly InputActionMap m_RopeCursor;
-    private IRopeCursorActions m_RopeCursorActionsCallbackInterface;
-    private readonly InputAction m_RopeCursor_CastRay;
-    private readonly InputAction m_RopeCursor_MoveSphere;
-    private readonly InputAction m_RopeCursor_Confirm;
-    public struct RopeCursorActions
+    // RayCursor
+    private readonly InputActionMap m_RayCursor;
+    private IRayCursorActions m_RayCursorActionsCallbackInterface;
+    private readonly InputAction m_RayCursor_CastRay;
+    private readonly InputAction m_RayCursor_MoveSphere;
+    private readonly InputAction m_RayCursor_Confirm;
+    private readonly InputAction m_RayCursor_ABC;
+    public struct RayCursorActions
     {
         private @InputMaster m_Wrapper;
-        public RopeCursorActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
-        public InputAction @CastRay => m_Wrapper.m_RopeCursor_CastRay;
-        public InputAction @MoveSphere => m_Wrapper.m_RopeCursor_MoveSphere;
-        public InputAction @Confirm => m_Wrapper.m_RopeCursor_Confirm;
-        public InputActionMap Get() { return m_Wrapper.m_RopeCursor; }
+        public RayCursorActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
+        public InputAction @CastRay => m_Wrapper.m_RayCursor_CastRay;
+        public InputAction @MoveSphere => m_Wrapper.m_RayCursor_MoveSphere;
+        public InputAction @Confirm => m_Wrapper.m_RayCursor_Confirm;
+        public InputAction @ABC => m_Wrapper.m_RayCursor_ABC;
+        public InputActionMap Get() { return m_Wrapper.m_RayCursor; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(RopeCursorActions set) { return set.Get(); }
-        public void SetCallbacks(IRopeCursorActions instance)
+        public static implicit operator InputActionMap(RayCursorActions set) { return set.Get(); }
+        public void SetCallbacks(IRayCursorActions instance)
         {
-            if (m_Wrapper.m_RopeCursorActionsCallbackInterface != null)
+            if (m_Wrapper.m_RayCursorActionsCallbackInterface != null)
             {
-                @CastRay.started -= m_Wrapper.m_RopeCursorActionsCallbackInterface.OnCastRay;
-                @CastRay.performed -= m_Wrapper.m_RopeCursorActionsCallbackInterface.OnCastRay;
-                @CastRay.canceled -= m_Wrapper.m_RopeCursorActionsCallbackInterface.OnCastRay;
-                @MoveSphere.started -= m_Wrapper.m_RopeCursorActionsCallbackInterface.OnMoveSphere;
-                @MoveSphere.performed -= m_Wrapper.m_RopeCursorActionsCallbackInterface.OnMoveSphere;
-                @MoveSphere.canceled -= m_Wrapper.m_RopeCursorActionsCallbackInterface.OnMoveSphere;
-                @Confirm.started -= m_Wrapper.m_RopeCursorActionsCallbackInterface.OnConfirm;
-                @Confirm.performed -= m_Wrapper.m_RopeCursorActionsCallbackInterface.OnConfirm;
-                @Confirm.canceled -= m_Wrapper.m_RopeCursorActionsCallbackInterface.OnConfirm;
+                @CastRay.started -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnCastRay;
+                @CastRay.performed -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnCastRay;
+                @CastRay.canceled -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnCastRay;
+                @MoveSphere.started -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnMoveSphere;
+                @MoveSphere.performed -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnMoveSphere;
+                @MoveSphere.canceled -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnMoveSphere;
+                @Confirm.started -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnConfirm;
+                @Confirm.performed -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnConfirm;
+                @Confirm.canceled -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnConfirm;
+                @ABC.started -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnABC;
+                @ABC.performed -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnABC;
+                @ABC.canceled -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnABC;
             }
-            m_Wrapper.m_RopeCursorActionsCallbackInterface = instance;
+            m_Wrapper.m_RayCursorActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @CastRay.started += instance.OnCastRay;
@@ -532,10 +514,13 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @Confirm.started += instance.OnConfirm;
                 @Confirm.performed += instance.OnConfirm;
                 @Confirm.canceled += instance.OnConfirm;
+                @ABC.started += instance.OnABC;
+                @ABC.performed += instance.OnABC;
+                @ABC.canceled += instance.OnABC;
             }
         }
     }
-    public RopeCursorActions @RopeCursor => new RopeCursorActions(this);
+    public RayCursorActions @RayCursor => new RayCursorActions(this);
 
     // TouchPad
     private readonly InputActionMap m_TouchPad;
@@ -648,11 +633,12 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         void OnMoveSphere(InputAction.CallbackContext context);
         void OnConfirm(InputAction.CallbackContext context);
     }
-    public interface IRopeCursorActions
+    public interface IRayCursorActions
     {
         void OnCastRay(InputAction.CallbackContext context);
         void OnMoveSphere(InputAction.CallbackContext context);
         void OnConfirm(InputAction.CallbackContext context);
+        void OnABC(InputAction.CallbackContext context);
     }
     public interface ITouchPadActions
     {
