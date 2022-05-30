@@ -1,35 +1,68 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class ChangeMaterial : MonoBehaviour
 {
-    public Material defaultMat;
+    public Material transparentMaterial;
+    public Material topCandidateMaterial;
+    public Material candidateMaterial;
 
-    public void ChangeColor(GameObject gameObject, int outlineNumber)
+
+
+    Dictionary<string, Material> colorDictionary = new Dictionary<string, Material>();
+
+    public void ChangeColor(GameObject gameObject, int outlineNumber, bool isTransparent)
     {
-        Renderer ren = gameObject.GetComponent<Renderer>();
+        string name = gameObject.name;
 
-        if (ren != null)
+        if (gameObject.TryGetComponent(out Renderer ren))
         {
-            switch (outlineNumber)
+
+            if (!colorDictionary.ContainsKey(name))
             {
-                case 0:
-                    ren.material.color = defaultMat.color;
-                    break;
-                case 1:
-                    ren.material.color = new Color(0.4f, 0.4f, 0.0f);
-                    break;
-                case 2:
-                    ren.material.color = new Color(1f, 1f, 0.6f);
-                    break;
+                Material m = ren.material;
+
+                colorDictionary.Add(name, m);
             }
+
+            if (!isTransparent)
+            {
+                switch (outlineNumber)
+                {
+                    case 0:
+                        Material material;
+                        colorDictionary.TryGetValue(name, out material);
+                        ren.material = material;
+                        break;
+                    case 1:
+                        ren.material = candidateMaterial;
+                        break;
+                    case 2:
+                        ren.material = topCandidateMaterial;
+                        break;
+                }
+            }
+            else
+            {
+                ren.material = transparentMaterial;
+            }
+            
+
+            
+            
         }
         else
         {
             Transform[] children = gameObject.GetComponentsInChildren<Transform>();
-            for(int i = 1; i < children.Length; i++)
+            for (int i = 1; i < children.Length; i++)
             {
-                ChangeColor(children[i].gameObject, outlineNumber);
+                ChangeColor(children[i].gameObject, outlineNumber, isTransparent);
             }
         }
+    }
+
+    public void ChangeColor(GameObject gameObject, int outlineNumber)
+    {
+        ChangeColor(gameObject, outlineNumber, false);
     }
 }

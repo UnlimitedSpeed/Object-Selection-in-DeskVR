@@ -37,7 +37,7 @@
                 {
                     "name": "",
                     "id": "ae281d4e-9f79-4291-a368-68a1bbaf250b",
-                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "path": "<XRController>/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -48,7 +48,7 @@
                 {
                     "name": "",
                     "id": "960b8213-0626-42fe-8284-825afcb9e5d3",
-                    "path": "<XRController>{RightHand}/gripPressed",
+                    "path": "<XRController>/gripPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -59,7 +59,7 @@
                 {
                     "name": "",
                     "id": "8e278f06-600e-426e-8557-a8b38a72115f",
-                    "path": "<XRController>{RightHand}/thumbstick",
+                    "path": "<XRController>/thumbstick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -114,7 +114,7 @@
                 {
                     "name": "",
                     "id": "601b58bd-b780-4dd4-bef3-0f90cf337628",
-                    "path": "<XRController>{RightHand}/triggerPressed",
+                    "path": "<XRController>/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -125,7 +125,7 @@
                 {
                     "name": "",
                     "id": "14a50f4b-0241-4121-87cf-af9cf093fa13",
-                    "path": "<XRController>{RightHand}/gripPressed",
+                    "path": "<XRController>/gripPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -136,7 +136,7 @@
                 {
                     "name": "",
                     "id": "b6deae3c-112f-4f28-85ab-1d6602c76a02",
-                    "path": "<XRController>{RightHand}/thumbstickTouched",
+                    "path": "<XRController>/thumbstickTouched",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -147,7 +147,7 @@
                 {
                     "name": "",
                     "id": "927351a5-e7cf-4db5-801b-700511c2308f",
-                    "path": "<XRController>{RightHand}/thumbstick",
+                    "path": "<XRController>/thumbstick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

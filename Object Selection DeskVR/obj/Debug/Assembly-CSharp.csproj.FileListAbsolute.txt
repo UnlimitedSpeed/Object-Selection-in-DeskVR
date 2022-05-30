@@ -1,0 +1,2 @@
+C:\Users\Testes\Desktop\Object-Selection-in-DeskVR\Object Selection DeskVR\obj\Debug\Assembly-CSharp.csprojAssemblyReference.cache
+C:\Users\Testes\Desktop\Object-Selection-in-DeskVR\Object Selection DeskVR\obj\Debug\Assembly-CSharp.csproj.CoreCompileInputs.cache

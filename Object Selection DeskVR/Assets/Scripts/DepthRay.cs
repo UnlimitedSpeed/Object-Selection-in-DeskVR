@@ -33,7 +33,7 @@ public class DepthRay : MonoBehaviour
         InputMaster.DepthRay.CastRay.started += ctx => CastRay();
         InputMaster.DepthRay.CastRay.canceled += ctx => DeleteRay();
 
-        InputMaster.DepthRay.MoveSphere.started += ctx => MoveSphere(ctx.ReadValue<Vector2>());
+        InputMaster.DepthRay.MoveSphere.performed += ctx => MoveSphere(ctx.ReadValue<Vector2>());
 
         InputMaster.DepthRay.Confirm.performed += ctx => Comfirm();
         
@@ -57,6 +57,8 @@ public class DepthRay : MonoBehaviour
     void MoveSphere(Vector2 vec)
     {
         sphereInput = (float)Math.Round(vec.y, 2);
+        if (sphereInput >= -0.01f && sphereInput <= 0.01f)
+            sphereInput = 0f;
     }
 
     void Comfirm()
@@ -65,7 +67,9 @@ public class DepthRay : MonoBehaviour
         {
             Renderer r = currentObject.GetComponent<Renderer>();
 
-            if (r.material.color == new Color(1f, 1f, 0.6f))
+            string n = r.material.name.Split(' ')[0];
+
+            if (n == "TopCandidateMaterial")
                 finalSelectedObject = currentObject;
             else
                 finalSelectedObject = null;

@@ -24,6 +24,7 @@ public class MethodControls : MonoBehaviour
         GameObject root = GameObject.FindGameObjectWithTag("Root");
 
         Renderer[] childrenRenderer = root.GetComponentsInChildren<Renderer>();
+        
         foreach (Renderer r in childrenRenderer)
         {
             if (r.gameObject.tag == "Selectable")

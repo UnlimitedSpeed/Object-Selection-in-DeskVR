@@ -9,6 +9,7 @@ public class RayCursor : MonoBehaviour
     public float sphereVelocity = 20f;
     public ChangeMaterial ChangeMaterial;
     public MethodControls mc;
+    
 
     float sphereInput;
     bool hasStarted = false;
@@ -20,15 +21,21 @@ public class RayCursor : MonoBehaviour
     GameObject currentObject;
     GameObject finalSelectedObject;
 
-
-    //Highlight
-    public bool isHighlight;
+    bool isRayCastNeeded;
 
     //Timed Trial
     public TimeTrial TimeTrial;
 
+
+
+    // countdown to reset method
+    bool isCountdown;
+    DateTime beginCountdown;
+
     void Awake()
     {
+        isRayCastNeeded = true;
+
         InputMaster = new InputMaster();
 
         InputMaster.RayCursor.CastRay.started += ctx => CastRay();
@@ -38,13 +45,20 @@ public class RayCursor : MonoBehaviour
 
         InputMaster.RayCursor.Confirm.performed += ctx => Comfirm();
 
-        //InputMaster.RayCursor.ABC.started += _ => ABC();
+        InputMaster.RayCursor.ABC.started += _ => StopCountdown();
+        InputMaster.RayCursor.ABC.canceled += _ => StartCountdown();
 
     }
 
-    void ABC()
+    void StopCountdown()
     {
-        print("ABC");
+        isCountdown = false;
+    }
+
+    void StartCountdown()
+    {
+        isCountdown = true;
+        beginCountdown = DateTime.Now;
     }
 
     void CastRay()
@@ -60,20 +74,30 @@ public class RayCursor : MonoBehaviour
     {
         hasStarted = false;
         Destroy(Clone);
+        isRayCastNeeded = true;
+        GameObject l = GameObject.Find("Line");
+        if (l != null)
+        {
+            Destroy(l);
+        }
     }
 
     void MoveSphere(Vector2 vec)
     {
         sphereInput = (float)Math.Round(vec.y, 2);
+        if (sphereInput >= -0.01f && sphereInput <= 0.01f)
+            sphereInput = 0f;
     }
 
     void Comfirm()
     {
-        if (hasStarted)
+        if (hasStarted && currentObject != null)
         {
-            Renderer r = currentObject.GetComponent<Renderer>();
 
-            if (r.material.color == new Color(1f, 1f, 0.6f))
+            Renderer r = currentObject.GetComponent<Renderer>();
+            string n = r.material.name.Split(' ')[0];
+
+            if (n == "TopCandidateMaterial")
                 finalSelectedObject = currentObject;
             else
                 finalSelectedObject = null;
@@ -93,57 +117,90 @@ public class RayCursor : MonoBehaviour
 
     void Update()
     {
-        GameObject l = GameObject.Find("Line");
-        if(l != null)
-        {
-            Destroy(l);
-        }
-
-        if (Sphere != null)
-        {
-            if (Sphere.transform.localPosition.z < 50 && sphereInput > 0 || Sphere.transform.localPosition.z > 0 && sphereInput < 50)
-                Sphere.transform.localPosition += new Vector3(0, 0, sphereVelocity * sphereInput * Time.deltaTime);
-
-        }
-
         if (hasStarted)
         {
-            GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Selectable");
 
-            float min = Mathf.Infinity;
-
-            foreach (GameObject obj in gameObjects)
+            if (isCountdown)
             {
-                float distance = Vector3.Distance(obj.transform.position, Sphere.transform.position);
-                if (distance < min)
+                DateTime dt = DateTime.Now;
+                TimeSpan ts = dt - beginCountdown;
+                if(ts.TotalMilliseconds >= 1000)
                 {
-                    min = distance;
-                    currentObject = obj;
+                    isRayCastNeeded = true;
+                    isCountdown = false;
                 }
             }
 
-            foreach (GameObject obj in gameObjects)
+
+            GameObject l = GameObject.Find("Line");
+            if (l != null)
             {
-                if (obj.name == currentObject.name)
-                {
-                    ChangeMaterial.ChangeColor(obj, 2);
-                }
-                else
-                {
-                    ChangeMaterial.ChangeColor(obj, 0);
-                }
+                Destroy(l);
             }
 
-            if (isHighlight)
+            if (Sphere != null)
             {
+                if (Sphere.transform.localPosition.z < 50 && sphereInput > 0 || Sphere.transform.localPosition.z > 0 && sphereInput < 50)
+                    Sphere.transform.localPosition += new Vector3(0, 0, sphereVelocity * sphereInput * Time.deltaTime);
+
+            }
+
+
+
+            if (isRayCastNeeded)
+            {
+                RaycastHit hit;
+                if (Physics.Raycast(transform.position, transform.forward, out hit))
+                {
+                    if (hit.collider.gameObject.tag == "Selectable")
+                    {
+                        Vector3 pointOfImpact = hit.point;
+                        if (Sphere != null)
+                        {
+                            Sphere.transform.position = pointOfImpact;
+                            isRayCastNeeded = false;
+                        }
+                    }
+                }
+            }
+            else
+            {
+                GameObject[] gameObjects = GameObject.FindGameObjectsWithTag("Selectable");
+
+                float min = Mathf.Infinity;
+
+                foreach (GameObject obj in gameObjects)
+                {
+                    float distance = Vector3.Distance(obj.transform.position, Sphere.transform.position);
+                    if (distance < min)
+                    {
+                        min = distance;
+                        currentObject = obj;
+                    }
+                }
+
+                foreach (GameObject obj in gameObjects)
+                {
+                    if (obj.name == currentObject.name)
+                    {
+                        ChangeMaterial.ChangeColor(obj, 2);
+                    }
+                    else
+                    {
+                        ChangeMaterial.ChangeColor(obj, 0);
+                    }
+                }
+
                 RenderLine();
             }
+            
         }
     }
 
     void RenderLine()
     {
         LineRenderer lineRenderer = new GameObject("Line").AddComponent<LineRenderer>();
+        lineRenderer.material = new Material(Shader.Find("Sprites/Default"));
         lineRenderer.startColor = Color.white;
         lineRenderer.endColor = Color.white;
         lineRenderer.startWidth = 0.01f;

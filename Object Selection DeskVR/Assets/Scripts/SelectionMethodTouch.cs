@@ -16,10 +16,8 @@ public class SelectionMethodTouch : MonoBehaviour
     GameObject cylinderClone;
 
     float xRotation = 0f;
+    List<GameObject> intersectedObjects = new List<GameObject>();
     float yRotation = 0f;
-    List<string> names;
-    List<float> distanceList = new List<float>();
-    Dictionary<float, GameObject> distanceDictionary = new Dictionary<float, GameObject>();
 
     GameObject finalSelectedObject;
     int index = 0;
@@ -66,67 +64,98 @@ public class SelectionMethodTouch : MonoBehaviour
         }
     }
 
-    void ReleaseTouch()
+
+    bool CheckSelectable(GameObject currentObject)
     {
-        if(isSelection)
+        if (currentObject != null)
         {
-            CheckObject co = cylinderClone.GetComponentInChildren<CheckObject>();
-            names = co.getNamesOfObj();
-
-            foreach (string s in names)
+            if (currentObject.tag == "Selectable")
             {
-                GameObject go = GameObject.Find(s);
-                float d = Vector3.Distance(transform.position, go.transform.position);
-                distanceDictionary.Add(d, go);
-            }
-
-            distanceList = distanceDictionary.Keys.ToList();
-            distanceList.Sort();
-
-            if (names.Count == 0)
-            {
-                Destroy(cylinderClone);
-                TimeTrial.StopCounting(null);
-                //Debug.Log("NO OBJECT SELECTED");
-                distanceList.Clear();
-                distanceDictionary.Clear();
+                intersectedObjects.Add(currentObject);
+                return true;
             }
             else
             {
-                if (mc.isFadeOutActive)
-                {
-                    mc.FadeOut(names);
-                }
+                GameObject parent = currentObject.transform.parent.gameObject;
+                if (parent.tag != "Root")
+                    return CheckSelectable(parent);
+                else
+                    return false;
+            }
 
-                if (names.Count == 1)
+        }
+        else
+            return false;
+    }
+
+    void CheckGroup(GameObject gameObject)
+    {
+        if (gameObject.tag == "Group")
+        {
+            if (intersectedObjects.Contains(gameObject))
+                intersectedObjects.Remove(gameObject);
+
+            intersectedObjects.Add(gameObject);
+        }
+
+        GameObject parent = gameObject.transform.parent.gameObject;
+
+        if (parent.tag != "Root")
+            CheckGroup(parent);
+    }
+
+    void ReleaseTouch()
+    {
+        if (isSelection)
+        {
+            mc.ResetObjects();
+            RaycastHit[] hits;
+            Ray ray = new Ray(cylinderClone.transform.position, cylinderClone.transform.forward);
+            hits = Physics.RaycastAll(ray);
+
+            foreach (RaycastHit hit in hits)
+            {
+                GameObject go = hit.transform.gameObject;
+
+                CheckSelectable(go);
+                CheckGroup(go);
+            }
+            
+
+            if (intersectedObjects.Count == 0)
+            {
+                Destroy(cylinderClone);
+                TimeTrial.StopCounting(null);
+                Debug.Log("NO OBJECT SELECTED");
+                intersectedObjects.Clear();
+            }
+            else
+            {
+
+                if (intersectedObjects.Count == 1)
                 {
                     Destroy(cylinderClone);
 
-                    finalSelectedObject = distanceDictionary[distanceList[0]];
+                    finalSelectedObject = intersectedObjects[0];
 
                     TimeTrial.StopCounting(finalSelectedObject.name);
 
                     ChangeMaterial.ChangeColor(finalSelectedObject, 2);
 
-                    //Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
-                    distanceList.Clear();
-                    distanceDictionary.Clear();
+                    Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
+                    intersectedObjects.Clear();
                 }
                 else
                 {
-                    //Debug.Log(distanceDictionary[distanceList[0]]);
-                    ChangeMaterial.ChangeColor(distanceDictionary[distanceList[0]], 2);
 
-                    for (int i = 1; i < distanceList.Count; i++)
+                    for (int i = 1; i < intersectedObjects.Count; i++)
                     {
-                        GameObject o = distanceDictionary[distanceList[i]];
-                        
-                        ChangeMaterial.ChangeColor(o, 1);
-                        Color c = o.GetComponent<Renderer>().material.color;
-                        c.a = 0.5f;
-                        o.GetComponent<Renderer>().material.color = c;
-                        
+                        GameObject o = intersectedObjects[i];
+
+                        ChangeMaterial.ChangeColor(o, 1, true);    
                     }
+
+                    ChangeMaterial.ChangeColor(intersectedObjects[0], 2);
 
                     isSelection = false;
                 }
@@ -135,18 +164,17 @@ public class SelectionMethodTouch : MonoBehaviour
         else
         {
             Destroy(cylinderClone);
-            finalSelectedObject = distanceDictionary[distanceList[index]];
-            foreach (string s in names)
+            finalSelectedObject = intersectedObjects[index];
+            foreach (GameObject g in intersectedObjects)
             {
-                if (s != finalSelectedObject.name)
-                    ChangeMaterial.ChangeColor(GameObject.Find(s), 0);
+                ChangeMaterial.ChangeColor(g, 0);
             }
+            ChangeMaterial.ChangeColor(finalSelectedObject, 2);
             TimeTrial.StopCounting(finalSelectedObject.name);
 
-            //Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
+            Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
             index = 0;
-            distanceList.Clear();
-            distanceDictionary.Clear();
+            intersectedObjects.Clear();
             isSelection = true;
         }
     }
@@ -179,33 +207,14 @@ public class SelectionMethodTouch : MonoBehaviour
             }
 
             if (newIndex < 0)
-                newIndex = names.Count - 1;
-            if (newIndex >= names.Count)
+                newIndex = intersectedObjects.Count - 1;
+            if (newIndex >= intersectedObjects.Count)
                 newIndex = 0;
 
-            ChangeMaterial.ChangeColor(distanceDictionary[distanceList[index]], 1);
+            ChangeMaterial.ChangeColor(intersectedObjects[index], 1, true);
 
-            ChangeMaterial.ChangeColor(distanceDictionary[distanceList[newIndex]], 2);
+            ChangeMaterial.ChangeColor(intersectedObjects[newIndex], 2);
             
-            for(int i = 0; i < distanceList.Count; i++)
-            {
-                GameObject o = distanceDictionary[distanceList[i]];
-                
-                if (i != newIndex)
-                {
-                    ChangeMaterial.ChangeColor(o, 1);
-                    Color c = o.GetComponent<Renderer>().material.color;
-                    c.a = 0.5f;
-                    o.GetComponent<Renderer>().material.color = c;
-                }
-                else
-                {
-                    ChangeMaterial.ChangeColor(o, 2);
-                    Color c = o.GetComponent<Renderer>().material.color;
-                    c.a = 1.0f;
-                    o.GetComponent<Renderer>().material.color = c;
-                }
-            }
 
 
             index = newIndex;

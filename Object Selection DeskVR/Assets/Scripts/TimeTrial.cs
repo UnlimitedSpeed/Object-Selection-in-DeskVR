@@ -21,12 +21,15 @@ public class TimeTrial : MonoBehaviour
 
     void Start()
     {
-        filename = Application.dataPath + "/Results/" + participant + ".csv";
-        TextWriter tw = new StreamWriter(filename, false);
-        tw.WriteLine("Name, finalTime, numberOfAttempts");
-        tw.Close();
-        currentIndex = 0;
-        wantedObject[currentIndex].AddComponent<Outline>();
+        if (wantedObject.Length != 0)
+        {
+            filename = Application.dataPath + "/Results/" + participant + ".csv";
+            TextWriter tw = new StreamWriter(filename, false);
+            tw.WriteLine("Name, finalTime, numberOfAttempts");
+            tw.Close();
+            currentIndex = 0;
+            wantedObject[currentIndex].AddComponent<Outline>();
+        }
     }
 
 

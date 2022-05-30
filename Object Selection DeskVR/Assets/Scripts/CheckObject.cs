@@ -45,8 +45,11 @@ public class CheckObject : MonoBehaviour
     {
         if (currentObject.tag == "Group")
         {
-            if (isEnter && !namesOfObj.Contains(currentObject.name))
+            if (isEnter)
             {
+                if(namesOfObj.Contains(currentObject.name))
+                    namesOfObj.Remove(currentObject.name);
+
                 namesOfObj.Add(currentObject.name);
             }
             else if (!isEnter && namesOfObj.Contains(currentObject.name))
