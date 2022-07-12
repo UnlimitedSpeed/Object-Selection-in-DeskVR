@@ -7,6 +7,10 @@ public class SelectionMethodTouch : MonoBehaviour
     public float touchSensitivity = 50f;
     public ChangeMaterial ChangeMaterial;
     public MethodControls mc;
+    //Timed Trial
+    public TimeTrial TimeTrial;
+
+    public bool isGroupFirst = false;
 
     [SerializeField]
     GameObject cylinder;
@@ -24,9 +28,7 @@ public class SelectionMethodTouch : MonoBehaviour
 
     float accumulator;
 
-    //Timed Trial
-    public TimeTrial TimeTrial;
-
+    
     InputMaster InputMaster;
 
     void Awake()
@@ -65,31 +67,34 @@ public class SelectionMethodTouch : MonoBehaviour
     }
 
 
-    bool CheckSelectable(GameObject currentObject)
+    GameObject CheckSelectable(GameObject currentObject)
     {
         if (currentObject != null)
         {
             if (currentObject.tag == "Selectable")
             {
-                intersectedObjects.Add(currentObject);
-                return true;
+                return currentObject;
             }
             else
             {
-                GameObject parent = currentObject.transform.parent.gameObject;
+                GameObject parent = null;
+                parent = currentObject.transform.parent.gameObject;
                 if (parent.tag != "Root")
                     return CheckSelectable(parent);
                 else
-                    return false;
+                    return null;
             }
 
         }
         else
-            return false;
+            return null;
     }
 
-    void CheckGroup(GameObject gameObject)
+    List<GameObject> CheckGroup(GameObject gameObject)
     {
+        List<GameObject> returnList = new List<GameObject>();
+        List<GameObject> gList = new List<GameObject>();
+
         if (gameObject.tag == "Group")
         {
             if (intersectedObjects.Contains(gameObject))
@@ -101,7 +106,34 @@ public class SelectionMethodTouch : MonoBehaviour
         GameObject parent = gameObject.transform.parent.gameObject;
 
         if (parent.tag != "Root")
-            CheckGroup(parent);
+            gList = CheckGroup(parent);
+
+        
+        return returnList;
+    }
+
+    GameObject getTreeRoot(GameObject gameObject)
+    {
+        GameObject returnObject = null;
+
+        GameObject parent;
+        parent = gameObject.transform.parent.gameObject;
+
+        if (parent != null)
+        {
+            if (parent.tag == "Group")
+                returnObject = parent;
+
+            if (parent.tag == "Root")
+                return returnObject;
+
+            GameObject g = getTreeRoot(parent);
+
+            if (g != null)
+                returnObject = g;
+        }
+
+        return returnObject;
     }
 
     void ReleaseTouch()
@@ -117,17 +149,34 @@ public class SelectionMethodTouch : MonoBehaviour
             {
                 GameObject go = hit.transform.gameObject;
 
-                CheckSelectable(go);
-                CheckGroup(go);
+                if(go.tag != "NotSelectable")
+                {
+                    GameObject g = CheckSelectable(go);
+
+                    if (g != null)
+                    {
+                        intersectedObjects.Add(g);
+                        CheckGroup(go);
+
+                    }
+                }
+                
             }
+
+
+
+            if(isGroupFirst)
+                intersectedObjects.Reverse();
             
 
             if (intersectedObjects.Count == 0)
             {
                 Destroy(cylinderClone);
                 TimeTrial.StopCounting(null);
-                Debug.Log("NO OBJECT SELECTED");
+
                 intersectedObjects.Clear();
+                
+                cylinderClone = null;
             }
             else
             {
@@ -141,9 +190,10 @@ public class SelectionMethodTouch : MonoBehaviour
                     TimeTrial.StopCounting(finalSelectedObject.name);
 
                     ChangeMaterial.ChangeColor(finalSelectedObject, 2);
-
-                    Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
+                    
                     intersectedObjects.Clear();
+                    
+                    cylinderClone = null;
                 }
                 else
                 {
@@ -164,6 +214,7 @@ public class SelectionMethodTouch : MonoBehaviour
         else
         {
             Destroy(cylinderClone);
+            
             finalSelectedObject = intersectedObjects[index];
             foreach (GameObject g in intersectedObjects)
             {
@@ -171,11 +222,11 @@ public class SelectionMethodTouch : MonoBehaviour
             }
             ChangeMaterial.ChangeColor(finalSelectedObject, 2);
             TimeTrial.StopCounting(finalSelectedObject.name);
-
-            Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
+            
             index = 0;
             intersectedObjects.Clear();
             isSelection = true;
+            cylinderClone = null;
         }
     }
     
@@ -221,7 +272,42 @@ public class SelectionMethodTouch : MonoBehaviour
         }
     }
 
-  
+
+    private void Update()
+    {
+        if (isSelection && cylinderClone != null)
+        {
+            mc.ResetObjects();
+
+            RaycastHit[] hits;
+            Ray ray = new Ray(cylinderClone.transform.position, cylinderClone.transform.forward);
+            hits = Physics.RaycastAll(ray);
+            foreach (RaycastHit hit in hits)
+            {
+                GameObject go = hit.transform.gameObject;
+                if(go.tag != "NotSelectable")
+                {
+                    if (!isGroupFirst)
+                    {
+
+                        GameObject g = CheckSelectable(go);
+                        if (g != null)
+                            ChangeMaterial.ChangeColor(go, 1);
+                    }
+                    else
+                    {
+                        GameObject p = getTreeRoot(go);
+                        ChangeMaterial.ChangeColor(p, 1);
+
+                    }
+                }
+            }
+        }
+
+        
+        
+    }
+
 
 
     void OnEnable()

@@ -67,6 +67,7 @@ public class CheckObject : MonoBehaviour
 
     void OnTriggerEnter(Collider other)
     {
+    
         if(CheckSelectable(other.gameObject, true))
             CheckGroup(other.gameObject, true);
     }

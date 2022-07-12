@@ -2100,7 +2100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e44c24a5341608b47b18dce889cd4e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  participant: 1_DisperseFar
+  participant: 18_DisperseFar_C
   wantedObject:
   - {fileID: 84734392}
   - {fileID: 1156485871}
@@ -3737,7 +3737,7 @@ GameObject:
   - component: {fileID: 1455438065}
   m_Layer: 0
   m_Name: RightHand Controller
-  m_TagString: Untagged
+  m_TagString: NotSelectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3773,6 +3773,7 @@ MonoBehaviour:
   ChangeMaterial: {fileID: 846647930}
   mc: {fileID: 846647928}
   TimeTrial: {fileID: 846647929}
+  isRightHand: 1
 --- !u!114 &1455438066
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3789,6 +3790,7 @@ MonoBehaviour:
   sphereVelocity: 20
   ChangeMaterial: {fileID: 846647930}
   mc: {fileID: 846647928}
+  isRightHand: 1
   TimeTrial: {fileID: 846647929}
 --- !u!114 &1455438067
 MonoBehaviour:
@@ -4112,7 +4114,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 8840140788286293730, guid: 22784d933a22ea246a20db7c9b1ac150, type: 3}
+  m_ModelPrefab: {fileID: -8679921383154817045, guid: e234f19d4b9cefd428228bbde30ce3c6, type: 3}
   m_ModelParent: {fileID: 1455438064}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -4769,8 +4771,9 @@ MonoBehaviour:
   touchSensitivity: 2
   ChangeMaterial: {fileID: 846647930}
   mc: {fileID: 846647928}
-  cylinder: {fileID: 1353465874605371500, guid: 612d81fbe0bfb904e95575595a773a21, type: 3}
   TimeTrial: {fileID: 846647929}
+  isGroupFirst: 0
+  cylinder: {fileID: 1353465874605371500, guid: 612d81fbe0bfb904e95575595a773a21, type: 3}
 --- !u!114 &1548429080
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5276,11 +5279,11 @@ GameObject:
   - component: {fileID: 1611344808}
   m_Layer: 0
   m_Name: LeftHand Controller
-  m_TagString: Untagged
+  m_TagString: NotSelectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1611344802
 Transform:
   m_ObjectHideFlags: 0
@@ -5617,7 +5620,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 8840140788286293730, guid: 22784d933a22ea246a20db7c9b1ac150, type: 3}
+  m_ModelPrefab: {fileID: -8679921383154817045, guid: ecb9af5a2bb21894299f22373fa77dc4, type: 3}
   m_ModelParent: {fileID: 1611344802}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -5650,6 +5653,7 @@ MonoBehaviour:
   ChangeMaterial: {fileID: 846647930}
   mc: {fileID: 846647928}
   TimeTrial: {fileID: 846647929}
+  isRightHand: 0
 --- !u!114 &1611344808
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5666,6 +5670,7 @@ MonoBehaviour:
   sphereVelocity: 20
   ChangeMaterial: {fileID: 846647930}
   mc: {fileID: 846647928}
+  isRightHand: 0
   TimeTrial: {fileID: 846647929}
 --- !u!1001 &1632503124
 PrefabInstance:
@@ -7069,7 +7074,7 @@ Transform:
   - {fileID: 1551704163}
   - {fileID: 43309293}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2021596708
 PrefabInstance:
@@ -7242,7 +7247,7 @@ Transform:
   m_Children:
   - {fileID: 445409510}
   m_Father: {fileID: 0}
-  m_RootOrder: 3
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 180, z: 0}
 --- !u!1001 &2095268563
 PrefabInstance:

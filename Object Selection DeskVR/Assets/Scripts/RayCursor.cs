@@ -26,7 +26,7 @@ public class RayCursor : MonoBehaviour
     //Timed Trial
     public TimeTrial TimeTrial;
 
-
+    public bool isRightHand;
 
     // countdown to reset method
     bool isCountdown;
@@ -38,16 +38,54 @@ public class RayCursor : MonoBehaviour
 
         InputMaster = new InputMaster();
 
-        InputMaster.RayCursor.CastRay.started += ctx => CastRay();
-        InputMaster.RayCursor.CastRay.canceled += ctx => DeleteRay();
+        if (isRightHand)
+        {
+            InputMaster.RayCursorRight.CastRay.started += ctx => CastRay();
+            InputMaster.RayCursorRight.CastRay.canceled += ctx => DeleteRay();
 
-        InputMaster.RayCursor.MoveSphere.performed += ctx => MoveSphere(ctx.ReadValue<Vector2>());
+            InputMaster.RayCursorRight.MoveSphere.performed += ctx => MoveSphere(ctx.ReadValue<Vector2>());
 
-        InputMaster.RayCursor.Confirm.performed += ctx => Comfirm();
+            InputMaster.RayCursorRight.Confirm.performed += ctx => Comfirm();
 
-        InputMaster.RayCursor.ABC.started += _ => StopCountdown();
-        InputMaster.RayCursor.ABC.canceled += _ => StartCountdown();
+            InputMaster.RayCursorRight.ThumbCountdown.started += _ => StopCountdown();
+            InputMaster.RayCursorRight.ThumbCountdown.canceled += _ => StartCountdown();
+        }
+        else
+        {
+            InputMaster.RayCursorLeft.CastRay.started += ctx => CastRay();
+            InputMaster.RayCursorLeft.CastRay.canceled += ctx => DeleteRay();
 
+            InputMaster.RayCursorLeft.MoveSphere.performed += ctx => MoveSphere(ctx.ReadValue<Vector2>());
+
+            InputMaster.RayCursorLeft.Confirm.performed += ctx => Comfirm();
+
+            InputMaster.RayCursorLeft.ThumbCountdown.started += _ => StopCountdown();
+            InputMaster.RayCursorLeft.ThumbCountdown.canceled += _ => StartCountdown();
+        }
+        
+    }
+
+    GameObject CheckSelectable(GameObject currentObject)
+    {
+        if (currentObject != null)
+        {
+            if (currentObject.tag == "Selectable")
+            {
+                return currentObject;
+            }
+            else
+            {
+                GameObject parent = null;
+                parent = currentObject.transform.parent.gameObject;
+                if (parent.tag != "Root")
+                    return CheckSelectable(parent);
+                else
+                    return null;
+            }
+
+        }
+        else
+            return null;
     }
 
     void StopCountdown()
@@ -104,12 +142,10 @@ public class RayCursor : MonoBehaviour
 
             if (finalSelectedObject != null)
             {
-                Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
                 TimeTrial.StopCounting(finalSelectedObject.name);
             }
             else
             {
-                Debug.Log("NO OBJECT SELECTED");
                 TimeTrial.StopCounting(null);
             }
         }
@@ -152,13 +188,19 @@ public class RayCursor : MonoBehaviour
                 RaycastHit hit;
                 if (Physics.Raycast(transform.position, transform.forward, out hit))
                 {
-                    if (hit.collider.gameObject.tag == "Selectable")
+                    GameObject collidedObject = hit.collider.gameObject;
+
+                    if (collidedObject.tag != "NotSelectable")
                     {
-                        Vector3 pointOfImpact = hit.point;
-                        if (Sphere != null)
+                        GameObject go = CheckSelectable(collidedObject);
+                        if (go != null)
                         {
-                            Sphere.transform.position = pointOfImpact;
-                            isRayCastNeeded = false;
+                            Vector3 pointOfImpact = hit.point;
+                            if (Sphere != null)
+                            {
+                                Sphere.transform.position = pointOfImpact;
+                                isRayCastNeeded = false;
+                            }
                         }
                     }
                 }
@@ -215,11 +257,17 @@ public class RayCursor : MonoBehaviour
 
     void OnEnable()
     {
-        InputMaster.RayCursor.Enable();
+        if(isRightHand)
+            InputMaster.RayCursorRight.Enable();
+        else
+            InputMaster.RayCursorLeft.Enable();
     }
 
     void OnDisable()
     {
-        InputMaster.RayCursor.Disable();
+        if (isRightHand)
+            InputMaster.RayCursorRight.Disable();
+        else
+            InputMaster.RayCursorLeft.Disable();
     }
 }

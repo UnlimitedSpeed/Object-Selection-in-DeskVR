@@ -10,6 +10,8 @@ public class DepthRay : MonoBehaviour
     public ChangeMaterial ChangeMaterial;
     public MethodControls mc;
 
+    public bool isRightHand;
+
     float sphereInput;
     bool hasStarted = false;
 
@@ -29,13 +31,26 @@ public class DepthRay : MonoBehaviour
     void Awake()
     {
         InputMaster = new InputMaster();
+
+        if (isRightHand)
+        {
+            InputMaster.DepthRayRight.CastRay.started += ctx => CastRay();
+            InputMaster.DepthRayRight.CastRay.canceled += ctx => DeleteRay();
+
+            InputMaster.DepthRayRight.MoveSphere.performed += ctx => MoveSphere(ctx.ReadValue<Vector2>());
+
+            InputMaster.DepthRayRight.Confirm.performed += ctx => Comfirm();
+        }
+        else
+        {
+            InputMaster.DepthRayLeft.CastRay.started += ctx => CastRay();
+            InputMaster.DepthRayLeft.CastRay.canceled += ctx => DeleteRay();
+
+            InputMaster.DepthRayLeft.MoveSphere.performed += ctx => MoveSphere(ctx.ReadValue<Vector2>());
+
+            InputMaster.DepthRayLeft.Confirm.performed += ctx => Comfirm();
+        }
         
-        InputMaster.DepthRay.CastRay.started += ctx => CastRay();
-        InputMaster.DepthRay.CastRay.canceled += ctx => DeleteRay();
-
-        InputMaster.DepthRay.MoveSphere.performed += ctx => MoveSphere(ctx.ReadValue<Vector2>());
-
-        InputMaster.DepthRay.Confirm.performed += ctx => Comfirm();
         
     }
 
@@ -84,13 +99,11 @@ public class DepthRay : MonoBehaviour
                         ChangeMaterial.ChangeColor(obj, 0);
                     }
                 }
-
-                Debug.Log("SELECTED OBJECT = " + finalSelectedObject.name);
+                
                 TimeTrial.StopCounting(finalSelectedObject.name);
             }
             else
             {
-                Debug.Log("NO OBJECT SELECTED");
                 TimeTrial.StopCounting(null);
             }
         }
@@ -140,11 +153,17 @@ public class DepthRay : MonoBehaviour
 
     void OnEnable()
     {
-        InputMaster.DepthRay.Enable();
+        if (isRightHand)
+            InputMaster.DepthRayRight.Enable();
+        else
+            InputMaster.DepthRayLeft.Enable();
     }
 
     void OnDisable()
     {
-        InputMaster.DepthRay.Disable();
+        if (isRightHand)
+            InputMaster.DepthRayRight.Disable();
+        else
+            InputMaster.DepthRayLeft.Disable();
     }
 }

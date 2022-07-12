@@ -6,19 +6,6 @@ public class MethodControls : MonoBehaviour
     public bool isFadeOutActive = false;
     public ChangeMaterial ChangeMaterial;
     
-    void Update()
-    {
-        /*if(Input.GetKeyDown(KeyCode.Q))
-        {
-            isFadeOutActive = !isFadeOutActive;
-        }
-
-        if (Input.GetKeyDown(KeyCode.R))
-        {
-            ResetObjects();
-        }*/
-    }
-
     public void ResetObjects()
     {
         GameObject root = GameObject.FindGameObjectWithTag("Root");

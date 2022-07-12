@@ -2,7 +2,7 @@
     "name": "InputMaster",
     "maps": [
         {
-            "name": "DepthRay",
+            "name": "DepthRayRight",
             "id": "23cd7bf6-888a-43e4-bb0a-6c434504f6f8",
             "actions": [
                 {
@@ -37,7 +37,7 @@
                 {
                     "name": "",
                     "id": "ae281d4e-9f79-4291-a368-68a1bbaf250b",
-                    "path": "<XRController>/triggerPressed",
+                    "path": "<XRController>{RightHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -48,7 +48,7 @@
                 {
                     "name": "",
                     "id": "960b8213-0626-42fe-8284-825afcb9e5d3",
-                    "path": "<XRController>/gripPressed",
+                    "path": "<XRController>{RightHand}/gripPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -59,7 +59,7 @@
                 {
                     "name": "",
                     "id": "8e278f06-600e-426e-8557-a8b38a72115f",
-                    "path": "<XRController>/thumbstick",
+                    "path": "<XRController>{RightHand}/thumbstick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -70,7 +70,75 @@
             ]
         },
         {
-            "name": "RayCursor",
+            "name": "DepthRayLeft",
+            "id": "9852fc53-084b-4981-a53c-8524c42fe50c",
+            "actions": [
+                {
+                    "name": "CastRay",
+                    "type": "Value",
+                    "id": "bfdef021-c1cd-4256-a1ef-fba021a986e9",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "MoveSphere",
+                    "type": "Value",
+                    "id": "88992ef6-de4e-4ba4-a9a1-ead0633b6baa",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Confirm",
+                    "type": "Button",
+                    "id": "40bcd86e-67c5-4bb2-a230-54d5fae62674",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "d40da6d4-cd98-4ddf-91a2-0dc8707805b8",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CastRay",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "0bca8558-6a60-4358-a7bc-04fb19188353",
+                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "5aa760b8-c3b4-40b3-8edd-3985fea22a8b",
+                    "path": "<XRController>{LeftHand}/thumbstick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveSphere",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "RayCursorRight",
             "id": "4a9455b2-587d-41cb-b681-dce2359032c1",
             "actions": [
                 {
@@ -101,7 +169,7 @@
                     "initialStateCheck": false
                 },
                 {
-                    "name": "ABC",
+                    "name": "ThumbCountdown",
                     "type": "Button",
                     "id": "fcf75141-0a18-47d8-a04e-0dcc1ef5aaa1",
                     "expectedControlType": "Button",
@@ -114,7 +182,7 @@
                 {
                     "name": "",
                     "id": "601b58bd-b780-4dd4-bef3-0f90cf337628",
-                    "path": "<XRController>/triggerPressed",
+                    "path": "<XRController>{RightHand}/triggerPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -125,7 +193,7 @@
                 {
                     "name": "",
                     "id": "14a50f4b-0241-4121-87cf-af9cf093fa13",
-                    "path": "<XRController>/gripPressed",
+                    "path": "<XRController>{RightHand}/gripPressed",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -136,18 +204,106 @@
                 {
                     "name": "",
                     "id": "b6deae3c-112f-4f28-85ab-1d6602c76a02",
-                    "path": "<XRController>/thumbstickTouched",
+                    "path": "<XRController>{RightHand}/thumbstickTouched",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "ABC",
+                    "action": "ThumbCountdown",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
                 {
                     "name": "",
                     "id": "927351a5-e7cf-4db5-801b-700511c2308f",
-                    "path": "<XRController>/thumbstick",
+                    "path": "<XRController>{RightHand}/thumbstick",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "MoveSphere",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                }
+            ]
+        },
+        {
+            "name": "RayCursorLeft",
+            "id": "26b3fde6-01ad-48ee-b50a-8bb650e3ca62",
+            "actions": [
+                {
+                    "name": "CastRay",
+                    "type": "Value",
+                    "id": "38326b86-1cc3-44b8-877e-189b2f308eb6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "MoveSphere",
+                    "type": "Value",
+                    "id": "37d1528b-fd0d-4d58-bbfd-d2eecbe0e1ac",
+                    "expectedControlType": "Vector2",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": true
+                },
+                {
+                    "name": "Confirm",
+                    "type": "Button",
+                    "id": "e47b98f4-d06b-4df0-a616-382f3d5961c6",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "ThumbCountdown",
+                    "type": "Button",
+                    "id": "138203a1-925f-4853-84b1-5aa1fd67099f",
+                    "expectedControlType": "Button",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                }
+            ],
+            "bindings": [
+                {
+                    "name": "",
+                    "id": "f078fae4-cd69-481a-8cb5-22eadf08d7b3",
+                    "path": "<XRController>{LeftHand}/triggerPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "CastRay",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "3eeb2500-103f-489b-86dd-960e66cd0306",
+                    "path": "<XRController>{LeftHand}/gripPressed",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Confirm",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "b5ee67bd-627d-404a-b709-1546b22c5e10",
+                    "path": "<XRController>{LeftHand}/thumbstickTouched",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ThumbCountdown",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "cbddfaf1-b16a-49a3-9145-42cb56f6db37",
+                    "path": "<XRController>{LeftHand}/thumbstick",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

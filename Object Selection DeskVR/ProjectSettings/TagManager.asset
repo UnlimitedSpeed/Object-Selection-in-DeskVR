@@ -7,6 +7,7 @@ TagManager:
   - Selectable
   - Group
   - Root
+  - NotSelectable
   layers:
   - Default
   - TransparentFX

@@ -24,7 +24,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     ""name"": ""InputMaster"",
     ""maps"": [
         {
-            ""name"": ""DepthRay"",
+            ""name"": ""DepthRayRight"",
             ""id"": ""23cd7bf6-888a-43e4-bb0a-6c434504f6f8"",
             ""actions"": [
                 {
@@ -59,7 +59,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""ae281d4e-9f79-4291-a368-68a1bbaf250b"",
-                    ""path"": ""<XRController>/triggerPressed"",
+                    ""path"": ""<XRController>{RightHand}/triggerPressed"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -70,7 +70,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""960b8213-0626-42fe-8284-825afcb9e5d3"",
-                    ""path"": ""<XRController>/gripPressed"",
+                    ""path"": ""<XRController>{RightHand}/gripPressed"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -81,7 +81,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""8e278f06-600e-426e-8557-a8b38a72115f"",
-                    ""path"": ""<XRController>/thumbstick"",
+                    ""path"": ""<XRController>{RightHand}/thumbstick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -92,7 +92,75 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
             ]
         },
         {
-            ""name"": ""RayCursor"",
+            ""name"": ""DepthRayLeft"",
+            ""id"": ""9852fc53-084b-4981-a53c-8524c42fe50c"",
+            ""actions"": [
+                {
+                    ""name"": ""CastRay"",
+                    ""type"": ""Value"",
+                    ""id"": ""bfdef021-c1cd-4256-a1ef-fba021a986e9"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""MoveSphere"",
+                    ""type"": ""Value"",
+                    ""id"": ""88992ef6-de4e-4ba4-a9a1-ead0633b6baa"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Confirm"",
+                    ""type"": ""Button"",
+                    ""id"": ""40bcd86e-67c5-4bb2-a230-54d5fae62674"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""d40da6d4-cd98-4ddf-91a2-0dc8707805b8"",
+                    ""path"": ""<XRController>{LeftHand}/triggerPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CastRay"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""0bca8558-6a60-4358-a7bc-04fb19188353"",
+                    ""path"": ""<XRController>{LeftHand}/gripPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""5aa760b8-c3b4-40b3-8edd-3985fea22a8b"",
+                    ""path"": ""<XRController>{LeftHand}/thumbstick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveSphere"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""RayCursorRight"",
             ""id"": ""4a9455b2-587d-41cb-b681-dce2359032c1"",
             ""actions"": [
                 {
@@ -123,7 +191,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                     ""initialStateCheck"": false
                 },
                 {
-                    ""name"": ""ABC"",
+                    ""name"": ""ThumbCountdown"",
                     ""type"": ""Button"",
                     ""id"": ""fcf75141-0a18-47d8-a04e-0dcc1ef5aaa1"",
                     ""expectedControlType"": ""Button"",
@@ -136,7 +204,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""601b58bd-b780-4dd4-bef3-0f90cf337628"",
-                    ""path"": ""<XRController>/triggerPressed"",
+                    ""path"": ""<XRController>{RightHand}/triggerPressed"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -147,7 +215,7 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""14a50f4b-0241-4121-87cf-af9cf093fa13"",
-                    ""path"": ""<XRController>/gripPressed"",
+                    ""path"": ""<XRController>{RightHand}/gripPressed"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -158,18 +226,106 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 {
                     ""name"": """",
                     ""id"": ""b6deae3c-112f-4f28-85ab-1d6602c76a02"",
-                    ""path"": ""<XRController>/thumbstickTouched"",
+                    ""path"": ""<XRController>{RightHand}/thumbstickTouched"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""ABC"",
+                    ""action"": ""ThumbCountdown"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
                 {
                     ""name"": """",
                     ""id"": ""927351a5-e7cf-4db5-801b-700511c2308f"",
-                    ""path"": ""<XRController>/thumbstick"",
+                    ""path"": ""<XRController>{RightHand}/thumbstick"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""MoveSphere"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                }
+            ]
+        },
+        {
+            ""name"": ""RayCursorLeft"",
+            ""id"": ""26b3fde6-01ad-48ee-b50a-8bb650e3ca62"",
+            ""actions"": [
+                {
+                    ""name"": ""CastRay"",
+                    ""type"": ""Value"",
+                    ""id"": ""38326b86-1cc3-44b8-877e-189b2f308eb6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""MoveSphere"",
+                    ""type"": ""Value"",
+                    ""id"": ""37d1528b-fd0d-4d58-bbfd-d2eecbe0e1ac"",
+                    ""expectedControlType"": ""Vector2"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": true
+                },
+                {
+                    ""name"": ""Confirm"",
+                    ""type"": ""Button"",
+                    ""id"": ""e47b98f4-d06b-4df0-a616-382f3d5961c6"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                },
+                {
+                    ""name"": ""ThumbCountdown"",
+                    ""type"": ""Button"",
+                    ""id"": ""138203a1-925f-4853-84b1-5aa1fd67099f"",
+                    ""expectedControlType"": ""Button"",
+                    ""processors"": """",
+                    ""interactions"": """",
+                    ""initialStateCheck"": false
+                }
+            ],
+            ""bindings"": [
+                {
+                    ""name"": """",
+                    ""id"": ""f078fae4-cd69-481a-8cb5-22eadf08d7b3"",
+                    ""path"": ""<XRController>{LeftHand}/triggerPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""CastRay"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""3eeb2500-103f-489b-86dd-960e66cd0306"",
+                    ""path"": ""<XRController>{LeftHand}/gripPressed"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Confirm"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""b5ee67bd-627d-404a-b709-1546b22c5e10"",
+                    ""path"": ""<XRController>{LeftHand}/thumbstickTouched"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""ThumbCountdown"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": """",
+                    ""id"": ""cbddfaf1-b16a-49a3-9145-42cb56f6db37"",
+                    ""path"": ""<XRController>{LeftHand}/thumbstick"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
@@ -338,17 +494,28 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
     ],
     ""controlSchemes"": []
 }");
-        // DepthRay
-        m_DepthRay = asset.FindActionMap("DepthRay", throwIfNotFound: true);
-        m_DepthRay_CastRay = m_DepthRay.FindAction("CastRay", throwIfNotFound: true);
-        m_DepthRay_MoveSphere = m_DepthRay.FindAction("MoveSphere", throwIfNotFound: true);
-        m_DepthRay_Confirm = m_DepthRay.FindAction("Confirm", throwIfNotFound: true);
-        // RayCursor
-        m_RayCursor = asset.FindActionMap("RayCursor", throwIfNotFound: true);
-        m_RayCursor_CastRay = m_RayCursor.FindAction("CastRay", throwIfNotFound: true);
-        m_RayCursor_MoveSphere = m_RayCursor.FindAction("MoveSphere", throwIfNotFound: true);
-        m_RayCursor_Confirm = m_RayCursor.FindAction("Confirm", throwIfNotFound: true);
-        m_RayCursor_ABC = m_RayCursor.FindAction("ABC", throwIfNotFound: true);
+        // DepthRayRight
+        m_DepthRayRight = asset.FindActionMap("DepthRayRight", throwIfNotFound: true);
+        m_DepthRayRight_CastRay = m_DepthRayRight.FindAction("CastRay", throwIfNotFound: true);
+        m_DepthRayRight_MoveSphere = m_DepthRayRight.FindAction("MoveSphere", throwIfNotFound: true);
+        m_DepthRayRight_Confirm = m_DepthRayRight.FindAction("Confirm", throwIfNotFound: true);
+        // DepthRayLeft
+        m_DepthRayLeft = asset.FindActionMap("DepthRayLeft", throwIfNotFound: true);
+        m_DepthRayLeft_CastRay = m_DepthRayLeft.FindAction("CastRay", throwIfNotFound: true);
+        m_DepthRayLeft_MoveSphere = m_DepthRayLeft.FindAction("MoveSphere", throwIfNotFound: true);
+        m_DepthRayLeft_Confirm = m_DepthRayLeft.FindAction("Confirm", throwIfNotFound: true);
+        // RayCursorRight
+        m_RayCursorRight = asset.FindActionMap("RayCursorRight", throwIfNotFound: true);
+        m_RayCursorRight_CastRay = m_RayCursorRight.FindAction("CastRay", throwIfNotFound: true);
+        m_RayCursorRight_MoveSphere = m_RayCursorRight.FindAction("MoveSphere", throwIfNotFound: true);
+        m_RayCursorRight_Confirm = m_RayCursorRight.FindAction("Confirm", throwIfNotFound: true);
+        m_RayCursorRight_ThumbCountdown = m_RayCursorRight.FindAction("ThumbCountdown", throwIfNotFound: true);
+        // RayCursorLeft
+        m_RayCursorLeft = asset.FindActionMap("RayCursorLeft", throwIfNotFound: true);
+        m_RayCursorLeft_CastRay = m_RayCursorLeft.FindAction("CastRay", throwIfNotFound: true);
+        m_RayCursorLeft_MoveSphere = m_RayCursorLeft.FindAction("MoveSphere", throwIfNotFound: true);
+        m_RayCursorLeft_Confirm = m_RayCursorLeft.FindAction("Confirm", throwIfNotFound: true);
+        m_RayCursorLeft_ThumbCountdown = m_RayCursorLeft.FindAction("ThumbCountdown", throwIfNotFound: true);
         // TouchPad
         m_TouchPad = asset.FindActionMap("TouchPad", throwIfNotFound: true);
         m_TouchPad_Touch = m_TouchPad.FindAction("Touch", throwIfNotFound: true);
@@ -416,39 +583,39 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         return asset.FindBinding(bindingMask, out action);
     }
 
-    // DepthRay
-    private readonly InputActionMap m_DepthRay;
-    private IDepthRayActions m_DepthRayActionsCallbackInterface;
-    private readonly InputAction m_DepthRay_CastRay;
-    private readonly InputAction m_DepthRay_MoveSphere;
-    private readonly InputAction m_DepthRay_Confirm;
-    public struct DepthRayActions
+    // DepthRayRight
+    private readonly InputActionMap m_DepthRayRight;
+    private IDepthRayRightActions m_DepthRayRightActionsCallbackInterface;
+    private readonly InputAction m_DepthRayRight_CastRay;
+    private readonly InputAction m_DepthRayRight_MoveSphere;
+    private readonly InputAction m_DepthRayRight_Confirm;
+    public struct DepthRayRightActions
     {
         private @InputMaster m_Wrapper;
-        public DepthRayActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
-        public InputAction @CastRay => m_Wrapper.m_DepthRay_CastRay;
-        public InputAction @MoveSphere => m_Wrapper.m_DepthRay_MoveSphere;
-        public InputAction @Confirm => m_Wrapper.m_DepthRay_Confirm;
-        public InputActionMap Get() { return m_Wrapper.m_DepthRay; }
+        public DepthRayRightActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
+        public InputAction @CastRay => m_Wrapper.m_DepthRayRight_CastRay;
+        public InputAction @MoveSphere => m_Wrapper.m_DepthRayRight_MoveSphere;
+        public InputAction @Confirm => m_Wrapper.m_DepthRayRight_Confirm;
+        public InputActionMap Get() { return m_Wrapper.m_DepthRayRight; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(DepthRayActions set) { return set.Get(); }
-        public void SetCallbacks(IDepthRayActions instance)
+        public static implicit operator InputActionMap(DepthRayRightActions set) { return set.Get(); }
+        public void SetCallbacks(IDepthRayRightActions instance)
         {
-            if (m_Wrapper.m_DepthRayActionsCallbackInterface != null)
+            if (m_Wrapper.m_DepthRayRightActionsCallbackInterface != null)
             {
-                @CastRay.started -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnCastRay;
-                @CastRay.performed -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnCastRay;
-                @CastRay.canceled -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnCastRay;
-                @MoveSphere.started -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnMoveSphere;
-                @MoveSphere.performed -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnMoveSphere;
-                @MoveSphere.canceled -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnMoveSphere;
-                @Confirm.started -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnConfirm;
-                @Confirm.performed -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnConfirm;
-                @Confirm.canceled -= m_Wrapper.m_DepthRayActionsCallbackInterface.OnConfirm;
+                @CastRay.started -= m_Wrapper.m_DepthRayRightActionsCallbackInterface.OnCastRay;
+                @CastRay.performed -= m_Wrapper.m_DepthRayRightActionsCallbackInterface.OnCastRay;
+                @CastRay.canceled -= m_Wrapper.m_DepthRayRightActionsCallbackInterface.OnCastRay;
+                @MoveSphere.started -= m_Wrapper.m_DepthRayRightActionsCallbackInterface.OnMoveSphere;
+                @MoveSphere.performed -= m_Wrapper.m_DepthRayRightActionsCallbackInterface.OnMoveSphere;
+                @MoveSphere.canceled -= m_Wrapper.m_DepthRayRightActionsCallbackInterface.OnMoveSphere;
+                @Confirm.started -= m_Wrapper.m_DepthRayRightActionsCallbackInterface.OnConfirm;
+                @Confirm.performed -= m_Wrapper.m_DepthRayRightActionsCallbackInterface.OnConfirm;
+                @Confirm.canceled -= m_Wrapper.m_DepthRayRightActionsCallbackInterface.OnConfirm;
             }
-            m_Wrapper.m_DepthRayActionsCallbackInterface = instance;
+            m_Wrapper.m_DepthRayRightActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @CastRay.started += instance.OnCastRay;
@@ -463,46 +630,41 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
             }
         }
     }
-    public DepthRayActions @DepthRay => new DepthRayActions(this);
+    public DepthRayRightActions @DepthRayRight => new DepthRayRightActions(this);
 
-    // RayCursor
-    private readonly InputActionMap m_RayCursor;
-    private IRayCursorActions m_RayCursorActionsCallbackInterface;
-    private readonly InputAction m_RayCursor_CastRay;
-    private readonly InputAction m_RayCursor_MoveSphere;
-    private readonly InputAction m_RayCursor_Confirm;
-    private readonly InputAction m_RayCursor_ABC;
-    public struct RayCursorActions
+    // DepthRayLeft
+    private readonly InputActionMap m_DepthRayLeft;
+    private IDepthRayLeftActions m_DepthRayLeftActionsCallbackInterface;
+    private readonly InputAction m_DepthRayLeft_CastRay;
+    private readonly InputAction m_DepthRayLeft_MoveSphere;
+    private readonly InputAction m_DepthRayLeft_Confirm;
+    public struct DepthRayLeftActions
     {
         private @InputMaster m_Wrapper;
-        public RayCursorActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
-        public InputAction @CastRay => m_Wrapper.m_RayCursor_CastRay;
-        public InputAction @MoveSphere => m_Wrapper.m_RayCursor_MoveSphere;
-        public InputAction @Confirm => m_Wrapper.m_RayCursor_Confirm;
-        public InputAction @ABC => m_Wrapper.m_RayCursor_ABC;
-        public InputActionMap Get() { return m_Wrapper.m_RayCursor; }
+        public DepthRayLeftActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
+        public InputAction @CastRay => m_Wrapper.m_DepthRayLeft_CastRay;
+        public InputAction @MoveSphere => m_Wrapper.m_DepthRayLeft_MoveSphere;
+        public InputAction @Confirm => m_Wrapper.m_DepthRayLeft_Confirm;
+        public InputActionMap Get() { return m_Wrapper.m_DepthRayLeft; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(RayCursorActions set) { return set.Get(); }
-        public void SetCallbacks(IRayCursorActions instance)
+        public static implicit operator InputActionMap(DepthRayLeftActions set) { return set.Get(); }
+        public void SetCallbacks(IDepthRayLeftActions instance)
         {
-            if (m_Wrapper.m_RayCursorActionsCallbackInterface != null)
+            if (m_Wrapper.m_DepthRayLeftActionsCallbackInterface != null)
             {
-                @CastRay.started -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnCastRay;
-                @CastRay.performed -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnCastRay;
-                @CastRay.canceled -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnCastRay;
-                @MoveSphere.started -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnMoveSphere;
-                @MoveSphere.performed -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnMoveSphere;
-                @MoveSphere.canceled -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnMoveSphere;
-                @Confirm.started -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnConfirm;
-                @Confirm.performed -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnConfirm;
-                @Confirm.canceled -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnConfirm;
-                @ABC.started -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnABC;
-                @ABC.performed -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnABC;
-                @ABC.canceled -= m_Wrapper.m_RayCursorActionsCallbackInterface.OnABC;
+                @CastRay.started -= m_Wrapper.m_DepthRayLeftActionsCallbackInterface.OnCastRay;
+                @CastRay.performed -= m_Wrapper.m_DepthRayLeftActionsCallbackInterface.OnCastRay;
+                @CastRay.canceled -= m_Wrapper.m_DepthRayLeftActionsCallbackInterface.OnCastRay;
+                @MoveSphere.started -= m_Wrapper.m_DepthRayLeftActionsCallbackInterface.OnMoveSphere;
+                @MoveSphere.performed -= m_Wrapper.m_DepthRayLeftActionsCallbackInterface.OnMoveSphere;
+                @MoveSphere.canceled -= m_Wrapper.m_DepthRayLeftActionsCallbackInterface.OnMoveSphere;
+                @Confirm.started -= m_Wrapper.m_DepthRayLeftActionsCallbackInterface.OnConfirm;
+                @Confirm.performed -= m_Wrapper.m_DepthRayLeftActionsCallbackInterface.OnConfirm;
+                @Confirm.canceled -= m_Wrapper.m_DepthRayLeftActionsCallbackInterface.OnConfirm;
             }
-            m_Wrapper.m_RayCursorActionsCallbackInterface = instance;
+            m_Wrapper.m_DepthRayLeftActionsCallbackInterface = instance;
             if (instance != null)
             {
                 @CastRay.started += instance.OnCastRay;
@@ -514,13 +676,124 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
                 @Confirm.started += instance.OnConfirm;
                 @Confirm.performed += instance.OnConfirm;
                 @Confirm.canceled += instance.OnConfirm;
-                @ABC.started += instance.OnABC;
-                @ABC.performed += instance.OnABC;
-                @ABC.canceled += instance.OnABC;
             }
         }
     }
-    public RayCursorActions @RayCursor => new RayCursorActions(this);
+    public DepthRayLeftActions @DepthRayLeft => new DepthRayLeftActions(this);
+
+    // RayCursorRight
+    private readonly InputActionMap m_RayCursorRight;
+    private IRayCursorRightActions m_RayCursorRightActionsCallbackInterface;
+    private readonly InputAction m_RayCursorRight_CastRay;
+    private readonly InputAction m_RayCursorRight_MoveSphere;
+    private readonly InputAction m_RayCursorRight_Confirm;
+    private readonly InputAction m_RayCursorRight_ThumbCountdown;
+    public struct RayCursorRightActions
+    {
+        private @InputMaster m_Wrapper;
+        public RayCursorRightActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
+        public InputAction @CastRay => m_Wrapper.m_RayCursorRight_CastRay;
+        public InputAction @MoveSphere => m_Wrapper.m_RayCursorRight_MoveSphere;
+        public InputAction @Confirm => m_Wrapper.m_RayCursorRight_Confirm;
+        public InputAction @ThumbCountdown => m_Wrapper.m_RayCursorRight_ThumbCountdown;
+        public InputActionMap Get() { return m_Wrapper.m_RayCursorRight; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(RayCursorRightActions set) { return set.Get(); }
+        public void SetCallbacks(IRayCursorRightActions instance)
+        {
+            if (m_Wrapper.m_RayCursorRightActionsCallbackInterface != null)
+            {
+                @CastRay.started -= m_Wrapper.m_RayCursorRightActionsCallbackInterface.OnCastRay;
+                @CastRay.performed -= m_Wrapper.m_RayCursorRightActionsCallbackInterface.OnCastRay;
+                @CastRay.canceled -= m_Wrapper.m_RayCursorRightActionsCallbackInterface.OnCastRay;
+                @MoveSphere.started -= m_Wrapper.m_RayCursorRightActionsCallbackInterface.OnMoveSphere;
+                @MoveSphere.performed -= m_Wrapper.m_RayCursorRightActionsCallbackInterface.OnMoveSphere;
+                @MoveSphere.canceled -= m_Wrapper.m_RayCursorRightActionsCallbackInterface.OnMoveSphere;
+                @Confirm.started -= m_Wrapper.m_RayCursorRightActionsCallbackInterface.OnConfirm;
+                @Confirm.performed -= m_Wrapper.m_RayCursorRightActionsCallbackInterface.OnConfirm;
+                @Confirm.canceled -= m_Wrapper.m_RayCursorRightActionsCallbackInterface.OnConfirm;
+                @ThumbCountdown.started -= m_Wrapper.m_RayCursorRightActionsCallbackInterface.OnThumbCountdown;
+                @ThumbCountdown.performed -= m_Wrapper.m_RayCursorRightActionsCallbackInterface.OnThumbCountdown;
+                @ThumbCountdown.canceled -= m_Wrapper.m_RayCursorRightActionsCallbackInterface.OnThumbCountdown;
+            }
+            m_Wrapper.m_RayCursorRightActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @CastRay.started += instance.OnCastRay;
+                @CastRay.performed += instance.OnCastRay;
+                @CastRay.canceled += instance.OnCastRay;
+                @MoveSphere.started += instance.OnMoveSphere;
+                @MoveSphere.performed += instance.OnMoveSphere;
+                @MoveSphere.canceled += instance.OnMoveSphere;
+                @Confirm.started += instance.OnConfirm;
+                @Confirm.performed += instance.OnConfirm;
+                @Confirm.canceled += instance.OnConfirm;
+                @ThumbCountdown.started += instance.OnThumbCountdown;
+                @ThumbCountdown.performed += instance.OnThumbCountdown;
+                @ThumbCountdown.canceled += instance.OnThumbCountdown;
+            }
+        }
+    }
+    public RayCursorRightActions @RayCursorRight => new RayCursorRightActions(this);
+
+    // RayCursorLeft
+    private readonly InputActionMap m_RayCursorLeft;
+    private IRayCursorLeftActions m_RayCursorLeftActionsCallbackInterface;
+    private readonly InputAction m_RayCursorLeft_CastRay;
+    private readonly InputAction m_RayCursorLeft_MoveSphere;
+    private readonly InputAction m_RayCursorLeft_Confirm;
+    private readonly InputAction m_RayCursorLeft_ThumbCountdown;
+    public struct RayCursorLeftActions
+    {
+        private @InputMaster m_Wrapper;
+        public RayCursorLeftActions(@InputMaster wrapper) { m_Wrapper = wrapper; }
+        public InputAction @CastRay => m_Wrapper.m_RayCursorLeft_CastRay;
+        public InputAction @MoveSphere => m_Wrapper.m_RayCursorLeft_MoveSphere;
+        public InputAction @Confirm => m_Wrapper.m_RayCursorLeft_Confirm;
+        public InputAction @ThumbCountdown => m_Wrapper.m_RayCursorLeft_ThumbCountdown;
+        public InputActionMap Get() { return m_Wrapper.m_RayCursorLeft; }
+        public void Enable() { Get().Enable(); }
+        public void Disable() { Get().Disable(); }
+        public bool enabled => Get().enabled;
+        public static implicit operator InputActionMap(RayCursorLeftActions set) { return set.Get(); }
+        public void SetCallbacks(IRayCursorLeftActions instance)
+        {
+            if (m_Wrapper.m_RayCursorLeftActionsCallbackInterface != null)
+            {
+                @CastRay.started -= m_Wrapper.m_RayCursorLeftActionsCallbackInterface.OnCastRay;
+                @CastRay.performed -= m_Wrapper.m_RayCursorLeftActionsCallbackInterface.OnCastRay;
+                @CastRay.canceled -= m_Wrapper.m_RayCursorLeftActionsCallbackInterface.OnCastRay;
+                @MoveSphere.started -= m_Wrapper.m_RayCursorLeftActionsCallbackInterface.OnMoveSphere;
+                @MoveSphere.performed -= m_Wrapper.m_RayCursorLeftActionsCallbackInterface.OnMoveSphere;
+                @MoveSphere.canceled -= m_Wrapper.m_RayCursorLeftActionsCallbackInterface.OnMoveSphere;
+                @Confirm.started -= m_Wrapper.m_RayCursorLeftActionsCallbackInterface.OnConfirm;
+                @Confirm.performed -= m_Wrapper.m_RayCursorLeftActionsCallbackInterface.OnConfirm;
+                @Confirm.canceled -= m_Wrapper.m_RayCursorLeftActionsCallbackInterface.OnConfirm;
+                @ThumbCountdown.started -= m_Wrapper.m_RayCursorLeftActionsCallbackInterface.OnThumbCountdown;
+                @ThumbCountdown.performed -= m_Wrapper.m_RayCursorLeftActionsCallbackInterface.OnThumbCountdown;
+                @ThumbCountdown.canceled -= m_Wrapper.m_RayCursorLeftActionsCallbackInterface.OnThumbCountdown;
+            }
+            m_Wrapper.m_RayCursorLeftActionsCallbackInterface = instance;
+            if (instance != null)
+            {
+                @CastRay.started += instance.OnCastRay;
+                @CastRay.performed += instance.OnCastRay;
+                @CastRay.canceled += instance.OnCastRay;
+                @MoveSphere.started += instance.OnMoveSphere;
+                @MoveSphere.performed += instance.OnMoveSphere;
+                @MoveSphere.canceled += instance.OnMoveSphere;
+                @Confirm.started += instance.OnConfirm;
+                @Confirm.performed += instance.OnConfirm;
+                @Confirm.canceled += instance.OnConfirm;
+                @ThumbCountdown.started += instance.OnThumbCountdown;
+                @ThumbCountdown.performed += instance.OnThumbCountdown;
+                @ThumbCountdown.canceled += instance.OnThumbCountdown;
+            }
+        }
+    }
+    public RayCursorLeftActions @RayCursorLeft => new RayCursorLeftActions(this);
 
     // TouchPad
     private readonly InputActionMap m_TouchPad;
@@ -627,18 +900,31 @@ public partial class @InputMaster : IInputActionCollection2, IDisposable
         }
     }
     public SceneManagerActions @SceneManager => new SceneManagerActions(this);
-    public interface IDepthRayActions
+    public interface IDepthRayRightActions
     {
         void OnCastRay(InputAction.CallbackContext context);
         void OnMoveSphere(InputAction.CallbackContext context);
         void OnConfirm(InputAction.CallbackContext context);
     }
-    public interface IRayCursorActions
+    public interface IDepthRayLeftActions
     {
         void OnCastRay(InputAction.CallbackContext context);
         void OnMoveSphere(InputAction.CallbackContext context);
         void OnConfirm(InputAction.CallbackContext context);
-        void OnABC(InputAction.CallbackContext context);
+    }
+    public interface IRayCursorRightActions
+    {
+        void OnCastRay(InputAction.CallbackContext context);
+        void OnMoveSphere(InputAction.CallbackContext context);
+        void OnConfirm(InputAction.CallbackContext context);
+        void OnThumbCountdown(InputAction.CallbackContext context);
+    }
+    public interface IRayCursorLeftActions
+    {
+        void OnCastRay(InputAction.CallbackContext context);
+        void OnMoveSphere(InputAction.CallbackContext context);
+        void OnConfirm(InputAction.CallbackContext context);
+        void OnThumbCountdown(InputAction.CallbackContext context);
     }
     public interface ITouchPadActions
     {

@@ -1004,8 +1004,9 @@ MonoBehaviour:
   touchSensitivity: 2
   ChangeMaterial: {fileID: 846647930}
   mc: {fileID: 846647928}
-  cylinder: {fileID: 1353465874605371500, guid: 612d81fbe0bfb904e95575595a773a21, type: 3}
   TimeTrial: {fileID: 846647929}
+  isGroupFirst: 0
+  cylinder: {fileID: 1353465874605371500, guid: 612d81fbe0bfb904e95575595a773a21, type: 3}
 --- !u!114 &206153214
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1955,11 +1956,11 @@ GameObject:
   - component: {fileID: 399280175}
   m_Layer: 0
   m_Name: LeftHand Controller
-  m_TagString: Untagged
+  m_TagString: NotSelectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &399280169
 Transform:
   m_ObjectHideFlags: 0
@@ -2296,7 +2297,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 8840140788286293730, guid: 22784d933a22ea246a20db7c9b1ac150, type: 3}
+  m_ModelPrefab: {fileID: -8679921383154817045, guid: ecb9af5a2bb21894299f22373fa77dc4, type: 3}
   m_ModelParent: {fileID: 399280169}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
@@ -2329,6 +2330,7 @@ MonoBehaviour:
   ChangeMaterial: {fileID: 846647930}
   mc: {fileID: 846647928}
   TimeTrial: {fileID: 846647929}
+  isRightHand: 0
 --- !u!114 &399280175
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2345,6 +2347,7 @@ MonoBehaviour:
   sphereVelocity: 20
   ChangeMaterial: {fileID: 846647930}
   mc: {fileID: 846647928}
+  isRightHand: 0
   TimeTrial: {fileID: 846647929}
 --- !u!1001 &439153732
 PrefabInstance:
@@ -3596,7 +3599,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e44c24a5341608b47b18dce889cd4e85, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  participant: 1_AggFar
+  participant: 18_AggFar_C
   wantedObject:
   - {fileID: 144411138}
   - {fileID: 1518189100}
@@ -6690,7 +6693,7 @@ GameObject:
   - component: {fileID: 1890185087}
   m_Layer: 0
   m_Name: RightHand Controller
-  m_TagString: Untagged
+  m_TagString: NotSelectable
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6726,6 +6729,7 @@ MonoBehaviour:
   ChangeMaterial: {fileID: 846647930}
   mc: {fileID: 846647928}
   TimeTrial: {fileID: 846647929}
+  isRightHand: 1
 --- !u!114 &1890185088
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -6742,6 +6746,7 @@ MonoBehaviour:
   sphereVelocity: 20
   ChangeMaterial: {fileID: 846647930}
   mc: {fileID: 846647928}
+  isRightHand: 1
   TimeTrial: {fileID: 846647929}
 --- !u!114 &1890185089
 MonoBehaviour:
@@ -7065,7 +7070,7 @@ MonoBehaviour:
   m_UpdateTrackingType: 0
   m_EnableInputTracking: 1
   m_EnableInputActions: 1
-  m_ModelPrefab: {fileID: 8840140788286293730, guid: 22784d933a22ea246a20db7c9b1ac150, type: 3}
+  m_ModelPrefab: {fileID: -8679921383154817045, guid: e234f19d4b9cefd428228bbde30ce3c6, type: 3}
   m_ModelParent: {fileID: 1890185086}
   m_Model: {fileID: 0}
   m_AnimateModel: 0
