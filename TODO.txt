@@ -1,4 +1,0 @@
-tarefas
-metricas
-log
-questionarios

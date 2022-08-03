@@ -1,7 +1,0 @@
-baseline: eye gaze
-refinement profundidade
-
-navegação em hierarquia
-
-
-adaptar para touchpad + VR
